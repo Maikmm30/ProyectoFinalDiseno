@@ -31,12 +31,15 @@ namespace Inventario
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            if (txtUserName.Text.Equals("user")&& txtPassword.Text.Equals("123") || (txtUserName.Text.Equals("admin") && txtPassword.Text.Equals("admin")))
+            {
+                proyectoFinal principal = new proyectoFinal();
+                principal.Show();
+                this.Hide();
+            }
             
             
             
-            proyectoFinal principal = new proyectoFinal();
-            principal.Show();
-            this.Hide();
             
         }
 
@@ -52,6 +55,11 @@ namespace Inventario
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuMaterialTextbox2_OnValueChanged(object sender, EventArgs e)
         {
 
         }
