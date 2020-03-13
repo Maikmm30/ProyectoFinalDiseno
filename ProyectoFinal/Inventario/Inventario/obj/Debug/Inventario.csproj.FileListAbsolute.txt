@@ -1,0 +1,49 @@
+C:\Users\William\Desktop\Diseño\Inventario\Inventario\obj\Debug\Inventario.csprojAssemblyReference.cache
+C:\Users\William\Desktop\Diseño\Inventario\Inventario\obj\Debug\Inventario.Form1.resources
+C:\Users\William\Desktop\Diseño\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
+C:\Users\William\Desktop\Diseño\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.cache
+C:\Users\William\Desktop\Diseño\Inventario\Inventario\bin\Debug\Inventario.exe.config
+C:\Users\William\Desktop\Diseño\Inventario\Inventario\bin\Debug\Inventario.exe
+C:\Users\William\Desktop\Diseño\Inventario\Inventario\bin\Debug\Inventario.pdb
+C:\Users\William\Desktop\Diseño\Inventario\Inventario\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\William\Desktop\Diseño\Inventario\Inventario\obj\Debug\Inventario.csproj.CopyComplete
+C:\Users\William\Desktop\Diseño\Inventario\Inventario\obj\Debug\Inventario.exe
+C:\Users\William\Desktop\Diseño\Inventario\Inventario\obj\Debug\Inventario.pdb
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.exe.config
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.exe
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.pdb
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\BunifuDataViz 1.0.dll
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Bunifu_UI_v1.52.dll
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csprojAssemblyReference.cache
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.cache
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.CopyComplete
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.exe
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.pdb
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Bunifu_UI_v1.5.3.dll
+E:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.exe.config
+E:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.exe
+E:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.pdb
+E:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Bunifu_UI_v1.5.3.dll
+E:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csprojAssemblyReference.cache
+E:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
+E:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.cache
+E:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.CopyComplete
+E:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.exe
+E:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.pdb
+F:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.exe.config
+F:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.exe
+F:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.pdb
+F:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\bin\Debug\Bunifu_UI_v1.5.3.dll
+F:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csprojResolveAssemblyReference.cache
+F:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
+F:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.Cache
+F:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.CoreCompileInputs.cache
+F:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.exe
+F:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.pdb
+E:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Login.resources
+E:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.proyectoFinal.resources
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.proyectoFinal.resources
+D:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Login.resources
+F:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.proyectoFinal.resources
+F:\DISEÑO DE APLICACIONES\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Login.resources
