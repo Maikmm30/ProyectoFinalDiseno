@@ -31,11 +31,20 @@ namespace Inventario
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text.Equals("user")&& txtPassword.Text.Equals("123") || (txtUserName.Text.Equals("admin") && txtPassword.Text.Equals("admin")))
+            if  (txtUserName.Text.Equals("admin") && txtPassword.Text.Equals("admin"))
             {
                 proyectoFinal principal = new proyectoFinal();
                 principal.Show();
                 this.Hide();
+            }
+            else
+            {
+               if (txtUserName.Text.Equals("user") && txtPassword.Text.Equals("123"))
+                {
+                    MenuCliente cliente = new MenuCliente();
+                    cliente.Show();
+                    this.Hide();
+                }
             }
             
             
