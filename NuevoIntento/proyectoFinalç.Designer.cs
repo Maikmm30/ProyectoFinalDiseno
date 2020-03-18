@@ -30,10 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(proyectoFinal));
-            //this.doubleBitmapControl1 = new BunifuAnimatorNS.DoubleBitmapControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel11 = new ns1.BunifuCustomLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel4 = new ns1.BunifuCustomLabel();
@@ -46,47 +47,34 @@
             this.Inventaria = new ns1.BunifuFlatButton();
             this.Usuario = new ns1.BunifuFlatButton();
             this.bunifuCustomLabel1 = new ns1.BunifuCustomLabel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.Chart = new Bunifu.DataViz.BunifuCharts();
-            this.bunifuFlatButton2 = new ns1.BunifuFlatButton();
-            this.bunifuFlatButton3 = new ns1.BunifuFlatButton();
-            this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
-            this.bunifuCharts2 = new Bunifu.DataViz.BunifuCharts();
-            this.menuPrincipal = new ns1.BunifuCustomLabel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuCustomLabel5 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel6 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel7 = new ns1.BunifuCustomLabel();
-            this.bunifuCustomLabel8 = new ns1.BunifuCustomLabel();
-            this.bunifuCircleProgressbar2 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel9 = new ns1.BunifuCustomLabel();
             this.bunifuCustomLabel10 = new ns1.BunifuCustomLabel();
             this.bunifuCircleProgressbar3 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuCustomLabel11 = new ns1.BunifuCustomLabel();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel7 = new ns1.BunifuCustomLabel();
+            this.bunifuCustomLabel8 = new ns1.BunifuCustomLabel();
+            this.bunifuCircleProgressbar2 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
+            this.bunifuCustomLabel6 = new ns1.BunifuCustomLabel();
+            this.bunifuCustomLabel5 = new ns1.BunifuCustomLabel();
+            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
+            this.bunifuFlatButton2 = new ns1.BunifuFlatButton();
+            this.bunifuFlatButton3 = new ns1.BunifuFlatButton();
+            this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
+            this.menuPrincipal = new ns1.BunifuCustomLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // doubleBitmapControl1
-            // 
-            //this.doubleBitmapControl1.Location = new System.Drawing.Point(750, 438);
-            //this.doubleBitmapControl1.Name = "doubleBitmapControl1";
-            //this.doubleBitmapControl1.Size = new System.Drawing.Size(75, 23);
-            //this.doubleBitmapControl1.TabIndex = 0;
-            //this.doubleBitmapControl1.Text = "doubleBitmapControl1";
-            //this.doubleBitmapControl1.Visible = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
             this.panel2.Controls.Add(this.bunifuSeparator1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(234, 0);
+            this.panel2.Location = new System.Drawing.Point(181, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 573);
+            this.panel2.Size = new System.Drawing.Size(5, 599);
             this.panel2.TabIndex = 3;
             // 
             // bunifuSeparator1
@@ -94,9 +82,9 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(-21, 3);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(11, 3);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(42, 593);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(10, 593);
             this.bunifuSeparator1.TabIndex = 0;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = true;
@@ -121,15 +109,35 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(234, 573);
+            this.panel1.Size = new System.Drawing.Size(181, 599);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(146)))), ((int)(((byte)(108)))));
+            this.panel6.ForeColor = System.Drawing.Color.Transparent;
+            this.panel6.Location = new System.Drawing.Point(182, 508);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 10);
+            this.panel6.TabIndex = 12;
+            // 
+            // bunifuCustomLabel11
+            // 
+            this.bunifuCustomLabel11.AutoSize = true;
+            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.DimGray;
+            this.bunifuCustomLabel11.Location = new System.Drawing.Point(15, 501);
+            this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
+            this.bunifuCustomLabel11.Size = new System.Drawing.Size(88, 17);
+            this.bunifuCustomLabel11.TabIndex = 11;
+            this.bunifuCustomLabel11.Text = "Proveedores";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(155)))), ((int)(((byte)(45)))));
             this.panel5.ForeColor = System.Drawing.Color.Transparent;
-            this.panel5.Location = new System.Drawing.Point(182, 465);
+            this.panel5.Location = new System.Drawing.Point(158, 465);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 10);
             this.panel5.TabIndex = 10;
@@ -138,7 +146,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(49)))), ((int)(((byte)(93)))));
             this.panel4.ForeColor = System.Drawing.Color.Transparent;
-            this.panel4.Location = new System.Drawing.Point(182, 420);
+            this.panel4.Location = new System.Drawing.Point(158, 417);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 10);
             this.panel4.TabIndex = 2;
@@ -199,7 +207,7 @@
             this.productosComprados.IconVisible = true;
             this.productosComprados.IconZoom = 90D;
             this.productosComprados.IsTab = false;
-            this.productosComprados.Location = new System.Drawing.Point(42, 228);
+            this.productosComprados.Location = new System.Drawing.Point(6, 240);
             this.productosComprados.Name = "productosComprados";
             this.productosComprados.Normalcolor = System.Drawing.Color.Transparent;
             this.productosComprados.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
@@ -233,7 +241,7 @@
             this.nuevosProductos.IconVisible = true;
             this.nuevosProductos.IconZoom = 90D;
             this.nuevosProductos.IsTab = false;
-            this.nuevosProductos.Location = new System.Drawing.Point(42, 274);
+            this.nuevosProductos.Location = new System.Drawing.Point(6, 283);
             this.nuevosProductos.Name = "nuevosProductos";
             this.nuevosProductos.Normalcolor = System.Drawing.Color.Transparent;
             this.nuevosProductos.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
@@ -267,7 +275,7 @@
             this.item.IconVisible = true;
             this.item.IconZoom = 90D;
             this.item.IsTab = false;
-            this.item.Location = new System.Drawing.Point(42, 185);
+            this.item.Location = new System.Drawing.Point(6, 195);
             this.item.Name = "item";
             this.item.Normalcolor = System.Drawing.Color.Transparent;
             this.item.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
@@ -279,6 +287,7 @@
             this.item.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.item.Textcolor = System.Drawing.Color.DimGray;
             this.item.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item.Click += new System.EventHandler(this.item_Click);
             // 
             // proveedor
             // 
@@ -301,7 +310,7 @@
             this.proveedor.IconVisible = true;
             this.proveedor.IconZoom = 90D;
             this.proveedor.IsTab = false;
-            this.proveedor.Location = new System.Drawing.Point(42, 140);
+            this.proveedor.Location = new System.Drawing.Point(6, 151);
             this.proveedor.Name = "proveedor";
             this.proveedor.Normalcolor = System.Drawing.Color.Transparent;
             this.proveedor.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
@@ -335,7 +344,7 @@
             this.Inventaria.IconVisible = true;
             this.Inventaria.IconZoom = 90D;
             this.Inventaria.IsTab = false;
-            this.Inventaria.Location = new System.Drawing.Point(42, 105);
+            this.Inventaria.Location = new System.Drawing.Point(8, 107);
             this.Inventaria.Name = "Inventaria";
             this.Inventaria.Normalcolor = System.Drawing.Color.Transparent;
             this.Inventaria.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
@@ -369,7 +378,7 @@
             this.Usuario.IconVisible = true;
             this.Usuario.IconZoom = 90D;
             this.Usuario.IsTab = false;
-            this.Usuario.Location = new System.Drawing.Point(42, 62);
+            this.Usuario.Location = new System.Drawing.Point(7, 74);
             this.Usuario.Name = "Usuario";
             this.Usuario.Normalcolor = System.Drawing.Color.Transparent;
             this.Usuario.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
@@ -394,56 +403,169 @@
             this.bunifuCustomLabel1.TabIndex = 0;
             this.bunifuCustomLabel1.Text = "Panel De Control";
             // 
-            // panel3
+            // panelContenedor
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.panel3.Controls.Add(this.bunifuCustomLabel9);
-            this.panel3.Controls.Add(this.bunifuCustomLabel10);
-            this.panel3.Controls.Add(this.bunifuCircleProgressbar3);
-            this.panel3.Controls.Add(this.bunifuCustomLabel7);
-            this.panel3.Controls.Add(this.bunifuCustomLabel8);
-            this.panel3.Controls.Add(this.bunifuCircleProgressbar2);
-            this.panel3.Controls.Add(this.bunifuCustomLabel6);
-            this.panel3.Controls.Add(this.bunifuCustomLabel5);
-            this.panel3.Controls.Add(this.bunifuCircleProgressbar1);
-            this.panel3.Controls.Add(this.Chart);
-            this.panel3.Controls.Add(this.bunifuFlatButton2);
-            this.panel3.Controls.Add(this.bunifuFlatButton3);
-            this.panel3.Controls.Add(this.bunifuFlatButton1);
-            this.panel3.Controls.Add(this.bunifuCharts2);
-            this.panel3.Controls.Add(this.menuPrincipal);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(239, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(653, 573);
-            this.panel3.TabIndex = 4;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            this.panelContenedor.AutoSize = true;
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.panelContenedor.Controls.Add(this.bunifuCustomLabel9);
+            this.panelContenedor.Controls.Add(this.bunifuCustomLabel10);
+            this.panelContenedor.Controls.Add(this.bunifuCircleProgressbar3);
+            this.panelContenedor.Controls.Add(this.bunifuCustomLabel7);
+            this.panelContenedor.Controls.Add(this.bunifuCustomLabel8);
+            this.panelContenedor.Controls.Add(this.bunifuCircleProgressbar2);
+            this.panelContenedor.Controls.Add(this.bunifuCustomLabel6);
+            this.panelContenedor.Controls.Add(this.bunifuCustomLabel5);
+            this.panelContenedor.Controls.Add(this.bunifuCircleProgressbar1);
+            this.panelContenedor.Controls.Add(this.bunifuFlatButton2);
+            this.panelContenedor.Controls.Add(this.bunifuFlatButton3);
+            this.panelContenedor.Controls.Add(this.bunifuFlatButton1);
+            this.panelContenedor.Controls.Add(this.menuPrincipal);
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(0, 0);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1053, 599);
+            this.panelContenedor.TabIndex = 5;
+            this.panelContenedor.TabStop = true;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // Chart
+            // bunifuCustomLabel9
             // 
-            this.Chart.animationEnabled = false;
-            this.Chart.AxisXFontColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(119)))), ((int)(((byte)(128)))));
-            this.Chart.AxisXGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.Chart.AxisXGridThickness = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Chart.AxisYFontColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(119)))), ((int)(((byte)(128)))));
-            this.Chart.AxisYGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(52)))));
-            this.Chart.AxisYGridThickness = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.Chart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Chart.Location = new System.Drawing.Point(22, 56);
-            this.Chart.Name = "Chart";
-            this.Chart.Size = new System.Drawing.Size(619, 371);
-            this.Chart.TabIndex = 15;
-            this.Chart.Theme = Bunifu.DataViz.BunifuCharts._theme.theme1;
-            this.Chart.Title = "";
-            this.Chart.Load += new System.EventHandler(this.bunifuCharts1_Load_1);
+            this.bunifuCustomLabel9.AutoSize = true;
+            this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(823, 533);
+            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(143, 17);
+            this.bunifuCustomLabel9.TabIndex = 24;
+            this.bunifuCustomLabel9.Text = "Cantidad Proveedores";
+            // 
+            // bunifuCustomLabel10
+            // 
+            this.bunifuCustomLabel10.AutoSize = true;
+            this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(822, 498);
+            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(27, 19);
+            this.bunifuCustomLabel10.TabIndex = 23;
+            this.bunifuCustomLabel10.Text = "16";
+            this.bunifuCustomLabel10.Click += new System.EventHandler(this.bunifuCustomLabel10_Click);
+            // 
+            // bunifuCircleProgressbar3
+            // 
+            this.bunifuCircleProgressbar3.animated = false;
+            this.bunifuCircleProgressbar3.animationIterval = 5;
+            this.bunifuCircleProgressbar3.animationSpeed = 300;
+            this.bunifuCircleProgressbar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.bunifuCircleProgressbar3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar3.BackgroundImage")));
+            this.bunifuCircleProgressbar3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCircleProgressbar3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(146)))), ((int)(((byte)(108)))));
+            this.bunifuCircleProgressbar3.LabelVisible = true;
+            this.bunifuCircleProgressbar3.LineProgressThickness = 8;
+            this.bunifuCircleProgressbar3.LineThickness = 5;
+            this.bunifuCircleProgressbar3.Location = new System.Drawing.Point(707, 476);
+            this.bunifuCircleProgressbar3.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.bunifuCircleProgressbar3.MaxValue = 100;
+            this.bunifuCircleProgressbar3.Name = "bunifuCircleProgressbar3";
+            this.bunifuCircleProgressbar3.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(119)))), ((int)(((byte)(128)))));
+            this.bunifuCircleProgressbar3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(146)))), ((int)(((byte)(108)))));
+            this.bunifuCircleProgressbar3.Size = new System.Drawing.Size(93, 93);
+            this.bunifuCircleProgressbar3.TabIndex = 22;
+            this.bunifuCircleProgressbar3.Value = 90;
+            // 
+            // bunifuCustomLabel7
+            // 
+            this.bunifuCustomLabel7.AutoSize = true;
+            this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(565, 552);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(58, 17);
+            this.bunifuCustomLabel7.TabIndex = 21;
+            this.bunifuCustomLabel7.Text = "En Stock";
+            // 
+            // bunifuCustomLabel8
+            // 
+            this.bunifuCustomLabel8.AutoSize = true;
+            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(564, 516);
+            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(36, 19);
+            this.bunifuCustomLabel8.TabIndex = 20;
+            this.bunifuCustomLabel8.Text = "500";
+            // 
+            // bunifuCircleProgressbar2
+            // 
+            this.bunifuCircleProgressbar2.animated = false;
+            this.bunifuCircleProgressbar2.animationIterval = 5;
+            this.bunifuCircleProgressbar2.animationSpeed = 300;
+            this.bunifuCircleProgressbar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.bunifuCircleProgressbar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar2.BackgroundImage")));
+            this.bunifuCircleProgressbar2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCircleProgressbar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(155)))), ((int)(((byte)(45)))));
+            this.bunifuCircleProgressbar2.LabelVisible = true;
+            this.bunifuCircleProgressbar2.LineProgressThickness = 8;
+            this.bunifuCircleProgressbar2.LineThickness = 5;
+            this.bunifuCircleProgressbar2.Location = new System.Drawing.Point(460, 489);
+            this.bunifuCircleProgressbar2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.bunifuCircleProgressbar2.MaxValue = 100;
+            this.bunifuCircleProgressbar2.Name = "bunifuCircleProgressbar2";
+            this.bunifuCircleProgressbar2.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(119)))), ((int)(((byte)(128)))));
+            this.bunifuCircleProgressbar2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(155)))), ((int)(((byte)(45)))));
+            this.bunifuCircleProgressbar2.Size = new System.Drawing.Size(93, 93);
+            this.bunifuCircleProgressbar2.TabIndex = 19;
+            this.bunifuCircleProgressbar2.Value = 34;
+            // 
+            // bunifuCustomLabel6
+            // 
+            this.bunifuCustomLabel6.AutoSize = true;
+            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(304, 550);
+            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(118, 17);
+            this.bunifuCustomLabel6.TabIndex = 18;
+            this.bunifuCustomLabel6.Text = "Cantidad Vendida";
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(294, 501);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(49, 19);
+            this.bunifuCustomLabel5.TabIndex = 17;
+            this.bunifuCustomLabel5.Text = "2 400";
+            // 
+            // bunifuCircleProgressbar1
+            // 
+            this.bunifuCircleProgressbar1.animated = false;
+            this.bunifuCircleProgressbar1.animationIterval = 5;
+            this.bunifuCircleProgressbar1.animationSpeed = 300;
+            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
+            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(49)))), ((int)(((byte)(93)))));
+            this.bunifuCircleProgressbar1.LabelVisible = true;
+            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
+            this.bunifuCircleProgressbar1.LineThickness = 5;
+            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(203, 489);
+            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.bunifuCircleProgressbar1.MaxValue = 100;
+            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
+            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(119)))), ((int)(((byte)(128)))));
+            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(49)))), ((int)(((byte)(93)))));
+            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(93, 93);
+            this.bunifuCircleProgressbar1.TabIndex = 16;
+            this.bunifuCircleProgressbar1.Value = 80;
             // 
             // bunifuFlatButton2
             // 
@@ -466,7 +588,7 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(590, 12);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(990, 3);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -501,7 +623,7 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(502, 12);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(902, 3);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -535,7 +657,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(414, 12);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(814, 3);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
@@ -548,38 +670,13 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(119)))), ((int)(((byte)(128)))));
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuCharts2
-            // 
-            this.bunifuCharts2.animationEnabled = false;
-            this.bunifuCharts2.AxisXFontColor = System.Drawing.Color.Gray;
-            this.bunifuCharts2.AxisXGridColor = System.Drawing.Color.Gray;
-            this.bunifuCharts2.AxisXGridThickness = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.bunifuCharts2.AxisYFontColor = System.Drawing.Color.Gray;
-            this.bunifuCharts2.AxisYGridColor = System.Drawing.Color.Gray;
-            this.bunifuCharts2.AxisYGridThickness = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.bunifuCharts2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuCharts2.Location = new System.Drawing.Point(183, 185);
-            this.bunifuCharts2.Name = "bunifuCharts2";
-            this.bunifuCharts2.Size = new System.Drawing.Size(132, 152);
-            this.bunifuCharts2.TabIndex = 3;
-            this.bunifuCharts2.Theme = Bunifu.DataViz.BunifuCharts._theme.theme1;
-            this.bunifuCharts2.Title = "";
-            // 
             // menuPrincipal
             // 
             this.menuPrincipal.AutoSize = true;
             this.menuPrincipal.BackColor = System.Drawing.Color.Transparent;
             this.menuPrincipal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuPrincipal.ForeColor = System.Drawing.Color.White;
-            this.menuPrincipal.Location = new System.Drawing.Point(40, 9);
+            this.menuPrincipal.Location = new System.Drawing.Point(197, 11);
             this.menuPrincipal.Name = "menuPrincipal";
             this.menuPrincipal.Size = new System.Drawing.Size(125, 19);
             this.menuPrincipal.TabIndex = 1;
@@ -591,183 +688,24 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // bunifuCircleProgressbar1
-            // 
-            this.bunifuCircleProgressbar1.animated = false;
-            this.bunifuCircleProgressbar1.animationIterval = 5;
-            this.bunifuCircleProgressbar1.animationSpeed = 300;
-            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
-            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(49)))), ((int)(((byte)(93)))));
-            this.bunifuCircleProgressbar1.LabelVisible = true;
-            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar1.LineThickness = 5;
-            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(22, 438);
-            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.bunifuCircleProgressbar1.MaxValue = 100;
-            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
-            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(119)))), ((int)(((byte)(128)))));
-            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(49)))), ((int)(((byte)(93)))));
-            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(93, 93);
-            this.bunifuCircleProgressbar1.TabIndex = 16;
-            this.bunifuCircleProgressbar1.Value = 80;
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(116, 465);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(49, 19);
-            this.bunifuCustomLabel5.TabIndex = 17;
-            this.bunifuCustomLabel5.Text = "2 400";
-            // 
-            // bunifuCustomLabel6
-            // 
-            this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(111, 501);
-            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(118, 17);
-            this.bunifuCustomLabel6.TabIndex = 18;
-            this.bunifuCustomLabel6.Text = "Cantidad Vendida";
-            // 
-            // bunifuCustomLabel7
-            // 
-            this.bunifuCustomLabel7.AutoSize = true;
-            this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(339, 501);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(58, 17);
-            this.bunifuCustomLabel7.TabIndex = 21;
-            this.bunifuCustomLabel7.Text = "En Stock";
-            // 
-            // bunifuCustomLabel8
-            // 
-            this.bunifuCustomLabel8.AutoSize = true;
-            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.bunifuCustomLabel8.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(338, 465);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(36, 19);
-            this.bunifuCustomLabel8.TabIndex = 20;
-            this.bunifuCustomLabel8.Text = "500";
-            // 
-            // bunifuCircleProgressbar2
-            // 
-            this.bunifuCircleProgressbar2.animated = false;
-            this.bunifuCircleProgressbar2.animationIterval = 5;
-            this.bunifuCircleProgressbar2.animationSpeed = 300;
-            this.bunifuCircleProgressbar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.bunifuCircleProgressbar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar2.BackgroundImage")));
-            this.bunifuCircleProgressbar2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCircleProgressbar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(155)))), ((int)(((byte)(45)))));
-            this.bunifuCircleProgressbar2.LabelVisible = true;
-            this.bunifuCircleProgressbar2.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar2.LineThickness = 5;
-            this.bunifuCircleProgressbar2.Location = new System.Drawing.Point(234, 438);
-            this.bunifuCircleProgressbar2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.bunifuCircleProgressbar2.MaxValue = 100;
-            this.bunifuCircleProgressbar2.Name = "bunifuCircleProgressbar2";
-            this.bunifuCircleProgressbar2.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(119)))), ((int)(((byte)(128)))));
-            this.bunifuCircleProgressbar2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(155)))), ((int)(((byte)(45)))));
-            this.bunifuCircleProgressbar2.Size = new System.Drawing.Size(93, 93);
-            this.bunifuCircleProgressbar2.TabIndex = 19;
-            this.bunifuCircleProgressbar2.Value = 34;
-            // 
-            // bunifuCustomLabel9
-            // 
-            this.bunifuCustomLabel9.AutoSize = true;
-            this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(507, 497);
-            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(143, 17);
-            this.bunifuCustomLabel9.TabIndex = 24;
-            this.bunifuCustomLabel9.Text = "Cantidad Proveedores";
-            // 
-            // bunifuCustomLabel10
-            // 
-            this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.bunifuCustomLabel10.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(517, 465);
-            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(27, 19);
-            this.bunifuCustomLabel10.TabIndex = 23;
-            this.bunifuCustomLabel10.Text = "16";
-            this.bunifuCustomLabel10.Click += new System.EventHandler(this.bunifuCustomLabel10_Click);
-            // 
-            // bunifuCircleProgressbar3
-            // 
-            this.bunifuCircleProgressbar3.animated = false;
-            this.bunifuCircleProgressbar3.animationIterval = 5;
-            this.bunifuCircleProgressbar3.animationSpeed = 300;
-            this.bunifuCircleProgressbar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.bunifuCircleProgressbar3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar3.BackgroundImage")));
-            this.bunifuCircleProgressbar3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCircleProgressbar3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(146)))), ((int)(((byte)(108)))));
-            this.bunifuCircleProgressbar3.LabelVisible = true;
-            this.bunifuCircleProgressbar3.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar3.LineThickness = 5;
-            this.bunifuCircleProgressbar3.Location = new System.Drawing.Point(423, 438);
-            this.bunifuCircleProgressbar3.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.bunifuCircleProgressbar3.MaxValue = 100;
-            this.bunifuCircleProgressbar3.Name = "bunifuCircleProgressbar3";
-            this.bunifuCircleProgressbar3.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(119)))), ((int)(((byte)(128)))));
-            this.bunifuCircleProgressbar3.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(146)))), ((int)(((byte)(108)))));
-            this.bunifuCircleProgressbar3.Size = new System.Drawing.Size(93, 93);
-            this.bunifuCircleProgressbar3.TabIndex = 22;
-            this.bunifuCircleProgressbar3.Value = 90;
-            // 
-            // bunifuCustomLabel11
-            // 
-            this.bunifuCustomLabel11.AutoSize = true;
-            this.bunifuCustomLabel11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel11.ForeColor = System.Drawing.Color.DimGray;
-            this.bunifuCustomLabel11.Location = new System.Drawing.Point(15, 501);
-            this.bunifuCustomLabel11.Name = "bunifuCustomLabel11";
-            this.bunifuCustomLabel11.Size = new System.Drawing.Size(88, 17);
-            this.bunifuCustomLabel11.TabIndex = 11;
-            this.bunifuCustomLabel11.Text = "Proveedores";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(146)))), ((int)(((byte)(108)))));
-            this.panel6.ForeColor = System.Drawing.Color.Transparent;
-            this.panel6.Location = new System.Drawing.Point(182, 508);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 10);
-            this.panel6.TabIndex = 12;
-            // 
-            // Form1
+            // proyectoFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 573);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(1053, 599);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            //this.Controls.Add(this.doubleBitmapControl1);
+            this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "proyectoFinal";
             this.Text = " ";
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelContenedor.ResumeLayout(false);
+            this.panelContenedor.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -776,7 +714,7 @@
         //private BunifuAnimatorNS.DoubleBitmapControl doubleBitmapControl1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelContenedor;
         private ns1.BunifuSeparator bunifuSeparator1;
         private ns1.BunifuFlatButton Usuario;
         private ns1.BunifuCustomLabel bunifuCustomLabel1;
@@ -791,11 +729,9 @@
         private ns1.BunifuFlatButton proveedor;
         private ns1.BunifuFlatButton Inventaria;
         private System.Windows.Forms.Panel panel5;
-        private Bunifu.DataViz.BunifuCharts bunifuCharts2;
         private ns1.BunifuFlatButton bunifuFlatButton2;
         private ns1.BunifuFlatButton bunifuFlatButton3;
         private ns1.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.DataViz.BunifuCharts Chart;
         private System.Windows.Forms.Timer timer1;
         private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar1;
         private System.Windows.Forms.Panel panel6;
