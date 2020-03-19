@@ -64,11 +64,35 @@
     <Compile Include="..\..\..\NuevoIntento\proyectoFinalç.Designer.cs">
       <DependentUpon>proyectoFinalç.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInventario.Designer.cs">
+      <DependentUpon>FormInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProductosComprados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductosComprados.Designer.cs">
+      <DependentUpon>FormProductosComprados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProveedores.Designer.cs">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioItems.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormularioItems.Designer.cs">
       <DependentUpon>FormularioItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioUsuarios.Designer.cs">
+      <DependentUpon>FormularioUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -99,8 +123,20 @@
     <EmbeddedResource Include="..\..\..\NuevoIntento\proyectoFinalç.resx">
       <DependentUpon>proyectoFinalç.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInventario.resx">
+      <DependentUpon>FormInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductosComprados.resx">
+      <DependentUpon>FormProductosComprados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProveedores.resx">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioItems.resx">
       <DependentUpon>FormularioItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioUsuarios.resx">
+      <DependentUpon>FormularioUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

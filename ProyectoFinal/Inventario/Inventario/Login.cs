@@ -36,6 +36,7 @@ namespace Inventario
                 proyectoFinal principal = new proyectoFinal();
                 principal.Show();
                 this.Hide();
+
             }
             else
             {
@@ -69,6 +70,11 @@ namespace Inventario
         }
 
         private void bunifuMaterialTextbox2_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
         {
 
         }

@@ -69,7 +69,7 @@ namespace Inventario
             point2.addLabely("SABADO", "9000");
             point2.addLabely("DOMINGO", "5000");
             data.addData(point2);
-           // Chart.Render(data);
+            bunifuCharts1.Render(data);
 
             Bunifu.DataViz.DataPoint point3 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.spline);
 
@@ -81,7 +81,7 @@ namespace Inventario
             point3.addLabely("SABADO", "6000");
             point3.addLabely("DOMINGO", "5000");
             data.addData(point3);
-            //Chart.Render(data);
+            bunifuCharts1.Render(data);
 
             
 
@@ -125,6 +125,36 @@ namespace Inventario
         private void item_Click(object sender, EventArgs e)
         {
             AbrirFormInPanel(new FormularioItems());
+        }
+
+        private void Usuario_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FormularioUsuarios());
+        }
+
+        private void Inventaria_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FormInventario());
+        }
+
+        private void productosComprados_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FormProductosComprados());
+        }
+
+        private void proveedor_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new FormProveedores());
+        }
+
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+            AbrirFormInPanel(new proyectoFinal());
+        }
+
+        private void bunifuCharts1_Load_2(object sender, EventArgs e)
+        {
+
         }
     }
 }
