@@ -160,5 +160,12 @@ namespace Inventario
             data.addData(point3);
             bunifuCharts1.Render(data);
         }
+
+        private void buttonVolver_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

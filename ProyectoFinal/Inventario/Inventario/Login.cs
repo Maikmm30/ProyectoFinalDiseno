@@ -46,6 +46,10 @@ namespace Inventario
                     cliente.Show();
                     this.Hide();
                 }
+                else
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrecta");
+                }
             }
             
             

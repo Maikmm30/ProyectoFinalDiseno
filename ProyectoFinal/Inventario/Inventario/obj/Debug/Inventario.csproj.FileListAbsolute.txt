@@ -112,3 +112,7 @@ D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFin
 D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.CopyComplete
 D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.exe
 D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.pdb
+C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormInventario.resources
+C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormProductosComprados.resources
+C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormProveedores.resources
+C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormularioUsuarios.resources
