@@ -97,7 +97,6 @@ D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFin
 D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.exe
 D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.pdb
 D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Bunifu_UI_v1.5.3.dll
-D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csprojAssemblyReference.cache
 D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.proyectoFinal.resources
 D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormInventario.resources
 D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormProductosComprados.resources

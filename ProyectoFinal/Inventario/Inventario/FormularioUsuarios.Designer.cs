@@ -42,6 +42,8 @@
             this.btn_Guardar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnBuscar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             dataGridUsuario = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(dataGridUsuario)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +80,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             dataGridUsuario.DefaultCellStyle = dataGridViewCellStyle3;
             dataGridUsuario.GridColor = System.Drawing.Color.SteelBlue;
-            dataGridUsuario.Location = new System.Drawing.Point(350, 168);
+            dataGridUsuario.Location = new System.Drawing.Point(229, 178);
             dataGridUsuario.Name = "dataGridUsuario";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(39)))));
@@ -94,7 +96,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridUsuario.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridUsuario.Size = new System.Drawing.Size(242, 297);
+            dataGridUsuario.Size = new System.Drawing.Size(369, 297);
             dataGridUsuario.TabIndex = 4;
             dataGridUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -123,7 +125,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(635, 163);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(256, 33);
+            this.txtUsuario.Size = new System.Drawing.Size(238, 33);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsuario.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
@@ -143,7 +145,7 @@
             this.txtContraseña.Location = new System.Drawing.Point(635, 248);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(256, 33);
+            this.txtContraseña.Size = new System.Drawing.Size(238, 33);
             this.txtContraseña.TabIndex = 1;
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContraseña.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox2_OnValueChanged);
@@ -223,12 +225,34 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(328, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 22);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "USUARIOS";
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(252, 45);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(70, 73);
+            this.panel1.TabIndex = 16;
+            // 
             // FormularioUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(900, 550);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btn_Guardar);
@@ -240,6 +264,7 @@
             this.Text = "FormularioUsuarios";
             ((System.ComponentModel.ISupportInitialize)(dataGridUsuario)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -252,5 +277,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -12,10 +12,13 @@ namespace Inventario
 {
     public partial class proyectoFinal : Form
     {
+        private Form Panelhijo;
+
         public proyectoFinal()
         {
             InitializeComponent();
             CenterToScreen();
+          
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -58,19 +61,27 @@ namespace Inventario
         }
 
 
-        public void AbrirFormInPanel(object FormularioItems)
+        public void AbrirFormInPanel(Form FormularioItems)
         {
             if (this.panelContenedor.Controls.Count>0)
             {
                 this.panelContenedor.Controls.RemoveAt(0);
                 Form fh = FormularioItems as Form;
+                Panelhijo = fh;
                 fh.TopLevel = false;
                 fh.Dock = DockStyle.Fill;
                 this.panelContenedor.Controls.Add(fh);
                 this.panelContenedor.Tag = fh;
+                fh.BringToFront();
                 fh.Show();
+                menuPrincipal.Text = fh.Text;
+
+
+                
 
             }
+
+            
         }
 
         private void item_Click(object sender, EventArgs e)
@@ -100,6 +111,7 @@ namespace Inventario
 
         private void bunifuCustomLabel1_Click(object sender, EventArgs e)
         {
+            Panelhijo.Close();
             AbrirFormInPanel(new proyectoFinal());
         }
 
