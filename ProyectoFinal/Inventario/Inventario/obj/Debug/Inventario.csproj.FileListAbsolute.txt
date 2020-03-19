@@ -93,3 +93,23 @@ C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\I
 C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormInventario.resources
 C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormProductosComprados.resources
 C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormProveedores.resources
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.exe.config
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.exe
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Inventario.pdb
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csprojAssemblyReference.cache
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.proyectoFinal.resources
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormInventario.resources
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormProductosComprados.resources
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormProveedores.resources
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormularioItems.resources
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormularioUsuarios.resources
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Login.resources
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.MenuCliente.resources
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Musica.resources
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Videojuegos.resources
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.cache
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.CopyComplete
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.exe
+D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.pdb

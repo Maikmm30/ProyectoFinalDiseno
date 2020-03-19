@@ -35,57 +35,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioUsuarios));
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUsuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtContraseña = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btn_Guardar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnBuscar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             dataGridUsuario = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(dataGridUsuario)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.White;
-            this.txtUsuario.HintForeColor = System.Drawing.Color.White;
-            this.txtUsuario.HintText = "Nombre Usuario";
-            this.txtUsuario.isPassword = false;
-            this.txtUsuario.LineFocusedColor = System.Drawing.Color.White;
-            this.txtUsuario.LineIdleColor = System.Drawing.Color.White;
-            this.txtUsuario.LineMouseHoverColor = System.Drawing.Color.White;
-            this.txtUsuario.LineThickness = 2;
-            this.txtUsuario.Location = new System.Drawing.Point(635, 163);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(256, 33);
-            this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtUsuario.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtContraseña.ForeColor = System.Drawing.Color.White;
-            this.txtContraseña.HintForeColor = System.Drawing.Color.White;
-            this.txtContraseña.HintText = "Ingrese Contraseña";
-            this.txtContraseña.isPassword = false;
-            this.txtContraseña.LineFocusedColor = System.Drawing.Color.White;
-            this.txtContraseña.LineIdleColor = System.Drawing.Color.White;
-            this.txtContraseña.LineMouseHoverColor = System.Drawing.Color.White;
-            this.txtContraseña.LineThickness = 2;
-            this.txtContraseña.Location = new System.Drawing.Point(635, 248);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(256, 33);
-            this.txtContraseña.TabIndex = 1;
-            this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtContraseña.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox2_OnValueChanged);
             // 
             // dataGridUsuario
             // 
@@ -138,6 +97,56 @@
             dataGridUsuario.Size = new System.Drawing.Size(242, 297);
             dataGridUsuario.TabIndex = 4;
             dataGridUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Usuario";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Marca
+            // 
+            this.Marca.HeaderText = "Contraseña";
+            this.Marca.Name = "Marca";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.ForeColor = System.Drawing.Color.White;
+            this.txtUsuario.HintForeColor = System.Drawing.Color.White;
+            this.txtUsuario.HintText = "Nombre Usuario";
+            this.txtUsuario.isPassword = false;
+            this.txtUsuario.LineFocusedColor = System.Drawing.Color.White;
+            this.txtUsuario.LineIdleColor = System.Drawing.Color.White;
+            this.txtUsuario.LineMouseHoverColor = System.Drawing.Color.White;
+            this.txtUsuario.LineThickness = 2;
+            this.txtUsuario.Location = new System.Drawing.Point(635, 163);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(256, 33);
+            this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUsuario.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtContraseña.ForeColor = System.Drawing.Color.White;
+            this.txtContraseña.HintForeColor = System.Drawing.Color.White;
+            this.txtContraseña.HintText = "Ingrese Contraseña";
+            this.txtContraseña.isPassword = false;
+            this.txtContraseña.LineFocusedColor = System.Drawing.Color.White;
+            this.txtContraseña.LineIdleColor = System.Drawing.Color.White;
+            this.txtContraseña.LineMouseHoverColor = System.Drawing.Color.White;
+            this.txtContraseña.LineThickness = 2;
+            this.txtContraseña.Location = new System.Drawing.Point(635, 248);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(256, 33);
+            this.txtContraseña.TabIndex = 1;
+            this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtContraseña.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox2_OnValueChanged);
             // 
             // btn_Guardar
             // 
@@ -214,35 +223,12 @@
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Usuario";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Marca
-            // 
-            this.Marca.HeaderText = "Contraseña";
-            this.Marca.Name = "Marca";
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(777, 95);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(16, 16);
-            this.bunifuCustomLabel1.TabIndex = 15;
-            this.bunifuCustomLabel1.Text = "X";
-            this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
-            // 
             // FormularioUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(900, 550);
-            this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btn_Guardar);
@@ -254,7 +240,6 @@
             this.Text = "FormularioUsuarios";
             ((System.ComponentModel.ISupportInitialize)(dataGridUsuario)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -267,6 +252,5 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnEliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }
