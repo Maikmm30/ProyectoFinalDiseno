@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Inventario
@@ -18,7 +11,7 @@ namespace Inventario
         {
             InitializeComponent();
             CenterToScreen();
-          
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -38,7 +31,7 @@ namespace Inventario
 
         private void salir_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -46,9 +39,9 @@ namespace Inventario
             Environment.Exit(0);
         }
 
-       
 
-       
+
+
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -63,7 +56,7 @@ namespace Inventario
 
         public void AbrirFormInPanel(Form FormularioItems)
         {
-            if (this.panelContenedor.Controls.Count>0)
+            if (this.panelContenedor.Controls.Count > 0)
             {
                 this.panelContenedor.Controls.RemoveAt(0);
                 Form fh = FormularioItems as Form;
@@ -77,11 +70,11 @@ namespace Inventario
                 menuPrincipal.Text = fh.Text;
 
 
-                
+
 
             }
 
-            
+
         }
 
         private void item_Click(object sender, EventArgs e)
