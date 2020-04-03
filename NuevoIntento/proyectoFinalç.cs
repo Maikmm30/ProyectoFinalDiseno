@@ -160,5 +160,12 @@ namespace Inventario
             Login login = new Login();
             login.Show();
         }
+
+        private void Bd_Click(object sender, EventArgs e)
+        {
+            Prueba_ConexionBd bd = new Prueba_ConexionBd();
+            bd.Show();
+            this.Hide();
+        }
     }
 }
