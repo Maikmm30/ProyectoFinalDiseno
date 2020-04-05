@@ -61,10 +61,11 @@
             this.pruebaTableAdapter = new Inventario.PruebaBdTableAdapters.PruebaTableAdapter();
             this.tableAdapterManager = new Inventario.PruebaBdTableAdapters.TableAdapterManager();
             this.button1 = new System.Windows.Forms.Button();
+            this.Agregar = new System.Windows.Forms.Button();
+            this.Limpiar = new System.Windows.Forms.Button();
+            this.Editar = new System.Windows.Forms.Button();
+            this.Eliminar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             apellidosLabel = new System.Windows.Forms.Label();
@@ -344,58 +345,70 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
-            this.button1.Text = "SALVAR";
+            this.button1.Text = "Salvar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Agregar
+            // 
+            this.Agregar.Location = new System.Drawing.Point(325, 160);
+            this.Agregar.Name = "Agregar";
+            this.Agregar.Size = new System.Drawing.Size(75, 23);
+            this.Agregar.TabIndex = 7;
+            this.Agregar.Text = "Agregar";
+            this.Agregar.UseVisualStyleBackColor = true;
+            this.Agregar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Limpiar
+            // 
+            this.Limpiar.Location = new System.Drawing.Point(224, 160);
+            this.Limpiar.Name = "Limpiar";
+            this.Limpiar.Size = new System.Drawing.Size(75, 23);
+            this.Limpiar.TabIndex = 6;
+            this.Limpiar.Text = "Limpiar";
+            this.Limpiar.UseVisualStyleBackColor = true;
+            this.Limpiar.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Editar
+            // 
+            this.Editar.Location = new System.Drawing.Point(133, 160);
+            this.Editar.Name = "Editar";
+            this.Editar.Size = new System.Drawing.Size(75, 23);
+            this.Editar.TabIndex = 5;
+            this.Editar.Text = "Editar";
+            this.Editar.UseVisualStyleBackColor = true;
+            this.Editar.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.Location = new System.Drawing.Point(423, 160);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(75, 23);
+            this.Eliminar.TabIndex = 8;
+            this.Eliminar.Text = "Eliminar";
+            this.Eliminar.UseVisualStyleBackColor = true;
+            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(325, 160);
+            this.button2.Location = new System.Drawing.Point(531, 159);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Agregar";
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(228, 160);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(133, 160);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Editar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(713, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Eliminar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Prueba_ConexionBd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 458);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.Eliminar);
+            this.Controls.Add(this.Editar);
+            this.Controls.Add(this.Limpiar);
+            this.Controls.Add(this.Agregar);
             this.Controls.Add(this.button1);
             this.Controls.Add(telefonoLabel);
             this.Controls.Add(this.telefonoTextBox);
@@ -450,9 +463,10 @@
         private System.Windows.Forms.TextBox apellidosTextBox;
         private System.Windows.Forms.TextBox telefonoTextBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Agregar;
+        private System.Windows.Forms.Button Limpiar;
+        private System.Windows.Forms.Button Editar;
+        private System.Windows.Forms.Button Eliminar;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
     }
 }

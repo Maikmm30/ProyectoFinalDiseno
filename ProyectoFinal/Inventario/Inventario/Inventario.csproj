@@ -79,6 +79,7 @@
     <Compile Include="..\..\..\NuevoIntento\proyectoFinalç.Designer.cs">
       <DependentUpon>proyectoFinalç.cs</DependentUpon>
     </Compile>
+    <Compile Include="Conexion.cs" />
     <Compile Include="PruebaBd.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
