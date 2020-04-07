@@ -180,11 +180,8 @@ namespace Inventario
             string eliminar = "DELETE FROM PRUEBA WHERE ID=@ID";
             SqlCommand cmd3 = new SqlCommand(eliminar, Conexion.conectar());
             cmd3.Parameters.AddWithValue("@ID", idTextBox.Text);
-
             cmd3.ExecuteNonQuery();
-
             MessageBox.Show(" Se han eliminado los datos ");
-
             pruebaDataGridView.DataSource = llenar_grid();
 
         }

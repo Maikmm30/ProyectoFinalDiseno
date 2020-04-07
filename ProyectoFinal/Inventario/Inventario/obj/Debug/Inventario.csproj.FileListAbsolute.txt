@@ -163,3 +163,6 @@ C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\I
 C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Database1_log.ldf
 C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csprojAssemblyReference.cache
 C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Prueba_ConexionBd.resources
+C:\Users\EFS\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Database1.mdf
+C:\Users\EFS\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Database1_log.ldf
+C:\Users\EFS\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Prueba_ConexionBd.resources
