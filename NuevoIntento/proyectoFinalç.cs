@@ -156,9 +156,7 @@ namespace Inventario
 
         private void buttonVolver_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login login = new Login();
-            login.Show();
+           
         }
 
         private void Bd_Click(object sender, EventArgs e)
@@ -166,6 +164,13 @@ namespace Inventario
             Prueba_ConexionBd bd = new Prueba_ConexionBd();
             bd.Show();
             this.Hide();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
         }
     }
 }

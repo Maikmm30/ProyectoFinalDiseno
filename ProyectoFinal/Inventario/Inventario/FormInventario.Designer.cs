@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInventario));
             this.txtId = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtHerramientas = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -43,6 +42,7 @@
             this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewProducto = new System.Windows.Forms.DataGridView();
+            this.txtCantidad = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             this.txtId.LineIdleColor = System.Drawing.Color.White;
             this.txtId.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.txtId.LineThickness = 2;
-            this.txtId.Location = new System.Drawing.Point(1049, 145);
+            this.txtId.Location = new System.Drawing.Point(1049, 117);
             this.txtId.Margin = new System.Windows.Forms.Padding(5);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(337, 36);
@@ -77,24 +77,12 @@
             this.txtDescripcion.LineIdleColor = System.Drawing.Color.White;
             this.txtDescripcion.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.txtDescripcion.LineThickness = 2;
-            this.txtDescripcion.Location = new System.Drawing.Point(1049, 202);
+            this.txtDescripcion.Location = new System.Drawing.Point(1049, 174);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(5);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(337, 36);
             this.txtDescripcion.TabIndex = 1;
             this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtHerramientas
-            // 
-            this.txtHerramientas.AutoSize = true;
-            this.txtHerramientas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHerramientas.ForeColor = System.Drawing.Color.White;
-            this.txtHerramientas.Location = new System.Drawing.Point(1232, 519);
-            this.txtHerramientas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.txtHerramientas.Name = "txtHerramientas";
-            this.txtHerramientas.Size = new System.Drawing.Size(128, 25);
-            this.txtHerramientas.TabIndex = 4;
-            this.txtHerramientas.Text = "Herramientas";
             // 
             // bunifuThinButton21
             // 
@@ -185,7 +173,7 @@
             this.txtDepartamento.LineIdleColor = System.Drawing.Color.White;
             this.txtDepartamento.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.txtDepartamento.LineThickness = 2;
-            this.txtDepartamento.Location = new System.Drawing.Point(1049, 263);
+            this.txtDepartamento.Location = new System.Drawing.Point(1049, 235);
             this.txtDepartamento.Margin = new System.Windows.Forms.Padding(5);
             this.txtDepartamento.Name = "txtDepartamento";
             this.txtDepartamento.Size = new System.Drawing.Size(337, 36);
@@ -204,7 +192,7 @@
             this.txtPrecio.LineIdleColor = System.Drawing.Color.White;
             this.txtPrecio.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.txtPrecio.LineThickness = 2;
-            this.txtPrecio.Location = new System.Drawing.Point(1049, 321);
+            this.txtPrecio.Location = new System.Drawing.Point(1049, 293);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(337, 36);
@@ -223,7 +211,7 @@
             this.txtProveedor.LineIdleColor = System.Drawing.Color.White;
             this.txtProveedor.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.txtProveedor.LineThickness = 2;
-            this.txtProveedor.Location = new System.Drawing.Point(1049, 382);
+            this.txtProveedor.Location = new System.Drawing.Point(1049, 354);
             this.txtProveedor.Margin = new System.Windows.Forms.Padding(5);
             this.txtProveedor.Name = "txtProveedor";
             this.txtProveedor.Size = new System.Drawing.Size(337, 36);
@@ -242,7 +230,7 @@
             this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.White;
             this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.bunifuMaterialTextbox1.LineThickness = 2;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(1049, 446);
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(1049, 418);
             this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
             this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(337, 36);
@@ -309,6 +297,26 @@
             this.dataGridViewProducto.Size = new System.Drawing.Size(721, 436);
             this.dataGridViewProducto.TabIndex = 17;
             // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCantidad.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtCantidad.ForeColor = System.Drawing.Color.White;
+            this.txtCantidad.HintForeColor = System.Drawing.Color.White;
+            this.txtCantidad.HintText = "Cantidad";
+            this.txtCantidad.isPassword = false;
+            this.txtCantidad.LineFocusedColor = System.Drawing.Color.White;
+            this.txtCantidad.LineIdleColor = System.Drawing.Color.White;
+            this.txtCantidad.LineMouseHoverColor = System.Drawing.Color.DarkRed;
+            this.txtCantidad.LineThickness = 2;
+            this.txtCantidad.Location = new System.Drawing.Point(1049, 488);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(337, 36);
+            this.txtCantidad.TabIndex = 18;
+            this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCantidad.OnValueChanged += new System.EventHandler(this.txtCantidad_OnValueChanged);
+            // 
             // FormInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -316,6 +324,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1404, 737);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.dataGridViewProducto);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuThinButton24);
@@ -327,7 +336,6 @@
             this.Controls.Add(this.bunifuThinButton23);
             this.Controls.Add(this.bunifuThinButton22);
             this.Controls.Add(this.bunifuThinButton21);
-            this.Controls.Add(this.txtHerramientas);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtId);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -344,7 +352,6 @@
 
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtId;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtDescripcion;
-        private Bunifu.Framework.UI.BunifuCustomLabel txtHerramientas;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
@@ -356,5 +363,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton24;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridViewProducto;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCantidad;
     }
 }

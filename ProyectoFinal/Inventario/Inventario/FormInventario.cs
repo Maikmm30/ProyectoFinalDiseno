@@ -16,6 +16,7 @@ namespace Inventario
         public FormInventario()
         {
             InitializeComponent();
+            dataGridViewProducto.DataSource = llenar_grid();
         }
 
      
@@ -38,6 +39,7 @@ namespace Inventario
             txtDepartamento.Enabled = value;
             txtPrecio.Enabled = value;
             txtProveedor.Enabled = value;
+            txtCantidad.Enabled = value;
         }
 
 
@@ -54,7 +56,7 @@ namespace Inventario
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
-            string insertar = "INSERT INTO INVENTARIO (ID_INVENTARIO,DESCRIPCION,MARCA,CATEGORIA,PRECIO,PROVEEDOR)VALUES(@ID_INVENTARIO,@DESCRIPCION,@MARCA,@CATEGORIA,@PRECIO,@PROVEEDOR)";
+            string insertar = "INSERT INTO INVENTARIO (ID_INVENTARIO,DESCRIPCION,MARCA,CATEGORIA,PRECIO,PROVEEDOR, CANTIDAD)VALUES(@ID_INVENTARIO,@DESCRIPCION,@MARCA,@CATEGORIA,@PRECIO,@PROVEEDOR,@CANTIDAD)";
             Conexion.conectar();
             SqlCommand cmd = new SqlCommand(insertar, Conexion.conectar());
             cmd.Parameters.AddWithValue("@ID_INVENTARIO", txtId.Text);
@@ -63,6 +65,7 @@ namespace Inventario
             cmd.Parameters.AddWithValue("@CATEGORIA", txtDepartamento.Text);
             cmd.Parameters.AddWithValue("@PRECIO", txtPrecio.Text);
             cmd.Parameters.AddWithValue("@PROVEEDOR", txtProveedor.Text);
+            cmd.Parameters.AddWithValue("@CANTIDAD", txtCantidad.Text);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Se han insertao con exito");
             dataGridViewProducto.DataSource = llenar_grid();
@@ -85,7 +88,7 @@ namespace Inventario
         {
             Edit(true);
             Conexion.conectar();
-            string actualizar = "UPDATE INVENTARIO SET ID_INVENTARIO = @ID_INVENTARIO, DESCRIPCION = @DESCRIPCION, MARCA =@MARCA, CATEGORIA = @CATEGORIA, PRECIO = @PRECIO,   PROVEEDOR= @PROVEEDOR WHERE ID_INVENTARIO=@ID_INVENTARIO";
+            string actualizar = "UPDATE INVENTARIO SET ID_INVENTARIO = @ID_INVENTARIO, DESCRIPCION = @DESCRIPCION, MARCA =@MARCA, CATEGORIA = @CATEGORIA, PRECIO = @PRECIO,   PROVEEDOR= @PROVEEDOR, CANTIDAD = @CANTIDAD WHERE ID_INVENTARIO = @ID_INVENTARIO";
             SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
             cmd2.Parameters.AddWithValue("@ID_INVENTARIO", txtId.Text);
             cmd2.Parameters.AddWithValue("@DESCRIPCION", txtDescripcion.Text);
@@ -93,9 +96,15 @@ namespace Inventario
             cmd2.Parameters.AddWithValue("@CATEGORIA", txtDepartamento.Text);
             cmd2.Parameters.AddWithValue("@PRECIO", txtPrecio.Text);
             cmd2.Parameters.AddWithValue("@PROVEEDOR", txtProveedor.Text);
+            cmd2.Parameters.AddWithValue("@CANTIDAD", txtCantidad.Text);
             cmd2.ExecuteNonQuery();
             MessageBox.Show("se han actualizado sus datos");
             dataGridViewProducto.DataSource = llenar_grid();
+        }
+
+        private void txtCantidad_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
