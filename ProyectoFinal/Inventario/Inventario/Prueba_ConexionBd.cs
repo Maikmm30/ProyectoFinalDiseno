@@ -13,7 +13,8 @@ namespace Inventario
 {
     public partial class Prueba_ConexionBd : Form
     {
-        
+        private DataSet dt;
+
         public Prueba_ConexionBd()
         {
             InitializeComponent();
@@ -78,20 +79,7 @@ namespace Inventario
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    Edit(true);
-            //    pruebaBd.Prueba.AddPruebaRow(pruebaBd.Prueba.NewPruebaRow());
-            //    pruebaBindingSource.MoveLast();
-            //    idTextBox.Focus();
-            //}
-            //catch (Exception ex)
-            //{
-
-            //    MessageBox.Show("Message: " + ex.Message);
-            //    pruebaBd.Prueba.RejectChanges();
-
-            //}
+          
             Conexion.conectar();
 
             
@@ -133,8 +121,7 @@ namespace Inventario
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Edit(false);
-            //pruebaBindingSource.ResetBindings(false);
+           
             idTextBox.Clear();
             nombreTextBox.Clear();
             apellidosTextBox.Clear();
@@ -151,7 +138,6 @@ namespace Inventario
                 pruebaTableAdapter.Update(pruebaBd.Prueba);
                 pruebaDataGridView.Refresh();
                
-                //idTextBox.Focus();
                 MessageBox.Show("se ha guardado la informaciòn");
             }
             catch (Exception ex)
@@ -190,13 +176,6 @@ namespace Inventario
         {
             try
             {
-                //int cedula = int.Parse(idTextBox.Text);
-                
-              
-
-             
-
-
 
                 Conexion.conectar();
                 string buscar = "SELECT * FROM PRUEBA WHERE ID=@ID";
@@ -217,5 +196,38 @@ namespace Inventario
                 MessageBox.Show("Mensaje " + ex);
             }
         }
+
+        public DataTable mostrarDatos()
+        {
+            Conexion.conectar();
+            SqlCommand cmd4 = new SqlCommand("select * from Prueba", Conexion.conectar());
+            SqlDataAdapter ad = new SqlDataAdapter(cmd4);
+            dt = new DataSet();
+            ad.Fill(dt, "tabla");
+            return dt.Tables["tabla"];
+        }
+
+        public DataTable Buscar(string id)
+        {
+            Conexion.conectar();
+            SqlCommand cmd5 = new SqlCommand(string.Format("select * from Prueba where ID like '%{0}%'",id), Conexion.conectar());
+            SqlDataAdapter ad = new SqlDataAdapter(cmd5);
+            dt = new DataSet();
+            ad.Fill(dt, "Prueba");
+            return dt.Tables["Prueba"];
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text != "")
+            {
+                pruebaDataGridView.DataSource= Buscar(txtBuscar.Text);
+            }
+            else
+            {
+                pruebaDataGridView.DataSource = mostrarDatos();
+            }
+        }
     }
+
 }
