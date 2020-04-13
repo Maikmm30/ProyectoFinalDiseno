@@ -11,7 +11,12 @@ namespace Inventario
             CenterToScreen();
         }
 
-
+        public MenuCliente(string nombre)
+        {
+            InitializeComponent();
+            CenterToScreen();
+            lbnombreUsuario.Text = nombre;
+        }
 
 
 

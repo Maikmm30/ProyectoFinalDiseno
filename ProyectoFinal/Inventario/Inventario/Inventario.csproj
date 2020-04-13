@@ -80,6 +80,12 @@
       <DependentUpon>proyectoFinalç.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="FRM_registrarse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_registrarse.Designer.cs">
+      <DependentUpon>FRM_registrarse.cs</DependentUpon>
+    </Compile>
     <Compile Include="PruebaBd.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioUsuarios.resx">
       <DependentUpon>FormularioUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_registrarse.resx">
+      <DependentUpon>FRM_registrarse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

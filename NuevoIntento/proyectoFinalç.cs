@@ -14,6 +14,14 @@ namespace Inventario
 
         }
 
+
+        public proyectoFinal(string nombre)
+        {
+            InitializeComponent();
+            CenterToScreen();
+            lbmensajeAdmin.Text = "BIENVENIDO" + nombre;
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -171,6 +179,11 @@ namespace Inventario
             this.Hide();
             Login login = new Login();
             login.Show();
+        }
+
+        private void lbmensajeAdmin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

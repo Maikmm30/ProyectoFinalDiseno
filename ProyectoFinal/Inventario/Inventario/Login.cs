@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Inventario
 {
@@ -22,28 +24,98 @@ namespace Inventario
             Environment.Exit(0);
         }
 
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        public void logear(string usuario, string contrasena)
         {
-            if (txtUserName.Text.Equals("admin") && txtPassword.Text.Equals("admin"))
+            try
             {
-                proyectoFinal principal = new proyectoFinal();
-                principal.Show();
-                this.Hide();
+                Conexion.conectar();
+                SqlCommand cmd = new SqlCommand("SELECT Nombre, tipo_usuario FROM USUARIOS WHERE Usuario = @Usuario AND Password = @pass", Conexion.conectar());
+                cmd.Parameters.AddWithValue("Usuario", usuario);
+                cmd.Parameters.AddWithValue("pass", contrasena);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
 
-            }
-            else
-            {
-                if (txtUserName.Text.Equals("user") && txtPassword.Text.Equals("123"))
-                {
-                    MenuCliente cliente = new MenuCliente();
-                    cliente.Show();
+                if (dt.Rows.Count == 1){
                     this.Hide();
+                    //new proyectoFinal(dt.Rows[0][0].ToString()).Show();
+
+                    if (dt.Rows[0][1].ToString() == "Admin"){
+                       // new proyectoFinal(dt.Rows[0][0].ToString()).Show();
+                        proyectoFinal principal = new proyectoFinal();
+                        principal.Show();
+                        this.Hide();
+                    }
+                    else if (dt.Rows[0][1].ToString() == "Usuario")
+                    {
+                        //new MenuCliente(dt.Rows[0][0].ToString()).Show();
+                        MenuCliente cliente = new MenuCliente();
+                        cliente.Show(); 
+                        this.Hide();
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Usuario y/o contraseña incorrecta");
                 }
             }
+            catch (Exception E)
+            {
+
+                MessageBox.Show(E.Message);
+            }
+           
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            //if (true)
+            //{
+                //Conexion.conectar();
+                //SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from log where Username='" + txtUserName.Text + "' and Password ='" + txtPassword.Text + "'",Conexion.conectar() );
+                //DataTable dt = new DataTable();
+                //sda.Fill(dt);
+
+
+
+
+                //if (dt.Rows[0][0].ToString() == "admin" )
+                //{
+
+                //    proyectoFinal principal = new proyectoFinal();
+                //    principal.Show();
+                //    this.Hide();
+                //}
+                //else if (dt.Rows[0][0].ToString() == "user")
+                //{
+
+
+                //    MenuCliente cliente = new MenuCliente();
+                //    cliente.Show();
+                //    this.Hide();
+                //}
+                logear(this.txtUserName.Text, this.txtPassword.Text);
+
+            //}
+
+
+
+
+
+        
+            //else
+            //{
+            //    if (txtUserName.Text.Equals("user") && txtPassword.Text.Equals("123"))
+            //    {
+            //        MenuCliente cliente = new MenuCliente();
+            //        cliente.Show();
+            //        this.Hide();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Usuario y/o contraseña incorrecta");
+            //    }
+            //}
 
 
 
@@ -78,7 +150,8 @@ namespace Inventario
 
         private void bunifuCustomLabel1_Click(object sender, EventArgs e)
         {
-
+            new txt_Nombre().Show();
+            this.Hide();
         }
     }
 }

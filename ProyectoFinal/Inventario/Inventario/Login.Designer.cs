@@ -87,11 +87,11 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(23)))), ((int)(((byte)(17)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(40, 346);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(76, 354);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(205, 19);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(127, 19);
             this.bunifuCustomLabel1.TabIndex = 6;
-            this.bunifuCustomLabel1.Text = "Has Olvidado tu Constraseña?";
+            this.bunifuCustomLabel1.Text = "No tienes cuenta?";
             this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
             // pictureBox2
@@ -152,7 +152,7 @@
             this.txtUserName.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(23)))), ((int)(((byte)(17)))));
             this.txtUserName.LineThickness = 3;
             this.txtUserName.Location = new System.Drawing.Point(13, 138);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(277, 33);
             this.txtUserName.TabIndex = 12;
@@ -169,7 +169,7 @@
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(300, 0);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(817, 0);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(34, 33);
             this.bunifuCustomLabel6.TabIndex = 4;
@@ -180,10 +180,10 @@
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Location = new System.Drawing.Point(647, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(462, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(201, 203);
+            this.pictureBox3.Size = new System.Drawing.Size(217, 108);
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
