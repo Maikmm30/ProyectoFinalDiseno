@@ -56,10 +56,10 @@
             this.txtUsuario.LineIdleColor = System.Drawing.Color.White;
             this.txtUsuario.LineMouseHoverColor = System.Drawing.Color.White;
             this.txtUsuario.LineThickness = 2;
-            this.txtUsuario.Location = new System.Drawing.Point(692, 289);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Location = new System.Drawing.Point(848, 282);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(183, 33);
+            this.txtUsuario.Size = new System.Drawing.Size(193, 33);
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsuario.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged);
@@ -76,10 +76,10 @@
             this.txtContraseña.LineIdleColor = System.Drawing.Color.White;
             this.txtContraseña.LineMouseHoverColor = System.Drawing.Color.White;
             this.txtContraseña.LineThickness = 2;
-            this.txtContraseña.Location = new System.Drawing.Point(692, 339);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Location = new System.Drawing.Point(848, 332);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(183, 33);
+            this.txtContraseña.Size = new System.Drawing.Size(193, 33);
             this.txtContraseña.TabIndex = 1;
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContraseña.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox2_OnValueChanged);
@@ -102,10 +102,10 @@
             this.btnBusca.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnBusca.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnBusca.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBusca.Location = new System.Drawing.Point(638, 422);
-            this.btnBusca.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnBusca.Location = new System.Drawing.Point(794, 415);
+            this.btnBusca.Margin = new System.Windows.Forms.Padding(5);
             this.btnBusca.Name = "btnBusca";
-            this.btnBusca.Size = new System.Drawing.Size(99, 34);
+            this.btnBusca.Size = new System.Drawing.Size(100, 34);
             this.btnBusca.TabIndex = 5;
             this.btnBusca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBusca.Click += new System.EventHandler(this.btn_Guardar_Click);
@@ -128,10 +128,10 @@
             this.btnEdit.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnEdit.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnEdit.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnEdit.Location = new System.Drawing.Point(759, 422);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEdit.Location = new System.Drawing.Point(915, 415);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(5);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(99, 34);
+            this.btnEdit.Size = new System.Drawing.Size(100, 34);
             this.btnEdit.TabIndex = 6;
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEdit.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -154,10 +154,10 @@
             this.btnEliminar.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnEliminar.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnEliminar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnEliminar.Location = new System.Drawing.Point(638, 470);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(794, 463);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(99, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(100, 34);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -167,7 +167,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(328, 85);
+            this.label1.Location = new System.Drawing.Point(399, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 22);
             this.label1.TabIndex = 15;
@@ -177,20 +177,20 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(252, 45);
+            this.panel1.Location = new System.Drawing.Point(323, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(70, 73);
+            this.panel1.Size = new System.Drawing.Size(71, 73);
             this.panel1.TabIndex = 16;
             // 
             // dataGridViewProducto
             // 
             this.dataGridViewProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProducto.Location = new System.Drawing.Point(109, 133);
-            this.dataGridViewProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewProducto.Location = new System.Drawing.Point(274, 115);
+            this.dataGridViewProducto.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewProducto.Name = "dataGridViewProducto";
             this.dataGridViewProducto.RowHeadersWidth = 51;
             this.dataGridViewProducto.RowTemplate.Height = 24;
-            this.dataGridViewProducto.Size = new System.Drawing.Size(564, 266);
+            this.dataGridViewProducto.Size = new System.Drawing.Size(541, 282);
             this.dataGridViewProducto.TabIndex = 17;
             // 
             // btnAgregar
@@ -211,10 +211,10 @@
             this.btnAgregar.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnAgregar.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnAgregar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnAgregar.Location = new System.Drawing.Point(759, 470);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnAgregar.Location = new System.Drawing.Point(915, 463);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(5);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(99, 34);
+            this.btnAgregar.Size = new System.Drawing.Size(100, 34);
             this.btnAgregar.TabIndex = 18;
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -231,10 +231,10 @@
             this.txtNyA.LineIdleColor = System.Drawing.Color.White;
             this.txtNyA.LineMouseHoverColor = System.Drawing.Color.White;
             this.txtNyA.LineThickness = 2;
-            this.txtNyA.Location = new System.Drawing.Point(692, 133);
-            this.txtNyA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNyA.Location = new System.Drawing.Point(848, 126);
+            this.txtNyA.Margin = new System.Windows.Forms.Padding(4);
             this.txtNyA.Name = "txtNyA";
-            this.txtNyA.Size = new System.Drawing.Size(183, 33);
+            this.txtNyA.Size = new System.Drawing.Size(193, 33);
             this.txtNyA.TabIndex = 19;
             this.txtNyA.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -250,10 +250,10 @@
             this.txtCelular.LineIdleColor = System.Drawing.Color.White;
             this.txtCelular.LineMouseHoverColor = System.Drawing.Color.White;
             this.txtCelular.LineThickness = 2;
-            this.txtCelular.Location = new System.Drawing.Point(692, 237);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCelular.Location = new System.Drawing.Point(848, 230);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(4);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(183, 33);
+            this.txtCelular.Size = new System.Drawing.Size(193, 33);
             this.txtCelular.TabIndex = 20;
             this.txtCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -269,10 +269,10 @@
             this.txtCargo.LineIdleColor = System.Drawing.Color.White;
             this.txtCargo.LineMouseHoverColor = System.Drawing.Color.White;
             this.txtCargo.LineThickness = 2;
-            this.txtCargo.Location = new System.Drawing.Point(692, 180);
-            this.txtCargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCargo.Location = new System.Drawing.Point(848, 173);
+            this.txtCargo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(183, 33);
+            this.txtCargo.Size = new System.Drawing.Size(193, 33);
             this.txtCargo.TabIndex = 21;
             this.txtCargo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -281,7 +281,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(900, 550);
+            this.ClientSize = new System.Drawing.Size(1083, 550);
             this.Controls.Add(this.txtCargo);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtNyA);
