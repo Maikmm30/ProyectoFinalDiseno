@@ -23,7 +23,7 @@ namespace Inventario
         {
             Conexion.conectar();
             DataTable dt = new DataTable();
-            string consulta = "SELECT * FROM USUARIO";
+            string consulta = "SELECT * FROM USUARIOS";
             SqlCommand cmd = new SqlCommand(consulta, Conexion.conectar());
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
@@ -36,7 +36,7 @@ namespace Inventario
             txtContraseña.Enabled = value;
             txtNyA.Enabled = value;
             txtCargo.Enabled = value;
-            txtCelular.Enabled = value;
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -72,7 +72,7 @@ namespace Inventario
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Conexion.conectar();
-            string eliminar = "DELETE FROM USUARIO WHERE Nombre_Usuario=@Nombre_Usuario";
+            string eliminar = "DELETE FROM USUARIOS WHERE Usuario=@Nombre_Usuario";
             SqlCommand cmd3 = new SqlCommand(eliminar, Conexion.conectar());
             cmd3.Parameters.AddWithValue("@Nombre_Usuario", txtUsuario.Text);
             cmd3.ExecuteNonQuery();
@@ -84,12 +84,12 @@ namespace Inventario
         {
             Edit(true);
             Conexion.conectar();
-            string actualizar = "UPDATE USUARIO SET Nombre_Usuario = @Nombre_Usuario, Contrasena = @Contrasena,  Nombre = @Nombre, Celular = @Celular, Cargo = @Cargo WHERE Nombre_Usuario = @Nombre_Usuario";
+            string actualizar = "UPDATE USUARIOS SET Nombre_Usuario = @Nombre_Usuario, Password = @Contrasena,  Nombre = @Nombre,  Tipo_usuario = @Cargo WHERE Usuario = @Nombre_Usuario";
             SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
             cmd2.Parameters.AddWithValue("@Nombre_Usuario", txtUsuario.Text);
             cmd2.Parameters.AddWithValue("@Contrasena", txtContraseña.Text);
             cmd2.Parameters.AddWithValue("@Nombre", txtNyA.Text);
-            cmd2.Parameters.AddWithValue("@Celular", txtCelular.Text);
+            
             cmd2.Parameters.AddWithValue("@Cargo", txtCargo.Text);
             cmd2.ExecuteNonQuery();
             MessageBox.Show("se han actualizado sus datos");
@@ -98,16 +98,15 @@ namespace Inventario
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            string insertar = "INSERT INTO USUARIO (Nombre_Usuario,Contrasena,Nombre,Celular,Cargo)VALUES(@Nombre_Usuario,@Contrasena,@Nombre,@Celular,@Cargo)";
+            string insertar = "INSERT INTO USUARIOS (NOMBRE,PASSWORD,USUARIO,TIPO_USUARIO)VALUES(@Nombre,@Contrasena,@Nombre_Usuario,@Cargo)";
             Conexion.conectar();
             SqlCommand cmd = new SqlCommand(insertar, Conexion.conectar());
             cmd.Parameters.AddWithValue("@Nombre_Usuario", txtUsuario.Text);
             cmd.Parameters.AddWithValue("@Contrasena", txtContraseña.Text);
             cmd.Parameters.AddWithValue("@Nombre", txtNyA.Text);
-            cmd.Parameters.AddWithValue("@Celular", txtCelular.Text);
             cmd.Parameters.AddWithValue("@Cargo", txtCargo.Text);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Se han insertao con exito");
+            MessageBox.Show("Se han insertado con exito");
             dataGridViewProducto.DataSource = llenar_grid();
         }
     }

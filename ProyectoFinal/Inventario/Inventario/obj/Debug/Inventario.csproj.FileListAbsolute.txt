@@ -161,7 +161,6 @@ D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\
 D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.pdb
 C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Database1.mdf
 C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Database1_log.ldf
-C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csprojAssemblyReference.cache
 C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Prueba_ConexionBd.resources
 C:\Users\EFS\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Database1.mdf
 C:\Users\EFS\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Database1_log.ldf

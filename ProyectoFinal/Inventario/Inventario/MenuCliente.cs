@@ -27,7 +27,7 @@ namespace Inventario
         {
             Conexion.conectar();
             DataTable dt = new DataTable();
-            string consulta = "select Categoria CATEGORIA, Descripcion DESCRIPCION, Precio PRECIO from Inventario where id_Inventario > 0; ";
+            string consulta = "select Categoria CATEGORIA, Descripcion DESCRIPCION, Precio PRECIO, Cantidad CANTIDAD from Inventario where id_Inventario > 0; ";
             SqlCommand cmd = new SqlCommand(consulta, Conexion.conectar());
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -98,7 +98,27 @@ namespace Inventario
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            //Conexion.conectar();
+            //string actualizar = "UPDATE PRUEBA SET ID=@ID, NOMBRE=@NOMBRE, APELLIDOS=@APELLIDOS, TELEFONO=@TELEFONO WHERE ID=@ID";
+            //SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
+            //cmd2.Parameters.AddWithValue("@ID", idTextBox.Text);
+            //cmd2.Parameters.AddWithValue("@NOMBRE", nombreTextBox.Text);
+            //cmd2.Parameters.AddWithValue("@APELLIDOS", apellidosTextBox.Text);
+            //cmd2.Parameters.AddWithValue("@TELEFONO", telefonoTextBox.Text);
 
+            //cmd2.ExecuteNonQuery();
+
+            //MessageBox.Show("se han actualizado sus datos");
+            //pruebaDataGridView.DataSource = llenar_grid();
+
+            Conexion.conectar();
+            string actualizar = "UPDATE Inventario set Cantidad = Cantidad - @CANTIDAD WHERE Descripcion = @DESCRIPCION";
+            SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
+            cmd2.Parameters.AddWithValue("@CANTIDAD", Convert.ToInt32(txtCantidad.Text));
+            cmd2.Parameters.AddWithValue("@DESCRIPCION", txtBuscar.Text);
+            cmd2.ExecuteNonQuery();
+            clienteData.DataSource = llenar_grid();
+            MessageBox.Show("Se ha registrado su compra" + "Gracias por preferirnos !!!");
         }
 
         private void MenuCliente_Load(object sender, EventArgs e)
@@ -142,16 +162,7 @@ namespace Inventario
             return dt.Tables["Inventario"];
         }
 
-        //public DataTable validarCantidad(String Descripcion, String cantidad)
-        //{
-        //    Conexion.conectar();
-        //    String consultar = "SELECT DESCRIPCION, CANTIDAD, PRECIO FROM Inventario where (CANTIDAD>=@CANTIDAD) AND (DESCRIPCION=@DESCRIPCION)";
-        //    SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
-        //    cmd.Parameters.AddWithValue("@CANTIDAD", cantidad);
-        //    cmd.Parameters.AddWithValue("@DESCRIPCION", Descripcion);
-        //    cmd.ExecuteNonQuery();
-
-        //}
+        
              
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -172,6 +183,21 @@ namespace Inventario
                 cmd.Parameters.AddWithValue("@DESCRIPCION", txtBuscar.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Si hay la cantidad solicitada");
+
+               
+                //cmd.ExecuteNonQuery();
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    txtPagar.Text = (sqlDataReader["Precio"].ToString());
+
+                    
+                }
+
+                int precio = int.Parse(txtPagar.Text);
+                precio = (precio * cantidad);
+                txtPagar.Text = precio.ToString();
             }
             catch (Exception)
             {
@@ -179,32 +205,10 @@ namespace Inventario
                 MessageBox.Show("No se ha encontrado la cantidad buscada ");
             }
         }
-
+        
         private void txtPagar_TextChanged(object sender, EventArgs e)
         {
-            Conexion.conectar();
-            String consultar = "SELECT DESCRIPCION, CANTIDAD, PRECIO FROM Inventario where (CANTIDAD>=@CANTIDAD) AND (DESCRIPCION=@DESCRIPCION)";
-            SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
-            int cantidad = int.Parse(txtCantidad.Text);
-            cmd.Parameters.AddWithValue("@CANTIDAD", cantidad);
-            cmd.Parameters.AddWithValue("@DESCRIPCION", txtBuscar.Text);
-            cmd.ExecuteNonQuery();
-            SqlDataReader sqlDataReader = cmd.ExecuteReader();
-
-            if (sqlDataReader.HasRows)
-            {
-                while (sqlDataReader.Read())
-                {
-                    sqlDataReader.Read();
-
-                    txtPagar.Text = "Precio" + "" + sqlDataReader["PRECIO"] + Environment.NewLine;
-                }
-            }
-
-            //double precio = double.Parse(txtPagar.Text);
-            //double cantidad = double.Parse(txtCantidad.Text);
-            //precio = (precio * cantidad) + (precio * cantidad) * 0.13;
-            //txtPagar.Text = precio.ToString();
+           
         }
 
         private void clienteData_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

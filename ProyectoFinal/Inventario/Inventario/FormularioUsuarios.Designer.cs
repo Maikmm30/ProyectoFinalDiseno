@@ -39,7 +39,6 @@
             this.dataGridViewProducto = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtNyA = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtCelular = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCargo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducto)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +55,7 @@
             this.txtUsuario.LineIdleColor = System.Drawing.Color.White;
             this.txtUsuario.LineMouseHoverColor = System.Drawing.Color.White;
             this.txtUsuario.LineThickness = 2;
-            this.txtUsuario.Location = new System.Drawing.Point(848, 282);
+            this.txtUsuario.Location = new System.Drawing.Point(848, 236);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(193, 33);
@@ -76,7 +75,7 @@
             this.txtContraseña.LineIdleColor = System.Drawing.Color.White;
             this.txtContraseña.LineMouseHoverColor = System.Drawing.Color.White;
             this.txtContraseña.LineThickness = 2;
-            this.txtContraseña.Location = new System.Drawing.Point(848, 332);
+            this.txtContraseña.Location = new System.Drawing.Point(848, 286);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(193, 33);
@@ -185,12 +184,12 @@
             // dataGridViewProducto
             // 
             this.dataGridViewProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProducto.Location = new System.Drawing.Point(274, 115);
+            this.dataGridViewProducto.Location = new System.Drawing.Point(312, 115);
             this.dataGridViewProducto.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewProducto.Name = "dataGridViewProducto";
             this.dataGridViewProducto.RowHeadersWidth = 51;
             this.dataGridViewProducto.RowTemplate.Height = 24;
-            this.dataGridViewProducto.Size = new System.Drawing.Size(541, 282);
+            this.dataGridViewProducto.Size = new System.Drawing.Size(500, 282);
             this.dataGridViewProducto.TabIndex = 17;
             // 
             // btnAgregar
@@ -238,25 +237,6 @@
             this.txtNyA.TabIndex = 19;
             this.txtNyA.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // txtCelular
-            // 
-            this.txtCelular.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCelular.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelular.ForeColor = System.Drawing.Color.White;
-            this.txtCelular.HintForeColor = System.Drawing.Color.White;
-            this.txtCelular.HintText = "Celular";
-            this.txtCelular.isPassword = false;
-            this.txtCelular.LineFocusedColor = System.Drawing.Color.White;
-            this.txtCelular.LineIdleColor = System.Drawing.Color.White;
-            this.txtCelular.LineMouseHoverColor = System.Drawing.Color.White;
-            this.txtCelular.LineThickness = 2;
-            this.txtCelular.Location = new System.Drawing.Point(848, 230);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(193, 33);
-            this.txtCelular.TabIndex = 20;
-            this.txtCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // txtCargo
             // 
             this.txtCargo.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -274,6 +254,7 @@
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(193, 33);
             this.txtCargo.TabIndex = 21;
+            this.txtCargo.Text = "Admin";
             this.txtCargo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // FormularioUsuarios
@@ -283,7 +264,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(1083, 550);
             this.Controls.Add(this.txtCargo);
-            this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtNyA);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dataGridViewProducto);
@@ -315,7 +295,6 @@
         private System.Windows.Forms.DataGridView dataGridViewProducto;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAgregar;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtNyA;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCelular;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCargo;
     }
 }

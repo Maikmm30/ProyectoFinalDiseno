@@ -60,7 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(294, 502);
+            this.panel1.Size = new System.Drawing.Size(294, 449);
             this.panel1.TabIndex = 0;
             // 
             // txtPassword
@@ -180,10 +180,10 @@
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Location = new System.Drawing.Point(462, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(816, 416);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(217, 108);
+            this.pictureBox3.Size = new System.Drawing.Size(35, 33);
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
@@ -193,7 +193,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(850, 502);
+            this.ClientSize = new System.Drawing.Size(854, 449);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.panel1);
