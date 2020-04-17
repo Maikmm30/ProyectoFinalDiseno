@@ -130,5 +130,86 @@ namespace Inventario
         {
             clienteData.DataSource = Buscar("Variado");
         }
+
+
+        public DataTable BuscarTxT(string Descripcion)
+        {
+            Conexion.conectar();
+            SqlCommand cmd5 = new SqlCommand(string.Format("select Categoria CATEGORIA, Descripcion DESCRIPCION, Precio PRECIO from Inventario where Descripcion like '%{0}%'", Descripcion), Conexion.conectar());
+            SqlDataAdapter ad = new SqlDataAdapter(cmd5);
+            dt = new DataSet();
+            ad.Fill(dt, "Inventario");
+            return dt.Tables["Inventario"];
+        }
+
+        //public DataTable validarCantidad(String Descripcion, String cantidad)
+        //{
+        //    Conexion.conectar();
+        //    String consultar = "SELECT DESCRIPCION, CANTIDAD, PRECIO FROM Inventario where (CANTIDAD>=@CANTIDAD) AND (DESCRIPCION=@DESCRIPCION)";
+        //    SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
+        //    cmd.Parameters.AddWithValue("@CANTIDAD", cantidad);
+        //    cmd.Parameters.AddWithValue("@DESCRIPCION", Descripcion);
+        //    cmd.ExecuteNonQuery();
+
+        //}
+             
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            clienteData.DataSource = BuscarTxT(txtBuscar.Text);
+        }
+
+        private void txtCantidad_TextChanged(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                Conexion.conectar();
+                String consultar = "SELECT DESCRIPCION, CANTIDAD, PRECIO FROM Inventario where (CANTIDAD>=@CANTIDAD) AND (DESCRIPCION=@DESCRIPCION)";
+                SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
+                int cantidad = int.Parse(txtCantidad.Text);
+                cmd.Parameters.AddWithValue("@CANTIDAD", cantidad);
+                cmd.Parameters.AddWithValue("@DESCRIPCION", txtBuscar.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Si hay la cantidad solicitada");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("No se ha encontrado la cantidad buscada ");
+            }
+        }
+
+        private void txtPagar_TextChanged(object sender, EventArgs e)
+        {
+            Conexion.conectar();
+            String consultar = "SELECT DESCRIPCION, CANTIDAD, PRECIO FROM Inventario where (CANTIDAD>=@CANTIDAD) AND (DESCRIPCION=@DESCRIPCION)";
+            SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
+            int cantidad = int.Parse(txtCantidad.Text);
+            cmd.Parameters.AddWithValue("@CANTIDAD", cantidad);
+            cmd.Parameters.AddWithValue("@DESCRIPCION", txtBuscar.Text);
+            cmd.ExecuteNonQuery();
+            SqlDataReader sqlDataReader = cmd.ExecuteReader();
+
+            if (sqlDataReader.HasRows)
+            {
+                while (sqlDataReader.Read())
+                {
+                    sqlDataReader.Read();
+
+                    txtPagar.Text = "Precio" + "" + sqlDataReader["PRECIO"] + Environment.NewLine;
+                }
+            }
+
+            //double precio = double.Parse(txtPagar.Text);
+            //double cantidad = double.Parse(txtCantidad.Text);
+            //precio = (precio * cantidad) + (precio * cantidad) * 0.13;
+            //txtPagar.Text = precio.ToString();
+        }
+
+        private void clienteData_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtPagar.Text = clienteData.CurrentRow.Cells[2].Value.ToString();
+        }
     }
 }

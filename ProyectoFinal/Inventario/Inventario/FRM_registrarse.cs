@@ -16,18 +16,19 @@ namespace Inventario
         public txt_Nombre()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void btn_registrarse_Click(object sender, EventArgs e)
         {
-            if (txtPassword.Text == txtPassword2.Text)
+            if (txtPassword3.Text == txtPassword4.Text)
             {
                 Conexion.conectar();
                 string insertar = "INSERT INTO USUARIOS (NOMBRE,USUARIO,PASSWORD,Tipo_Usuario)VALUES(@Nombre,@Usuario,@Password,@Tipo_Uusuario)";
                 SqlCommand cmd = new SqlCommand(insertar, Conexion.conectar());
-                cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                cmd.Parameters.AddWithValue("@Usuario", txtUserName.Text);
-                cmd.Parameters.AddWithValue("@Password", txtPassword.Text);
+                cmd.Parameters.AddWithValue("@Nombre", txtNombre1.Text);
+                cmd.Parameters.AddWithValue("@Usuario", txtUserName1.Text);
+                cmd.Parameters.AddWithValue("@Password", txtPassword3.Text);
                 cmd.Parameters.AddWithValue("@Tipo_Uusuario", TXTipoUsuario.Text);
 
                 cmd.ExecuteNonQuery();
@@ -37,23 +38,23 @@ namespace Inventario
         }
 
 
-        public static int CrearCuentas(string pUsuario, string pContraseña, string Nombre, string Tipo_Usuario)
-        {
+        //public static int CrearCuentas(string pUsuario, string pContraseña, string Nombre, string Tipo_Usuario)
+        //{
 
-            //string insertar = "INSERT INTO PRUEBA (ID,NOMBRE,APELLIDOS,TELEFONO)VALUES(@ID,@NOMBRE,@APELLIDOS,@TELEFONO)";
-            //SqlCommand cmd = new SqlCommand(insertar, Conexion.conectar());
-            //cmd.Parameters.AddWithValue("@ID", idTextBox.Text);
-            //cmd.Parameters.AddWithValue("@NOMBRE", nombreTextBox.Text);
-            //cmd.Parameters.AddWithValue("@APELLIDOS", apellidosTextBox.Text);
-            //cmd.Parameters.AddWithValue("@TELEFONO", telefonoTextBox.Text);
+        //    //string insertar = "INSERT INTO PRUEBA (ID,NOMBRE,APELLIDOS,TELEFONO)VALUES(@ID,@NOMBRE,@APELLIDOS,@TELEFONO)";
+        //    //SqlCommand cmd = new SqlCommand(insertar, Conexion.conectar());
+        //    //cmd.Parameters.AddWithValue("@ID", idTextBox.Text);
+        //    //cmd.Parameters.AddWithValue("@NOMBRE", nombreTextBox.Text);
+        //    //cmd.Parameters.AddWithValue("@APELLIDOS", apellidosTextBox.Text);
+        //    //cmd.Parameters.AddWithValue("@TELEFONO", telefonoTextBox.Text);
 
-            //cmd.ExecuteNonQuery();
+        //    //cmd.ExecuteNonQuery();
 
-            int resultado =0;
+        //    int resultado =0;
             
 
-            return resultado;
-        }
+        //    return resultado;
+        //}
 
         private void txt_Nombre_Load(object sender, EventArgs e)
         {
