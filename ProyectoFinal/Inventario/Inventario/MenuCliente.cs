@@ -98,18 +98,6 @@ namespace Inventario
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //Conexion.conectar();
-            //string actualizar = "UPDATE PRUEBA SET ID=@ID, NOMBRE=@NOMBRE, APELLIDOS=@APELLIDOS, TELEFONO=@TELEFONO WHERE ID=@ID";
-            //SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
-            //cmd2.Parameters.AddWithValue("@ID", idTextBox.Text);
-            //cmd2.Parameters.AddWithValue("@NOMBRE", nombreTextBox.Text);
-            //cmd2.Parameters.AddWithValue("@APELLIDOS", apellidosTextBox.Text);
-            //cmd2.Parameters.AddWithValue("@TELEFONO", telefonoTextBox.Text);
-
-            //cmd2.ExecuteNonQuery();
-
-            //MessageBox.Show("se han actualizado sus datos");
-            //pruebaDataGridView.DataSource = llenar_grid();
 
             Conexion.conectar();
             string actualizar = "UPDATE Inventario set Cantidad = Cantidad - @CANTIDAD WHERE Descripcion = @DESCRIPCION";
@@ -184,8 +172,6 @@ namespace Inventario
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Si hay la cantidad solicitada");
 
-               
-                //cmd.ExecuteNonQuery();
                 SqlDataReader sqlDataReader = cmd.ExecuteReader();
 
                 while (sqlDataReader.Read())

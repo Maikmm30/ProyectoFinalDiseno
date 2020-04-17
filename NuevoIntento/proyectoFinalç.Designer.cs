@@ -57,8 +57,11 @@
             this.Inventaria = new ns1.BunifuFlatButton();
             this.proveedor = new ns1.BunifuFlatButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.lbmensajeAdmin = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.lbFiguras = new System.Windows.Forms.Label();
+            this.lbPelicula = new System.Windows.Forms.Label();
+            this.lbVideojuego = new System.Windows.Forms.Label();
+            this.lbMusica = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -76,6 +79,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbdiferente = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -529,7 +533,6 @@
             // 
             this.panelContenedor.AutoSize = true;
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.panelContenedor.Controls.Add(this.lbmensajeAdmin);
             this.panelContenedor.Controls.Add(this.panel15);
             this.panelContenedor.Controls.Add(this.panel14);
             this.panelContenedor.Controls.Add(this.bunifuCharts1);
@@ -546,22 +549,16 @@
             this.panelContenedor.TabStop = true;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // lbmensajeAdmin
-            // 
-            this.lbmensajeAdmin.AutoSize = true;
-            this.lbmensajeAdmin.BackColor = System.Drawing.Color.White;
-            this.lbmensajeAdmin.Location = new System.Drawing.Point(355, 15);
-            this.lbmensajeAdmin.Name = "lbmensajeAdmin";
-            this.lbmensajeAdmin.Size = new System.Drawing.Size(41, 13);
-            this.lbmensajeAdmin.TabIndex = 20;
-            this.lbmensajeAdmin.Text = "label13";
-            this.lbmensajeAdmin.Click += new System.EventHandler(this.lbmensajeAdmin_Click);
-            // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.Teal;
             this.panel15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel15.BackgroundImage")));
             this.panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel15.Controls.Add(this.lbdiferente);
+            this.panel15.Controls.Add(this.lbFiguras);
+            this.panel15.Controls.Add(this.lbPelicula);
+            this.panel15.Controls.Add(this.lbVideojuego);
+            this.panel15.Controls.Add(this.lbMusica);
             this.panel15.Controls.Add(this.label11);
             this.panel15.Controls.Add(this.label12);
             this.panel15.Location = new System.Drawing.Point(425, 48);
@@ -569,25 +566,74 @@
             this.panel15.Size = new System.Drawing.Size(205, 119);
             this.panel15.TabIndex = 17;
             // 
+            // lbFiguras
+            // 
+            this.lbFiguras.AutoSize = true;
+            this.lbFiguras.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFiguras.ForeColor = System.Drawing.Color.Teal;
+            this.lbFiguras.Location = new System.Drawing.Point(133, 7);
+            this.lbFiguras.Name = "lbFiguras";
+            this.lbFiguras.Size = new System.Drawing.Size(26, 30);
+            this.lbFiguras.TabIndex = 10;
+            this.lbFiguras.Text = "0";
+            this.lbFiguras.Click += new System.EventHandler(this.lbFiguras_Click);
+            // 
+            // lbPelicula
+            // 
+            this.lbPelicula.AutoSize = true;
+            this.lbPelicula.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPelicula.ForeColor = System.Drawing.Color.Teal;
+            this.lbPelicula.Location = new System.Drawing.Point(133, 85);
+            this.lbPelicula.Name = "lbPelicula";
+            this.lbPelicula.Size = new System.Drawing.Size(26, 30);
+            this.lbPelicula.TabIndex = 9;
+            this.lbPelicula.Text = "0";
+            this.lbPelicula.Click += new System.EventHandler(this.lbPelicula_Click);
+            // 
+            // lbVideojuego
+            // 
+            this.lbVideojuego.AutoSize = true;
+            this.lbVideojuego.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVideojuego.ForeColor = System.Drawing.Color.Teal;
+            this.lbVideojuego.Location = new System.Drawing.Point(165, 30);
+            this.lbVideojuego.Name = "lbVideojuego";
+            this.lbVideojuego.Size = new System.Drawing.Size(26, 30);
+            this.lbVideojuego.TabIndex = 7;
+            this.lbVideojuego.Text = "0";
+            this.lbVideojuego.Click += new System.EventHandler(this.lbVideojuego_Click);
+            // 
+            // lbMusica
+            // 
+            this.lbMusica.AutoSize = true;
+            this.lbMusica.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMusica.ForeColor = System.Drawing.Color.Teal;
+            this.lbMusica.Location = new System.Drawing.Point(4, 52);
+            this.lbMusica.Name = "lbMusica";
+            this.lbMusica.Size = new System.Drawing.Size(26, 30);
+            this.lbMusica.TabIndex = 6;
+            this.lbMusica.Text = "0";
+            this.lbMusica.Click += new System.EventHandler(this.lbMusica_Click);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(3, 22);
+            this.label11.Location = new System.Drawing.Point(11, 22);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 30);
+            this.label11.Size = new System.Drawing.Size(24, 25);
             this.label11.TabIndex = 5;
             this.label11.Text = "0";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(5, 89);
+            this.label12.Location = new System.Drawing.Point(14, 93);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 16);
+            this.label12.Size = new System.Drawing.Size(78, 20);
             this.label12.TabIndex = 4;
             this.label12.Text = "EN STOCK";
             // 
@@ -598,7 +644,7 @@
             this.panel14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel14.Controls.Add(this.label9);
             this.panel14.Controls.Add(this.label10);
-            this.panel14.Location = new System.Drawing.Point(208, 48);
+            this.panel14.Location = new System.Drawing.Point(212, 48);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(205, 119);
             this.panel14.TabIndex = 17;
@@ -606,11 +652,11 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(3, 22);
+            this.label9.Location = new System.Drawing.Point(14, 22);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(26, 30);
+            this.label9.Size = new System.Drawing.Size(24, 25);
             this.label9.TabIndex = 5;
             this.label9.Text = "0";
             // 
@@ -618,11 +664,11 @@
             // 
             this.label10.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(5, 89);
+            this.label10.Location = new System.Drawing.Point(3, 93);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(137, 16);
+            this.label10.Size = new System.Drawing.Size(180, 20);
             this.label10.TabIndex = 4;
             this.label10.Text = "PRODUCTOS VENDIDOS";
             // 
@@ -644,7 +690,8 @@
             0,
             0});
             this.bunifuCharts1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuCharts1.Location = new System.Drawing.Point(233, 180);
+            this.bunifuCharts1.ForeColor = System.Drawing.Color.White;
+            this.bunifuCharts1.Location = new System.Drawing.Point(240, 180);
             this.bunifuCharts1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCharts1.Name = "bunifuCharts1";
             this.bunifuCharts1.Size = new System.Drawing.Size(756, 375);
@@ -723,28 +770,29 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 22);
+            this.label5.Location = new System.Drawing.Point(19, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 30);
+            this.label5.Size = new System.Drawing.Size(24, 25);
             this.label5.TabIndex = 5;
             this.label5.Text = "0";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(5, 89);
+            this.label6.Location = new System.Drawing.Point(3, 93);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 16);
+            this.label6.Size = new System.Drawing.Size(115, 20);
             this.label6.TabIndex = 4;
             this.label6.Text = "PROVEEDORES";
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(112)))));
             this.panel7.Controls.Add(this.panel12);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Controls.Add(this.label4);
@@ -755,33 +803,34 @@
             // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(112)))));
             this.panel12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel12.BackgroundImage")));
             this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel12.Location = new System.Drawing.Point(74, 3);
+            this.panel12.Location = new System.Drawing.Point(86, 10);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(117, 95);
+            this.panel12.Size = new System.Drawing.Size(105, 69);
             this.panel12.TabIndex = 17;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 22);
+            this.label3.Location = new System.Drawing.Point(14, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 30);
+            this.label3.Size = new System.Drawing.Size(24, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "0";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(15, 98);
+            this.label4.Location = new System.Drawing.Point(15, 89);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 16);
+            this.label4.Size = new System.Drawing.Size(83, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = "USUARIOS";
             // 
@@ -790,6 +839,18 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
+            // lbdiferente
+            // 
+            this.lbdiferente.AutoSize = true;
+            this.lbdiferente.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbdiferente.ForeColor = System.Drawing.Color.Teal;
+            this.lbdiferente.Location = new System.Drawing.Point(41, 10);
+            this.lbdiferente.Name = "lbdiferente";
+            this.lbdiferente.Size = new System.Drawing.Size(26, 30);
+            this.lbdiferente.TabIndex = 11;
+            this.lbdiferente.Text = "0";
+            this.lbdiferente.Click += new System.EventHandler(this.lbdiferente_Click);
             // 
             // proyectoFinal
             // 
@@ -872,7 +933,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button Bd;
         private Bunifu.Framework.UI.BunifuThinButton2 btnVolver;
-        private System.Windows.Forms.Label lbmensajeAdmin;
+        //private System.Windows.Forms.Label labelVariado;
+        private System.Windows.Forms.Label lbVideojuego;
+        private System.Windows.Forms.Label lbMusica;
+        private System.Windows.Forms.Label lbPelicula;
+        private System.Windows.Forms.Label lbFiguras;
+        private System.Windows.Forms.Label lbdiferente;
     }
 }
 

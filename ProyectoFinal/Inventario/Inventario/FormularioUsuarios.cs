@@ -36,7 +36,7 @@ namespace Inventario
             txtContraseña.Enabled = value;
             txtNyA.Enabled = value;
             txtCargo.Enabled = value;
-            
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -89,7 +89,7 @@ namespace Inventario
             cmd2.Parameters.AddWithValue("@Nombre_Usuario", txtUsuario.Text);
             cmd2.Parameters.AddWithValue("@Contrasena", txtContraseña.Text);
             cmd2.Parameters.AddWithValue("@Nombre", txtNyA.Text);
-            
+
             cmd2.Parameters.AddWithValue("@Cargo", txtCargo.Text);
             cmd2.ExecuteNonQuery();
             MessageBox.Show("se han actualizado sus datos");
@@ -108,6 +108,15 @@ namespace Inventario
             cmd.ExecuteNonQuery();
             MessageBox.Show("Se han insertado con exito");
             dataGridViewProducto.DataSource = llenar_grid();
+        }
+
+        private void dataGridViewProducto_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            txtUsuario.Text = dataGridViewProducto.CurrentRow.Cells[0].Value.ToString();
+            txtContraseña.Text = dataGridViewProducto.CurrentRow.Cells[1].ToString();
+            txtNyA.Text = dataGridViewProducto.CurrentRow.Cells[2].ToString();
+            txtCargo.Text = dataGridViewProducto.CurrentRow.Cells[3].ToString();
+
         }
     }
 }

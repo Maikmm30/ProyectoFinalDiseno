@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Inventario
@@ -11,6 +12,15 @@ namespace Inventario
         {
             InitializeComponent();
             CenterToScreen();
+            
+            labelVariado();
+            labelPelicula();
+            labelMusica();
+            labelFiguras();
+            cantidadUsuario();
+            labelVideojuego();
+            labelStock();
+            cantidadProveedores();
 
         }
 
@@ -18,8 +28,16 @@ namespace Inventario
         public proyectoFinal(string nombre)
         {
             InitializeComponent();
-            CenterToScreen();
-            lbmensajeAdmin.Text = "BIENVENIDO" + nombre;
+            CenterToScreen();  
+            labelVariado();
+            labelPelicula();
+            labelMusica();
+            cantidadUsuario();
+            labelFiguras();
+            labelVideojuego();
+            cantidadProveedores();
+            labelStock();
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -34,7 +52,7 @@ namespace Inventario
 
         private void bunifuCharts1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void salir_Click(object sender, EventArgs e)
@@ -77,9 +95,6 @@ namespace Inventario
                 fh.Show();
                 menuPrincipal.Text = fh.Text;
 
-
-
-
             }
 
 
@@ -118,7 +133,7 @@ namespace Inventario
 
         private void bunifuCharts1_Load_2(object sender, EventArgs e)
         {
-
+            labelStock();
         }
 
         private void timer1_Tick_1(object sender, EventArgs e)
@@ -128,36 +143,36 @@ namespace Inventario
             Bunifu.DataViz.Data data = new Bunifu.DataViz.Data();
             Bunifu.DataViz.DataPoint point1 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.spline);
 
-            point1.addLabely("LUNES", "5000");
-            point1.addLabely("MARTES", "5000");
-            point1.addLabely("MIERCOLES", "4000");
-            point1.addLabely("JUEVES", "8000");
-            point1.addLabely("VIERNES", "4000");
-            point1.addLabely("SABADO", "5000");
-            point1.addLabely("DOMINGO", "5000");
+            point1.addLabely("LUNES", label11.Text);
+            point1.addLabely("MARTES", label11.Text);
+            point1.addLabely("MIERCOLES", label11.Text);
+            point1.addLabely("JUEVES", "80");
+            point1.addLabely("VIERNES", "90");
+            point1.addLabely("SABADO", label11.Text);
+            point1.addLabely("DOMINGO","100");
             data.addData(point1);
 
             Bunifu.DataViz.DataPoint point2 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.spline);
 
-            point2.addLabely("LUNES", "2000");
-            point2.addLabely("MARTES", "2000");
-            point2.addLabely("MIERCOLES", "3000");
-            point2.addLabely("JUEVES", "7000");
-            point2.addLabely("VIERNES", "4000");
-            point2.addLabely("SABADO", "9000");
-            point2.addLabely("DOMINGO", "5000");
+            point2.addLabely("LUNES", "100");
+            point2.addLabely("MARTES", "200");
+            point2.addLabely("MIERCOLES", "300");
+            point2.addLabely("JUEVES", "700");
+            point2.addLabely("VIERNES", "400");
+            point2.addLabely("SABADO", "900");
+            point2.addLabely("DOMINGO", "500");
             data.addData(point2);
             bunifuCharts1.Render(data);
 
             Bunifu.DataViz.DataPoint point3 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.spline);
 
-            point3.addLabely("LUNES", "1000");
-            point3.addLabely("MARTES", "4000");
-            point3.addLabely("MIERCOLES", "6000");
-            point3.addLabely("JUEVES", "3000");
-            point3.addLabely("VIERNES", "4000");
-            point3.addLabely("SABADO", "6000");
-            point3.addLabely("DOMINGO", "5000");
+            point3.addLabely("LUNES", "100");
+            point3.addLabely("MARTES", "400");
+            point3.addLabely("MIERCOLES", "600");
+            point3.addLabely("JUEVES", "300");
+            point3.addLabely("VIERNES", "400");
+            point3.addLabely("SABADO", "600");
+            point3.addLabely("DOMINGO", "500");
             data.addData(point3);
             bunifuCharts1.Render(data);
         }
@@ -184,6 +199,244 @@ namespace Inventario
         private void lbmensajeAdmin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            labelStock();
+
+        }
+
+        public void labelStock()
+        {
+            try
+            {
+               
+                int total = 0;
+                int musica = int.Parse(lbMusica.Text);
+                int figuras = int.Parse(lbFiguras.Text);
+                int pelicula = int.Parse(lbPelicula.Text);
+                int videoJuego = int.Parse(lbVideojuego.Text);
+                int variado = int.Parse(lbdiferente.Text);
+                total = musica + figuras + pelicula + videoJuego + variado;
+                label11.Text = total.ToString();
+
+
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
+
+        public void labelMusica()
+        {
+            try
+            {
+                Conexion.conectar();
+                String consultar = "SELECT CANTIDAD FROM INVENTARIO WHERE CATEGORIA=@CATEGORIA ";
+                SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
+
+
+                cmd.Parameters.AddWithValue("@CATEGORIA", "Musica");
+                cmd.ExecuteNonQuery();
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    lbMusica.Text = (sqlDataReader["Cantidad"].ToString());
+
+
+                }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("No se ha encontrado la cantidad buscada ");
+            }
+        }
+
+        public void labelFiguras()
+        {
+           
+                try
+                {
+                    Conexion.conectar();
+                    String consultar = "SELECT CANTIDAD FROM INVENTARIO WHERE CATEGORIA=@CATEGORIA ";
+                    SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
+
+
+                    cmd.Parameters.AddWithValue("@CATEGORIA", "Figura");
+                    cmd.ExecuteNonQuery();
+                    SqlDataReader sqlDataReader = cmd.ExecuteReader();
+
+                    while (sqlDataReader.Read())
+                    {
+                        lbFiguras.Text = (sqlDataReader["Cantidad"].ToString());
+                    }
+
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("No se ha encontrado la cantidad buscada ");
+                }
+            }
+
+        public void labelPelicula()
+        {
+            try
+            {
+                Conexion.conectar();
+                String consultar = "SELECT CANTIDAD FROM INVENTARIO WHERE CATEGORIA=@CATEGORIA ";
+                SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
+
+
+                cmd.Parameters.AddWithValue("@CATEGORIA", "Pelicula");
+                cmd.ExecuteNonQuery();
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    lbPelicula.Text = (sqlDataReader["Cantidad"].ToString());
+
+
+                }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("No se ha encontrado la cantidad buscada ");
+            }
+        }
+
+        public void labelVideojuego()
+        {
+            try
+            {
+                Conexion.conectar();
+                String consultar = "SELECT CANTIDAD FROM INVENTARIO WHERE CATEGORIA=@CATEGORIA ";
+                SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
+
+
+                cmd.Parameters.AddWithValue("@CATEGORIA", "VIDEOJUEGO");
+                cmd.ExecuteNonQuery();
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    lbVideojuego.Text = (sqlDataReader["Cantidad"].ToString());
+
+
+                }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("No se ha encontrado la cantidad buscada ");
+            }
+        }
+
+        public void labelVariado()
+        {
+            try
+            {
+                Conexion.conectar();
+                String consultar = "SELECT CANTIDAD FROM INVENTARIO WHERE CATEGORIA=@CATEGORIA";
+                SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
+
+
+                cmd.Parameters.AddWithValue("@CATEGORIA", "Variado");
+                cmd.ExecuteNonQuery();
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
+
+                while (sqlDataReader.Read())
+                {
+                    lbdiferente.Text = (sqlDataReader["Cantidad"].ToString());
+
+
+                }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("No se ha encontrado la cantidad buscada ");
+            }
+        }
+
+        public void cantidadUsuario()
+        {
+            Conexion.conectar();
+            string CUENTA = "select COUNT(*) CANTIDAD from USUARIOS;";
+            SqlCommand cmd = new SqlCommand(CUENTA, Conexion.conectar());
+            cmd.ExecuteNonQuery();
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                //label de usuarios
+                label3.Text = (reader["CANTIDAD"].ToString());
+            }
+        }
+
+        public void cantidadProveedores()
+        {
+            Conexion.conectar();
+            string CUENTA = "select COUNT(*) CANTIDAD from PROVEEDORES;";
+            SqlCommand cmd = new SqlCommand(CUENTA, Conexion.conectar());
+            cmd.ExecuteNonQuery();
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                //label de proveedores
+                label5.Text = (reader["CANTIDAD"].ToString());
+            }
+        }
+
+        private void lbFiguras_Click(object sender, EventArgs e)
+        {
+            labelFiguras();
+        }
+
+        private void lbMusica_Click(object sender, EventArgs e)
+        {
+            labelMusica();
+        }
+
+        private void lbPelicula_Click(object sender, EventArgs e)
+        {
+            labelPelicula();
+        }
+
+        private void lbVideojuego_Click(object sender, EventArgs e)
+        {
+            labelVideojuego();
+        }
+
+        private void labelVariado_Click(object sender, EventArgs e)
+        {
+            labelVariado();
+        }
+
+        private void lbdiferente_Click(object sender, EventArgs e)
+        {
+            labelVariado();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            cantidadUsuario();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            cantidadProveedores();
         }
     }
 }
