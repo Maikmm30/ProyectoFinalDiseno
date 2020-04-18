@@ -34,7 +34,7 @@ namespace Inventario
         {
             txtCantidad.Enabled = value;
             txtCosto.Enabled = value;
-            txtFecha.Enabled = value;
+            //txtFecha.Enabled = value;
             txtProducto.Enabled = value;
             txtMarca.Enabled = value;              
         }
@@ -55,7 +55,7 @@ namespace Inventario
             cmd2.Parameters.AddWithValue("@CANTIDAD", txtCantidad.Text);
             cmd2.Parameters.AddWithValue("@PRECIO", txtCosto.Text);
             cmd2.Parameters.AddWithValue("@MARCA", txtMarca.Text);
-            cmd2.Parameters.AddWithValue("@FECHA", txtFecha.Text);
+            //cmd2.Parameters.AddWithValue("@FECHA", txtFecha.Text);
             cmd2.ExecuteNonQuery();
             MessageBox.Show("se han actualizado sus datos");
             dataGridViewProducto.DataSource = llenar_grid();
@@ -70,10 +70,11 @@ namespace Inventario
             cmd.Parameters.AddWithValue("@CANTIDAD", txtCantidad.Text);
             cmd.Parameters.AddWithValue("@PRECIO", txtCosto.Text);
             cmd.Parameters.AddWithValue("@MARCA", txtMarca.Text);
-            cmd.Parameters.AddWithValue("@FECHA", txtFecha.Text);          
+            cmd.Parameters.AddWithValue("@FECHA", dateTimePicker1.Value);          
             cmd.ExecuteNonQuery();
             MessageBox.Show("Se han insertao con exito");
             dataGridViewProducto.DataSource = llenar_grid();
+            modificarInventario();
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
@@ -85,6 +86,23 @@ namespace Inventario
             cmd3.ExecuteNonQuery();
             MessageBox.Show(" Se han eliminado los datos ");
             dataGridViewProducto.DataSource = llenar_grid();
+        }
+
+
+        public void modificarInventario()
+        {
+            Conexion.conectar();
+            string actualizar = "UPDATE Inventario set Cantidad = Cantidad - @CANTIDAD WHERE Id_Inventario = @Id_Inventario";
+            SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
+            cmd2.Parameters.AddWithValue("@CANTIDAD", Convert.ToInt32(txtCantidad.Text));
+            cmd2.Parameters.AddWithValue("@Id_Inventario", Convert.ToInt32(txtProducto.Text));
+            cmd2.ExecuteNonQuery();
+            MessageBox.Show("Se ha registrado su compra" + "Gracias por preferirnos !!!");
+        }
+
+        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
