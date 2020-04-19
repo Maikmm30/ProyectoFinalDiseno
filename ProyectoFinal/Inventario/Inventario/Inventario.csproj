@@ -80,6 +80,12 @@
       <DependentUpon>proyectoFinalç.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="FormularioBienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioBienvenida.Designer.cs">
+      <DependentUpon>FormularioBienvenida.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRM_registrarse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProveedores.resx">
       <DependentUpon>FormProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioBienvenida.resx">
+      <DependentUpon>FormularioBienvenida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioItems.resx">
       <DependentUpon>FormularioItems.cs</DependentUpon>

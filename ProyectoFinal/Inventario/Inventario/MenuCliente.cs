@@ -7,6 +7,7 @@ namespace Inventario
 {
     public partial class MenuCliente : Form
     {
+        DateTime fecha = DateTime.Today;
 
         private DataSet dt;
 
@@ -106,7 +107,25 @@ namespace Inventario
             cmd2.Parameters.AddWithValue("@DESCRIPCION", txtBuscar.Text);
             cmd2.ExecuteNonQuery();
             clienteData.DataSource = llenar_grid();
-            MessageBox.Show("Se ha registrado su compra" + "Gracias por preferirnos !!!");
+            MessageBox.Show("Se ha registrado su compra" + " Gracias por preferirnos !!!");
+
+
+            try
+            {
+                String agregar = "INSERT INTO COMPRA (CANTIDAD_COMPRADA,PRECIO_PAGADO,DESCRIPCION,FECHA) VALUES (@CANTIDAD_COMPRADA,@PRECIO,@DESCRIPCION,@FECHA)";
+                SqlCommand cmd3 = new SqlCommand(agregar, Conexion.conectar());
+                cmd3.Parameters.AddWithValue("@CANTIDAD_COMPRADA", txtCantidad.Text);
+                cmd3.Parameters.AddWithValue("@PRECIO", txtPagar.Text);
+                cmd3.Parameters.AddWithValue("@DESCRIPCION", txtBuscar.Text);
+                cmd3.Parameters.AddWithValue("@FECHA", fecha);
+                cmd3.ExecuteNonQuery();
+                MessageBox.Show("SE HA INSERTADO EN LA TABLA DE COMPRADOS");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(" "+ex);
+            }
         }
 
         private void MenuCliente_Load(object sender, EventArgs e)
@@ -200,6 +219,11 @@ namespace Inventario
         private void clienteData_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             txtPagar.Text = clienteData.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void lbFecha_Click(object sender, EventArgs e)
+        {
+            lbFecha.Text = DateTime.Now.ToShortDateString();
         }
     }
 }

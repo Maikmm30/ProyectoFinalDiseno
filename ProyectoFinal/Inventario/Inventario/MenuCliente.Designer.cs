@@ -43,6 +43,7 @@
             this.btnTodos = new System.Windows.Forms.Button();
             this.txtPagar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lbFecha = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.clienteData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,12 +140,12 @@
             // 
             this.clienteData.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.clienteData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clienteData.Location = new System.Drawing.Point(156, 11);
+            this.clienteData.Location = new System.Drawing.Point(156, 47);
             this.clienteData.Margin = new System.Windows.Forms.Padding(2);
             this.clienteData.Name = "clienteData";
             this.clienteData.RowHeadersWidth = 51;
             this.clienteData.RowTemplate.Height = 24;
-            this.clienteData.Size = new System.Drawing.Size(801, 393);
+            this.clienteData.Size = new System.Drawing.Size(841, 357);
             this.clienteData.TabIndex = 15;
             this.clienteData.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clienteData_CellContentDoubleClick);
             // 
@@ -248,12 +249,25 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "C.Pagar";
             // 
+            // lbFecha
+            // 
+            this.lbFecha.AutoSize = true;
+            this.lbFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbFecha.Location = new System.Drawing.Point(797, 11);
+            this.lbFecha.Name = "lbFecha";
+            this.lbFecha.Size = new System.Drawing.Size(199, 22);
+            this.lbFecha.TabIndex = 24;
+            this.lbFecha.Text = "bunifuCustomLabel1";
+            this.lbFecha.Click += new System.EventHandler(this.lbFecha_Click);
+            // 
             // MenuCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(1008, 460);
+            this.Controls.Add(this.lbFecha);
             this.Controls.Add(this.txtPagar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnTodos);
@@ -296,5 +310,6 @@
         private System.Windows.Forms.Button btnTodos;
         private System.Windows.Forms.TextBox txtPagar;
         private System.Windows.Forms.Label label3;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbFecha;
     }
 }

@@ -58,6 +58,7 @@
             this.proveedor = new ns1.BunifuFlatButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.lbdiferente = new System.Windows.Forms.Label();
             this.lbFiguras = new System.Windows.Forms.Label();
             this.lbPelicula = new System.Windows.Forms.Label();
             this.lbVideojuego = new System.Windows.Forms.Label();
@@ -79,7 +80,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lbdiferente = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -566,6 +566,18 @@
             this.panel15.Size = new System.Drawing.Size(205, 119);
             this.panel15.TabIndex = 17;
             // 
+            // lbdiferente
+            // 
+            this.lbdiferente.AutoSize = true;
+            this.lbdiferente.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbdiferente.ForeColor = System.Drawing.Color.Teal;
+            this.lbdiferente.Location = new System.Drawing.Point(41, 10);
+            this.lbdiferente.Name = "lbdiferente";
+            this.lbdiferente.Size = new System.Drawing.Size(26, 30);
+            this.lbdiferente.TabIndex = 11;
+            this.lbdiferente.Text = "0";
+            this.lbdiferente.Click += new System.EventHandler(this.lbdiferente_Click);
+            // 
             // lbFiguras
             // 
             this.lbFiguras.AutoSize = true;
@@ -659,6 +671,7 @@
             this.label9.Size = new System.Drawing.Size(24, 25);
             this.label9.TabIndex = 5;
             this.label9.Text = "0";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -839,18 +852,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
-            // 
-            // lbdiferente
-            // 
-            this.lbdiferente.AutoSize = true;
-            this.lbdiferente.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbdiferente.ForeColor = System.Drawing.Color.Teal;
-            this.lbdiferente.Location = new System.Drawing.Point(41, 10);
-            this.lbdiferente.Name = "lbdiferente";
-            this.lbdiferente.Size = new System.Drawing.Size(26, 30);
-            this.lbdiferente.TabIndex = 11;
-            this.lbdiferente.Text = "0";
-            this.lbdiferente.Click += new System.EventHandler(this.lbdiferente_Click);
             // 
             // proyectoFinal
             // 

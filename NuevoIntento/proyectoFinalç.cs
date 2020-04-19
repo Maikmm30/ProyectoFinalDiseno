@@ -18,27 +18,16 @@ namespace Inventario
             labelMusica();
             labelFiguras();
             cantidadUsuario();
+            cantidadVendidos();
             labelVideojuego();
+            cantidadProveedores();
             labelStock();
             cantidadProveedores();
 
         }
 
 
-        public proyectoFinal(string nombre)
-        {
-            InitializeComponent();
-            CenterToScreen();  
-            labelVariado();
-            labelPelicula();
-            labelMusica();
-            cantidadUsuario();
-            labelFiguras();
-            labelVideojuego();
-            cantidadProveedores();
-            labelStock();
-
-        }
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -154,7 +143,9 @@ namespace Inventario
 
             Bunifu.DataViz.DataPoint point2 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.spline);
 
-            point2.addLabely("LUNES", "100");
+            
+
+            point2.addLabely("LUNES", "90");
             point2.addLabely("MARTES", "200");
             point2.addLabely("MIERCOLES", "300");
             point2.addLabely("JUEVES", "700");
@@ -203,7 +194,7 @@ namespace Inventario
 
         private void label11_Click(object sender, EventArgs e)
         {
-            labelStock();
+           
 
         }
 
@@ -372,7 +363,7 @@ namespace Inventario
         public void cantidadUsuario()
         {
             Conexion.conectar();
-            string CUENTA = "select COUNT(*) CANTIDAD from USUARIOS;";
+            string CUENTA = "select COUNT(*) CANTIDAD from USUARIOS";
             SqlCommand cmd = new SqlCommand(CUENTA, Conexion.conectar());
             cmd.ExecuteNonQuery();
             SqlDataReader reader = cmd.ExecuteReader();
@@ -384,6 +375,20 @@ namespace Inventario
             }
         }
 
+        public void cantidadVendidos()
+        {
+            Conexion.conectar();
+            string CUENTA = "select COUNT(*) CANTIDAD from COMPRA where id_compra >0";
+            SqlCommand cmd = new SqlCommand(CUENTA, Conexion.conectar());
+            cmd.ExecuteNonQuery();
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                //label de usuarios
+                label9.Text = (reader["CANTIDAD"].ToString());
+            }
+        }
         public void cantidadProveedores()
         {
             Conexion.conectar();
@@ -394,7 +399,7 @@ namespace Inventario
 
             while (reader.Read())
             {
-                //label de proveedores
+                //label de vendidos
                 label5.Text = (reader["CANTIDAD"].ToString());
             }
         }
@@ -431,12 +436,19 @@ namespace Inventario
 
         private void label3_Click(object sender, EventArgs e)
         {
-            cantidadUsuario();
+            
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
-            cantidadProveedores();
+            
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        
     }
 }
