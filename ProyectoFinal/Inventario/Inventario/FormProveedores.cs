@@ -52,45 +52,78 @@ namespace Inventario
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
-            
-            string insertar = "INSERT INTO PROVEEDORES (ID_PROVEEDOR,NOMBRE_CONTACTO,NOMBRE_EMPRESA,DIRECCION,TELEFONO)VALUES(@ID_PROVEEDOR,@NOMBRE_CONTACTO,@NOMBRE_EMPRESA,@DIRECCION,@TELEFONO)";
-            Conexion.conectar();
-            SqlCommand cmd = new SqlCommand(insertar, Conexion.conectar());
-            cmd.Parameters.AddWithValue("@ID_PROVEEDOR", bunifuMaterialTextbox1.Text);
-            cmd.Parameters.AddWithValue("@NOMBRE_CONTACTO", bunifuMaterialTextbox5.Text);
-            cmd.Parameters.AddWithValue("@NOMBRE_EMPRESA", bunifuMaterialTextbox4.Text);
-            cmd.Parameters.AddWithValue("@DIRECCION", bunifuMaterialTextbox3.Text);
-            cmd.Parameters.AddWithValue("@TELEFONO", bunifuMaterialTextbox2.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Se han insertao con exito");
-            dataGridViewProducto.DataSource = llenar_grid();
+            try
+            {
+                string insertar = "INSERT INTO PROVEEDORES (ID_PROVEEDOR,NOMBRE_CONTACTO,NOMBRE_EMPRESA,DIRECCION,TELEFONO)VALUES(@ID_PROVEEDOR,@NOMBRE_CONTACTO,@NOMBRE_EMPRESA,@DIRECCION,@TELEFONO)";
+                Conexion.conectar();
+                SqlCommand cmd = new SqlCommand(insertar, Conexion.conectar());
+                cmd.Parameters.AddWithValue("@ID_PROVEEDOR", bunifuMaterialTextbox1.Text);
+                cmd.Parameters.AddWithValue("@NOMBRE_CONTACTO", bunifuMaterialTextbox5.Text);
+                cmd.Parameters.AddWithValue("@NOMBRE_EMPRESA", bunifuMaterialTextbox4.Text);
+                cmd.Parameters.AddWithValue("@DIRECCION", bunifuMaterialTextbox3.Text);
+                cmd.Parameters.AddWithValue("@TELEFONO", bunifuMaterialTextbox2.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Se han insertao con exito");
+                dataGridViewProducto.DataSource = llenar_grid();
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al insertar" + ex);
+            }
+
+
+          
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            Conexion.conectar();
-            string eliminar = "DELETE FROM PROVEEDORES WHERE ID_PROVEEDOR=@ID_PROVEEDOR";
-            SqlCommand cmd3 = new SqlCommand(eliminar, Conexion.conectar());
-            cmd3.Parameters.AddWithValue("@ID_PROVEEDOR", bunifuMaterialTextbox1.Text);
-            cmd3.ExecuteNonQuery();
-            MessageBox.Show(" Se han eliminado los datos ");
-            dataGridViewProducto.DataSource = llenar_grid();
+            try
+            {
+                Conexion.conectar();
+                string eliminar = "DELETE FROM PROVEEDORES WHERE ID_PROVEEDOR=@ID_PROVEEDOR";
+                SqlCommand cmd3 = new SqlCommand(eliminar, Conexion.conectar());
+                cmd3.Parameters.AddWithValue("@ID_PROVEEDOR", bunifuMaterialTextbox1.Text);
+                cmd3.ExecuteNonQuery();
+                MessageBox.Show(" Se han eliminado los datos ");
+                dataGridViewProducto.DataSource = llenar_grid();
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al eliminar" + ex);
+            }
+
+
+
+    
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Edit(true);
-            Conexion.conectar();
-            string actualizar = "UPDATE PROVEEDORES SET ID_PROVEEDOR = @ID_PROVEEDOR,NOMBRE_CONTACTO = @NOMBRE_CONTACTO,NOMBRE_EMPRESA = @NOMBRE_EMPRESA, DIRECCION = @DIRECCION,TELEFONO = @TELEFONO WHERE ID_PROVEEDOR=@ID_PROVEEDOR";
-            SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
-            cmd2.Parameters.AddWithValue("@ID_PROVEEDOR", bunifuMaterialTextbox1.Text);
-            cmd2.Parameters.AddWithValue("@NOMBRE_CONTACTO", bunifuMaterialTextbox5.Text);
-            cmd2.Parameters.AddWithValue("@NOMBRE_EMPRESA", bunifuMaterialTextbox4.Text);
-            cmd2.Parameters.AddWithValue("@DIRECCION", bunifuMaterialTextbox3.Text);
-            cmd2.Parameters.AddWithValue("@TELEFONO", bunifuMaterialTextbox2.Text);
-            cmd2.ExecuteNonQuery();
-            MessageBox.Show("se han actualizado sus datos");
-            dataGridViewProducto.DataSource = llenar_grid();
+            try
+            {
+                Edit(true);
+                Conexion.conectar();
+                string actualizar = "UPDATE PROVEEDORES SET ID_PROVEEDOR = @ID_PROVEEDOR,NOMBRE_CONTACTO = @NOMBRE_CONTACTO,NOMBRE_EMPRESA = @NOMBRE_EMPRESA, DIRECCION = @DIRECCION,TELEFONO = @TELEFONO WHERE ID_PROVEEDOR=@ID_PROVEEDOR";
+                SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
+                cmd2.Parameters.AddWithValue("@ID_PROVEEDOR", bunifuMaterialTextbox1.Text);
+                cmd2.Parameters.AddWithValue("@NOMBRE_CONTACTO", bunifuMaterialTextbox5.Text);
+                cmd2.Parameters.AddWithValue("@NOMBRE_EMPRESA", bunifuMaterialTextbox4.Text);
+                cmd2.Parameters.AddWithValue("@DIRECCION", bunifuMaterialTextbox3.Text);
+                cmd2.Parameters.AddWithValue("@TELEFONO", bunifuMaterialTextbox2.Text);
+                cmd2.ExecuteNonQuery();
+                MessageBox.Show("se han actualizado sus datos");
+                dataGridViewProducto.DataSource = llenar_grid();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al editar" + ex);
+            }
+           
         }
 
         private void textBuscar_OnValueChanged(object sender, EventArgs e)

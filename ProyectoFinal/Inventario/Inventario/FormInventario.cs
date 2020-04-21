@@ -58,50 +58,78 @@ namespace Inventario
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
-            string insertar = "INSERT INTO INVENTARIO (ID_INVENTARIO,DESCRIPCION,MARCA,CATEGORIA,PRECIO,PROVEEDOR, CANTIDAD)VALUES(@ID_INVENTARIO,@DESCRIPCION,@MARCA,@CATEGORIA,@PRECIO,@PROVEEDOR,@CANTIDAD)";
-            Conexion.conectar();
-            SqlCommand cmd = new SqlCommand(insertar, Conexion.conectar());
-            cmd.Parameters.AddWithValue("@ID_INVENTARIO", txtId.Text);
-            cmd.Parameters.AddWithValue("@DESCRIPCION", txtDescripcion.Text);
-            cmd.Parameters.AddWithValue("@MARCA", bunifuMaterialTextbox1.Text);
-            cmd.Parameters.AddWithValue("@CATEGORIA", txtDepartamento.Text);
-            cmd.Parameters.AddWithValue("@PRECIO", txtPrecio.Text);
-            cmd.Parameters.AddWithValue("@PROVEEDOR", txtProveedor.Text);
-            cmd.Parameters.AddWithValue("@CANTIDAD", txtCantidad.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Se han insertao con exito");
-            dataGridViewProducto.DataSource = llenar_grid();
+            try
+            {
+                string insertar = "INSERT INTO INVENTARIO (ID_INVENTARIO,DESCRIPCION,MARCA,CATEGORIA,PRECIO,PROVEEDOR, CANTIDAD)VALUES(@ID_INVENTARIO,@DESCRIPCION,@MARCA,@CATEGORIA,@PRECIO,@PROVEEDOR,@CANTIDAD)";
+                Conexion.conectar();
+                SqlCommand cmd = new SqlCommand(insertar, Conexion.conectar());
+                cmd.Parameters.AddWithValue("@ID_INVENTARIO", txtId.Text);
+                cmd.Parameters.AddWithValue("@DESCRIPCION", txtDescripcion.Text);
+                cmd.Parameters.AddWithValue("@MARCA", bunifuMaterialTextbox1.Text);
+                cmd.Parameters.AddWithValue("@CATEGORIA", txtDepartamento.Text);
+                cmd.Parameters.AddWithValue("@PRECIO", txtPrecio.Text);
+                cmd.Parameters.AddWithValue("@PROVEEDOR", txtProveedor.Text);
+                cmd.Parameters.AddWithValue("@CANTIDAD", txtCantidad.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Se han insertao con exito");
+                dataGridViewProducto.DataSource = llenar_grid();
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al insertar" + ex);
+            }
+
+
+          
 
 
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            Conexion.conectar();
-            string eliminar = "DELETE FROM INVENTARIO WHERE ID_INVENTARIO=@ID_INVENTARIO";
-            SqlCommand cmd3 = new SqlCommand(eliminar, Conexion.conectar());
-            cmd3.Parameters.AddWithValue("@ID_INVENTARIO", txtId.Text);
-            cmd3.ExecuteNonQuery();
-            MessageBox.Show(" Se han eliminado los datos ");
-            dataGridViewProducto.DataSource = llenar_grid();
+            try
+            {
+                Conexion.conectar();
+                string eliminar = "DELETE FROM INVENTARIO WHERE ID_INVENTARIO=@ID_INVENTARIO";
+                SqlCommand cmd3 = new SqlCommand(eliminar, Conexion.conectar());
+                cmd3.Parameters.AddWithValue("@ID_INVENTARIO", txtId.Text);
+                cmd3.ExecuteNonQuery();
+                MessageBox.Show(" Se han eliminado los datos ");
+                dataGridViewProducto.DataSource = llenar_grid();
+            }
+
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al eliminar" + ex);
+            }         
         }
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
-            Edit(true);
-            Conexion.conectar();
-            string actualizar = "UPDATE INVENTARIO SET ID_INVENTARIO = @ID_INVENTARIO, DESCRIPCION = @DESCRIPCION, MARCA =@MARCA, CATEGORIA = @CATEGORIA, PRECIO = @PRECIO,   PROVEEDOR= @PROVEEDOR, CANTIDAD = @CANTIDAD WHERE ID_INVENTARIO = @ID_INVENTARIO";
-            SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
-            cmd2.Parameters.AddWithValue("@ID_INVENTARIO", txtId.Text);
-            cmd2.Parameters.AddWithValue("@DESCRIPCION", txtDescripcion.Text);
-            cmd2.Parameters.AddWithValue("@MARCA", bunifuMaterialTextbox1.Text);
-            cmd2.Parameters.AddWithValue("@CATEGORIA", txtDepartamento.Text);
-            cmd2.Parameters.AddWithValue("@PRECIO", txtPrecio.Text);
-            cmd2.Parameters.AddWithValue("@PROVEEDOR", txtProveedor.Text);
-            cmd2.Parameters.AddWithValue("@CANTIDAD", txtCantidad.Text);
-            cmd2.ExecuteNonQuery();
-            MessageBox.Show("se han actualizado sus datos");
-            dataGridViewProducto.DataSource = llenar_grid();
+            try
+            {
+                Edit(true);
+                Conexion.conectar();
+                string actualizar = "UPDATE INVENTARIO SET ID_INVENTARIO = @ID_INVENTARIO, DESCRIPCION = @DESCRIPCION, MARCA =@MARCA, CATEGORIA = @CATEGORIA, PRECIO = @PRECIO,   PROVEEDOR= @PROVEEDOR, CANTIDAD = @CANTIDAD WHERE ID_INVENTARIO = @ID_INVENTARIO";
+                SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
+                cmd2.Parameters.AddWithValue("@ID_INVENTARIO", txtId.Text);
+                cmd2.Parameters.AddWithValue("@DESCRIPCION", txtDescripcion.Text);
+                cmd2.Parameters.AddWithValue("@MARCA", bunifuMaterialTextbox1.Text);
+                cmd2.Parameters.AddWithValue("@CATEGORIA", txtDepartamento.Text);
+                cmd2.Parameters.AddWithValue("@PRECIO", txtPrecio.Text);
+                cmd2.Parameters.AddWithValue("@PROVEEDOR", txtProveedor.Text);
+                cmd2.Parameters.AddWithValue("@CANTIDAD", txtCantidad.Text);
+                cmd2.ExecuteNonQuery();
+                MessageBox.Show("se han actualizado sus datos");
+                dataGridViewProducto.DataSource = llenar_grid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al editar" + ex);
+            }          
         }
 
         private void txtCantidad_OnValueChanged(object sender, EventArgs e)

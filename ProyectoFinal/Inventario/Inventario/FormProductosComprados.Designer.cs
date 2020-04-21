@@ -32,8 +32,6 @@
             this.txtFech = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtProducto = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCantidad = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtCosto = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -46,6 +44,7 @@
             this.dataGridViewProducto = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtIDCompra = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +53,7 @@
             this.txtFech.AutoSize = true;
             this.txtFech.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFech.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(57)))));
-            this.txtFech.Location = new System.Drawing.Point(319, 185);
+            this.txtFech.Location = new System.Drawing.Point(319, 175);
             this.txtFech.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtFech.Name = "txtFech";
             this.txtFech.Size = new System.Drawing.Size(68, 22);
@@ -66,7 +65,7 @@
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(57)))));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(320, 335);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(319, 322);
             this.bunifuCustomLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(66, 22);
@@ -78,43 +77,12 @@
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(57)))));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(319, 283);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(318, 249);
             this.bunifuCustomLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(99, 22);
             this.bunifuCustomLabel4.TabIndex = 4;
             this.bunifuCustomLabel4.Text = "Cantidad";
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(57)))));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(319, 238);
-            this.bunifuCustomLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(119, 22);
-            this.bunifuCustomLabel5.TabIndex = 5;
-            this.bunifuCustomLabel5.Text = "ID Producto";
-            // 
-            // txtProducto
-            // 
-            this.txtProducto.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtProducto.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtProducto.ForeColor = System.Drawing.Color.White;
-            this.txtProducto.HintForeColor = System.Drawing.Color.White;
-            this.txtProducto.HintText = "";
-            this.txtProducto.isPassword = false;
-            this.txtProducto.LineFocusedColor = System.Drawing.Color.White;
-            this.txtProducto.LineIdleColor = System.Drawing.Color.White;
-            this.txtProducto.LineMouseHoverColor = System.Drawing.Color.DarkRed;
-            this.txtProducto.LineThickness = 1;
-            this.txtProducto.Location = new System.Drawing.Point(487, 229);
-            this.txtProducto.Margin = new System.Windows.Forms.Padding(5);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(378, 34);
-            this.txtProducto.TabIndex = 9;
-            this.txtProducto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtCantidad
             // 
@@ -128,7 +96,7 @@
             this.txtCantidad.LineIdleColor = System.Drawing.Color.White;
             this.txtCantidad.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.txtCantidad.LineThickness = 1;
-            this.txtCantidad.Location = new System.Drawing.Point(487, 288);
+            this.txtCantidad.Location = new System.Drawing.Point(523, 237);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(5);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(378, 34);
@@ -147,7 +115,7 @@
             this.txtCosto.LineIdleColor = System.Drawing.Color.White;
             this.txtCosto.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.txtCosto.LineThickness = 1;
-            this.txtCosto.Location = new System.Drawing.Point(487, 341);
+            this.txtCosto.Location = new System.Drawing.Point(523, 310);
             this.txtCosto.Margin = new System.Windows.Forms.Padding(5);
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(378, 34);
@@ -172,7 +140,7 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(1155, 298);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(966, 407);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(169, 42);
@@ -198,7 +166,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(972, 366);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(966, 299);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(169, 42);
@@ -224,7 +192,7 @@
             this.btnEditar.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnEditar.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnEditar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnEditar.Location = new System.Drawing.Point(972, 298);
+            this.btnEditar.Location = new System.Drawing.Point(966, 353);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(169, 42);
@@ -244,7 +212,7 @@
             this.txtMarca.LineIdleColor = System.Drawing.Color.White;
             this.txtMarca.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.txtMarca.LineThickness = 1;
-            this.txtMarca.Location = new System.Drawing.Point(487, 395);
+            this.txtMarca.Location = new System.Drawing.Point(523, 393);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(5);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(378, 34);
@@ -256,12 +224,12 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(57)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(319, 395);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(318, 393);
             this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(71, 22);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(116, 22);
             this.bunifuCustomLabel2.TabIndex = 19;
-            this.bunifuCustomLabel2.Text = "Marca";
+            this.bunifuCustomLabel2.Text = "Descripción";
             // 
             // label1
             // 
@@ -298,7 +266,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(486, 185);
+            this.dateTimePicker1.Location = new System.Drawing.Point(523, 175);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(287, 22);
             this.dateTimePicker1.TabIndex = 25;
@@ -315,7 +283,7 @@
             this.textBuscar.LineIdleColor = System.Drawing.Color.White;
             this.textBuscar.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.textBuscar.LineThickness = 2;
-            this.textBuscar.Location = new System.Drawing.Point(972, 224);
+            this.textBuscar.Location = new System.Drawing.Point(966, 161);
             this.textBuscar.Margin = new System.Windows.Forms.Padding(5);
             this.textBuscar.Name = "textBuscar";
             this.textBuscar.Size = new System.Drawing.Size(337, 36);
@@ -323,12 +291,32 @@
             this.textBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBuscar.OnValueChanged += new System.EventHandler(this.textBuscar_OnValueChanged);
             // 
+            // txtIDCompra
+            // 
+            this.txtIDCompra.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIDCompra.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtIDCompra.ForeColor = System.Drawing.Color.White;
+            this.txtIDCompra.HintForeColor = System.Drawing.Color.White;
+            this.txtIDCompra.HintText = "ID";
+            this.txtIDCompra.isPassword = false;
+            this.txtIDCompra.LineFocusedColor = System.Drawing.Color.White;
+            this.txtIDCompra.LineIdleColor = System.Drawing.Color.White;
+            this.txtIDCompra.LineMouseHoverColor = System.Drawing.Color.DarkRed;
+            this.txtIDCompra.LineThickness = 2;
+            this.txtIDCompra.Location = new System.Drawing.Point(966, 235);
+            this.txtIDCompra.Margin = new System.Windows.Forms.Padding(5);
+            this.txtIDCompra.Name = "txtIDCompra";
+            this.txtIDCompra.Size = new System.Drawing.Size(169, 36);
+            this.txtIDCompra.TabIndex = 27;
+            this.txtIDCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // FormProductosComprados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(1404, 737);
+            this.Controls.Add(this.txtIDCompra);
             this.Controls.Add(this.textBuscar);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.dataGridViewProducto);
@@ -341,8 +329,6 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtCosto);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.txtProducto);
-            this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.txtFech);
@@ -361,8 +347,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel txtFech;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtProducto;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCantidad;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCosto;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
@@ -375,5 +359,6 @@
         private System.Windows.Forms.DataGridView dataGridViewProducto;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBuscar;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtIDCompra;
     }
 }
