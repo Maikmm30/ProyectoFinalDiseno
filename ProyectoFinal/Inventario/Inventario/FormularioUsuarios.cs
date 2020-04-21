@@ -11,8 +11,12 @@ using System.Data.SqlClient;
 
 namespace Inventario
 {
+
     public partial class FormularioUsuarios : Form
     {
+
+        private DataSet dt;
+
         public FormularioUsuarios()
         {
             InitializeComponent();
@@ -20,14 +24,14 @@ namespace Inventario
         }
 
         public DataTable llenar_grid()
-        {
-            Conexion.conectar();
-            DataTable dt = new DataTable();
-            string consulta = "SELECT * FROM USUARIOS";
-            SqlCommand cmd = new SqlCommand(consulta, Conexion.conectar());
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            return dt;
+        {        
+                Conexion.conectar();
+                DataTable dt = new DataTable();
+                string consulta = "SELECT * FROM USUARIOS";
+                SqlCommand cmd = new SqlCommand(consulta, Conexion.conectar());
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                return dt;       
         }
 
         private void Edit(bool value)
@@ -70,44 +74,73 @@ namespace Inventario
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            Conexion.conectar();
-            string eliminar = "DELETE FROM USUARIOS WHERE Usuario=@Nombre_Usuario";
-            SqlCommand cmd3 = new SqlCommand(eliminar, Conexion.conectar());
-            cmd3.Parameters.AddWithValue("@Nombre_Usuario", txtUsuario.Text);
-            cmd3.ExecuteNonQuery();
-            MessageBox.Show(" Se han eliminado los datos ");
-            dataGridViewProducto.DataSource = llenar_grid();
+        {                   
+            try
+            {
+                Conexion.conectar();
+                string eliminar = "DELETE FROM USUARIOS WHERE Usuario=@Usuario";
+                SqlCommand cmd3 = new SqlCommand(eliminar, Conexion.conectar());
+                cmd3.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
+                cmd3.ExecuteNonQuery();
+                MessageBox.Show(" Se han eliminado los datos ");
+                dataGridViewProducto.DataSource = llenar_grid();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al eliminar" + ex);
+            }
+
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+    private void btnBuscar_Click(object sender, EventArgs e)
         {
-            Edit(true);
-            Conexion.conectar();
-            string actualizar = "UPDATE USUARIOS SET Nombre_Usuario = @Nombre_Usuario, Password = @Contrasena,  Nombre = @Nombre,  Tipo_usuario = @Cargo WHERE Usuario = @Nombre_Usuario";
-            SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
-            cmd2.Parameters.AddWithValue("@Nombre_Usuario", txtUsuario.Text);
-            cmd2.Parameters.AddWithValue("@Contrasena", txtContraseña.Text);
-            cmd2.Parameters.AddWithValue("@Nombre", txtNyA.Text);
+            try
+            {
+                Edit(true);
+                Conexion.conectar();
+                string actualizar = "UPDATE USUARIOS SET Nombre = @Nombre,Usuario = @Usuario,  Password = @Password, Tipo_usuario = @Tipo_usuario WHERE Usuario = @Usuario";
+                SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
+                cmd2.Parameters.AddWithValue("@USUARIO", txtUsuario.Text);
+                cmd2.Parameters.AddWithValue("@PASSWORD", txtContraseña.Text);
+                cmd2.Parameters.AddWithValue("@NOMBRE", txtNyA.Text);
+                cmd2.Parameters.AddWithValue("@TIPO_USUARIO", txtCargo.Text);
+                cmd2.ExecuteNonQuery();
+                MessageBox.Show("se han actualizado sus datos");
+                dataGridViewProducto.DataSource = llenar_grid();
+            }
+            catch (Exception ex)
+            {
 
-            cmd2.Parameters.AddWithValue("@Cargo", txtCargo.Text);
-            cmd2.ExecuteNonQuery();
-            MessageBox.Show("se han actualizado sus datos");
-            dataGridViewProducto.DataSource = llenar_grid();
+                MessageBox.Show("Error al buscar" + ex);
+            }
+     
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            string insertar = "INSERT INTO USUARIOS (NOMBRE,PASSWORD,USUARIO,TIPO_USUARIO)VALUES(@Nombre,@Contrasena,@Nombre_Usuario,@Cargo)";
-            Conexion.conectar();
-            SqlCommand cmd = new SqlCommand(insertar, Conexion.conectar());
-            cmd.Parameters.AddWithValue("@Nombre_Usuario", txtUsuario.Text);
-            cmd.Parameters.AddWithValue("@Contrasena", txtContraseña.Text);
-            cmd.Parameters.AddWithValue("@Nombre", txtNyA.Text);
-            cmd.Parameters.AddWithValue("@Cargo", txtCargo.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Se han insertado con exito");
-            dataGridViewProducto.DataSource = llenar_grid();
+            try
+            {
+                string insertar = "INSERT INTO USUARIOS (NOMBRE,USUARIO,PASSWORD,TIPO_USUARIO)VALUES(@NOMBRE,@USUARIO,@PASSWORD,@TIPO_USUARIO)";
+                Conexion.conectar();
+                SqlCommand cmd = new SqlCommand(insertar, Conexion.conectar());
+                cmd.Parameters.AddWithValue("@USUARIO", txtUsuario.Text);
+                cmd.Parameters.AddWithValue("@PASSWORD", txtContraseña.Text);
+                cmd.Parameters.AddWithValue("@NOMBRE", txtNyA.Text);
+                cmd.Parameters.AddWithValue("@TIPO_USUARIO", txtCargo.Text);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Se han insertado con exito");
+                dataGridViewProducto.DataSource = llenar_grid();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al agregar" + ex);
+            }
+
+
+           
         }
 
         private void dataGridViewProducto_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -118,5 +151,65 @@ namespace Inventario
             txtCargo.Text = dataGridViewProducto.CurrentRow.Cells[3].ToString();
 
         }
+
+        private void textBuscar_OnValueChanged(object sender, EventArgs e)
+        {
+            if (textBuscar.Text != "")
+            {
+                dataGridViewProducto.DataSource = Buscar(textBuscar.Text);
+            }
+            else
+            {
+                dataGridViewProducto.DataSource = mostrarDatos();
+            }
+        }
+
+        public void BuscarElemento()
+        {
+            try
+            {
+                Conexion.conectar();
+                string buscar = "SELECT * FROM USUARIOS WHERE Nombre=@Nombre";
+                SqlCommand cmd4 = new SqlCommand(buscar, Conexion.conectar());
+                cmd4.CommandType = CommandType.Text;
+                cmd4.CommandText = buscar;
+                cmd4.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd4);
+                da.Fill(dt);
+                dataGridViewProducto.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Mensaje " + ex);
+            }
+        }
+
+        public DataTable mostrarDatos()
+        {
+            Conexion.conectar();
+            SqlCommand cmd4 = new SqlCommand("select * from USUARIOS", Conexion.conectar());
+            SqlDataAdapter ad = new SqlDataAdapter(cmd4);
+            dt = new DataSet();
+            ad.Fill(dt, "tabla");
+            return dt.Tables["tabla"];
+        }
+
+        public DataTable Buscar(string Nombre)
+        {
+            Conexion.conectar();
+            SqlCommand cmd5 = new SqlCommand(string.Format("select * from USUARIOS where Nombre like '%{0}%'", Nombre), Conexion.conectar());
+            SqlDataAdapter ad = new SqlDataAdapter(cmd5);
+            dt = new DataSet();
+            ad.Fill(dt, "USUARIOS");
+            return dt.Tables["USUARIOS"];
+        }
+
+        private void txtCargo_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }
+

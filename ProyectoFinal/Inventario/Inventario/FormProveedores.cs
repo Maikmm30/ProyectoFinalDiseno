@@ -12,6 +12,8 @@ namespace Inventario
 {
     public partial class FormProveedores : Form
     {
+        private DataSet dt;
+
         public FormProveedores()
         {
             InitializeComponent();
@@ -50,6 +52,7 @@ namespace Inventario
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
+            
             string insertar = "INSERT INTO PROVEEDORES (ID_PROVEEDOR,NOMBRE_CONTACTO,NOMBRE_EMPRESA,DIRECCION,TELEFONO)VALUES(@ID_PROVEEDOR,@NOMBRE_CONTACTO,@NOMBRE_EMPRESA,@DIRECCION,@TELEFONO)";
             Conexion.conectar();
             SqlCommand cmd = new SqlCommand(insertar, Conexion.conectar());
@@ -88,6 +91,58 @@ namespace Inventario
             cmd2.ExecuteNonQuery();
             MessageBox.Show("se han actualizado sus datos");
             dataGridViewProducto.DataSource = llenar_grid();
+        }
+
+        private void textBuscar_OnValueChanged(object sender, EventArgs e)
+        {
+            if (textBuscar.Text != "")
+            {
+                dataGridViewProducto.DataSource = Buscar(textBuscar.Text);
+            }
+            else
+            {
+                dataGridViewProducto.DataSource = mostrarDatos();
+            }
+        }
+        public void BuscarElemento()
+        {
+            try
+            {
+                Conexion.conectar();
+                string buscar = "SELECT * FROM PROVEEDORES WHERE ID_PROVEEDOR=@ID_PROVEEDOR";
+                SqlCommand cmd4 = new SqlCommand(buscar, Conexion.conectar());
+                cmd4.CommandType = CommandType.Text;
+                cmd4.CommandText = buscar;
+                cmd4.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd4);
+                da.Fill(dt);
+                dataGridViewProducto.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Mensaje " + ex);
+            }
+        }
+
+        public DataTable mostrarDatos()
+        {
+            Conexion.conectar();
+            SqlCommand cmd4 = new SqlCommand("select * from PROVEEDORES", Conexion.conectar());
+            SqlDataAdapter ad = new SqlDataAdapter(cmd4);
+            dt = new DataSet();
+            ad.Fill(dt, "tabla");
+            return dt.Tables["tabla"];
+        }
+
+        public DataTable Buscar(string ID_PROVEEDOR)
+        {
+            Conexion.conectar();
+            SqlCommand cmd5 = new SqlCommand(string.Format("select * from PROVEEDORES where ID_PROVEEDOR like '%{0}%'", ID_PROVEEDOR), Conexion.conectar());
+            SqlDataAdapter ad = new SqlDataAdapter(cmd5);
+            dt = new DataSet();
+            ad.Fill(dt, "PROVEEDORES");
+            return dt.Tables["PROVEEDORES"];
         }
     }
 }

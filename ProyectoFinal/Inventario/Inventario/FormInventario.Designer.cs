@@ -33,7 +33,6 @@
             this.txtDescripcion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtDepartamento = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPrecio = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtProveedor = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -43,6 +42,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewProducto = new System.Windows.Forms.DataGridView();
             this.txtCantidad = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.textBuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +102,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(1043, 618);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(1224, 618);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(149, 41);
@@ -128,38 +128,13 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(1223, 618);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(1224, 565);
             this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
             this.bunifuThinButton22.Size = new System.Drawing.Size(149, 41);
             this.bunifuThinButton22.TabIndex = 7;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
-            // 
-            // bunifuThinButton23
-            // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 20;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Buscar";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.IdleBorderThickness = 1;
-            this.bunifuThinButton23.IdleCornerRadius = 20;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(1223, 565);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(149, 41);
-            this.bunifuThinButton23.TabIndex = 8;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtDepartamento
             // 
@@ -317,6 +292,26 @@
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCantidad.OnValueChanged += new System.EventHandler(this.txtCantidad_OnValueChanged);
             // 
+            // textBuscar
+            // 
+            this.textBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.textBuscar.ForeColor = System.Drawing.Color.White;
+            this.textBuscar.HintForeColor = System.Drawing.Color.White;
+            this.textBuscar.HintText = "Buscar";
+            this.textBuscar.isPassword = false;
+            this.textBuscar.LineFocusedColor = System.Drawing.Color.White;
+            this.textBuscar.LineIdleColor = System.Drawing.Color.White;
+            this.textBuscar.LineMouseHoverColor = System.Drawing.Color.DarkRed;
+            this.textBuscar.LineThickness = 2;
+            this.textBuscar.Location = new System.Drawing.Point(285, 623);
+            this.textBuscar.Margin = new System.Windows.Forms.Padding(5);
+            this.textBuscar.Name = "textBuscar";
+            this.textBuscar.Size = new System.Drawing.Size(337, 36);
+            this.textBuscar.TabIndex = 19;
+            this.textBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBuscar.OnValueChanged += new System.EventHandler(this.textBuscar_OnValueChanged);
+            // 
             // FormInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -324,6 +319,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1404, 737);
+            this.Controls.Add(this.textBuscar);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.dataGridViewProducto);
             this.Controls.Add(this.panel1);
@@ -333,7 +329,6 @@
             this.Controls.Add(this.txtProveedor);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtDepartamento);
-            this.Controls.Add(this.bunifuThinButton23);
             this.Controls.Add(this.bunifuThinButton22);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.txtDescripcion);
@@ -354,7 +349,6 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtDescripcion;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtDepartamento;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrecio;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtProveedor;
@@ -364,5 +358,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridViewProducto;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCantidad;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox textBuscar;
     }
 }

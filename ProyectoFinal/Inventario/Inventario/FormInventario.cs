@@ -13,6 +13,8 @@ namespace Inventario
 {
     public partial class FormInventario : Form
     {
+
+        private DataSet dt;
         public FormInventario()
         {
             InitializeComponent();
@@ -106,5 +108,64 @@ namespace Inventario
         {
 
         }
+
+        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBuscar_OnValueChanged(object sender, EventArgs e)
+        {
+            if (textBuscar.Text != "")
+            {
+                dataGridViewProducto.DataSource = Buscar(textBuscar.Text);
+            }
+            else
+            {
+                dataGridViewProducto.DataSource = mostrarDatos();
+            }
+        }
+
+        public void BuscarElemento()
+        {
+            try
+            {
+                Conexion.conectar();
+                string buscar = "SELECT * FROM INVENTARIO WHERE ID_INVENTARIO=@ID_INVENTARIO";
+                SqlCommand cmd4 = new SqlCommand(buscar, Conexion.conectar());
+                cmd4.CommandType = CommandType.Text;
+                cmd4.CommandText = buscar;
+                cmd4.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd4);
+                da.Fill(dt);
+                dataGridViewProducto.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Mensaje " + ex);
+            }
+        }
+
+        public DataTable mostrarDatos()
+        {
+            Conexion.conectar();
+            SqlCommand cmd4 = new SqlCommand("select * from INVENTARIO", Conexion.conectar());
+            SqlDataAdapter ad = new SqlDataAdapter(cmd4);
+            dt = new DataSet();
+            ad.Fill(dt, "tabla");
+            return dt.Tables["tabla"];
+        }
+
+        public DataTable Buscar(string ID_INVENTARIO)
+        {
+            Conexion.conectar();
+            SqlCommand cmd5 = new SqlCommand(string.Format("select * from INVENTARIO where ID_INVENTARIO like '%{0}%'", ID_INVENTARIO), Conexion.conectar());
+            SqlDataAdapter ad = new SqlDataAdapter(cmd5);
+            dt = new DataSet();
+            ad.Fill(dt, "INVENTARIO");
+            return dt.Tables["INVENTARIO"];
+        }
+
     }
 }
