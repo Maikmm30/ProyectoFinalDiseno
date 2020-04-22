@@ -157,7 +157,7 @@ namespace Inventario
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("IExplore.exe", "D:/Users/Michael/Documents/Visual Studio 2019/ProyectoFinalDiseno/ProyectoFinal/Inventario/Inventario/PaginaWeb/indice.html");
+            System.Diagnostics.Process.Start("D:/Users/Michael/Documents/Visual Studio 2019/ProyectoFinalDiseno/ProyectoFinal/Inventario/Inventario/PaginaWeb/indice.html");
         }
     }
 }
