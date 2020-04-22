@@ -181,3 +181,5 @@ C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFina
 C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.txt_Nombre.resources
 C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Prueba_ConexionBd.resources
 C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.CoreCompileInputs.cache
+D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormularioBienvenida.resources
+D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.txt_Nombre.resources

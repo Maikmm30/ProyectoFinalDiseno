@@ -40,6 +40,7 @@
             this.txtUserName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCustomLabel6 = new ns1.BunifuCustomLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,6 +49,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.bunifuCustomLabel3);
             this.panel1.Controls.Add(this.bunifuCustomLabel1);
@@ -87,9 +89,9 @@
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(23)))), ((int)(((byte)(17)))));
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(76, 354);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(127, 19);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(134, 19);
             this.bunifuCustomLabel1.TabIndex = 6;
-            this.bunifuCustomLabel1.Text = "No tienes cuenta?";
+            this.bunifuCustomLabel1.Text = "¿No tienes cuenta?";
             this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
             // pictureBox2
@@ -174,6 +176,16 @@
             this.bunifuCustomLabel6.Text = "X";
             this.bunifuCustomLabel6.Click += new System.EventHandler(this.bunifuCustomLabel6_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 431);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Ayuda";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +195,7 @@
             this.ClientSize = new System.Drawing.Size(820, 466);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
@@ -211,6 +224,7 @@
         private ns1.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtUserName;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button button1;
         //private BunifuCustomTextbox bunifuCustomTextbox1;
         //private BunifuCustomTextbox password;
         //private BunifuCustomTextbox userNmae;
