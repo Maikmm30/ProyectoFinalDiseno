@@ -34,6 +34,8 @@ namespace Inventario
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Se ha creado su usuario");
+                this.Hide();
+                new Login().Show();
             }
         }
 

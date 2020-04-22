@@ -175,3 +175,9 @@ C:\Users\EFS\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inven
 C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csprojAssemblyReference.cache
 C:\Users\William\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormularioBienvenida.resources
 C:\Users\EFS\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormularioBienvenida.resources
+C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Database1.mdf
+C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\bin\Debug\Database1_log.ldf
+C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormularioBienvenida.resources
+C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.txt_Nombre.resources
+C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Prueba_ConexionBd.resources
+C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.CoreCompileInputs.cache
