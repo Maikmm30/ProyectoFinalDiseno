@@ -109,7 +109,7 @@ namespace Inventario
             cmd2.Parameters.AddWithValue("@DESCRIPCION", txtBuscar.Text);
             cmd2.ExecuteNonQuery();
             clienteData.DataSource = llenar_grid();
-            MessageBox.Show("Se ha registrado su compra" + " Gracias por preferirnos !!!");
+            MessageBox.Show("Se ha efectuado su compra" + " Gracias por preferirnos !!!");
 
 
             try

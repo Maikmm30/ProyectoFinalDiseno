@@ -42,9 +42,11 @@ namespace Inventario
 
                     if (dt.Rows[0][1].ToString() == "Admin"){
                         //new proyectoFinal(dt.Rows[0][0].ToString()).Show();
-                        proyectoFinal principal = new proyectoFinal();
-                        principal.Show();
-                        //new FormularioBienvenida().Show();
+                        //proyectoFinal principal = new proyectoFinal();
+                        //principal.Show();
+                        new FormBienvenidacs().Show();
+
+
                         this.Hide();
                     }
                     else if (dt.Rows[0][1].ToString() == "Usuario")
