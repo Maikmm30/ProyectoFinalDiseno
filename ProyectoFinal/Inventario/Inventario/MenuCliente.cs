@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Inventario
@@ -15,6 +16,7 @@ namespace Inventario
         {
             InitializeComponent();
             CenterToScreen();
+            obtenerFecha();
         }
 
         public MenuCliente(string nombre)
@@ -28,7 +30,7 @@ namespace Inventario
         {
             Conexion.conectar();
             DataTable dt = new DataTable();
-            string consulta = "select Categoria CATEGORIA, Descripcion DESCRIPCION, Precio PRECIO, Cantidad CANTIDAD from Inventario where id_Inventario > 0; ";
+            string consulta = "select Categoria CATEGORIA, Descripcion DESCRIPCION, Precio PRECIO from Inventario where id_Inventario > 0; ";
             SqlCommand cmd = new SqlCommand(consulta, Conexion.conectar());
 
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -169,7 +171,10 @@ namespace Inventario
             return dt.Tables["Inventario"];
         }
 
-        
+        public void obtenerFecha()
+        {
+            lbFecha.Text = DateTime.Now.ToLongDateString();
+        }
              
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -218,12 +223,17 @@ namespace Inventario
 
         private void clienteData_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtPagar.Text = clienteData.CurrentRow.Cells[2].Value.ToString();
+            
         }
 
         private void lbFecha_Click(object sender, EventArgs e)
         {
-            lbFecha.Text = DateTime.Now.ToShortDateString();
+            obtenerFecha();
+        }
+
+        private void clienteData_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+           
         }
     }
 }

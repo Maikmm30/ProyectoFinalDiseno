@@ -195,5 +195,42 @@ namespace Inventario
             return dt.Tables["INVENTARIO"];
         }
 
+        private void dataGridViewProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewProducto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.dataGridViewProducto.Columns[e.ColumnIndex].Name == "Cantidad")
+            {
+                if (Convert.ToInt32(e.Value) <= 150)
+                {
+                    e.CellStyle.ForeColor = Color.Black;
+                    e.CellStyle.BackColor = Color.LightGreen;
+
+                    if (Convert.ToInt32(e.Value) <= 100)
+                    {
+                        e.CellStyle.ForeColor = Color.Black;
+                        e.CellStyle.BackColor = Color.Yellow;
+
+                        if (Convert.ToInt32(e.Value) <= 50)
+                        {
+                            e.CellStyle.ForeColor = Color.Black;
+                            e.CellStyle.BackColor = Color.OrangeRed;
+
+                            if (Convert.ToInt32(e.Value) <= 10)
+                            {
+                                e.CellStyle.ForeColor = Color.Black;
+                                e.CellStyle.BackColor = Color.Red;
+
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
     }
 }

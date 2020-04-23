@@ -130,41 +130,40 @@ namespace Inventario
             timer1.Stop();
 
             Bunifu.DataViz.Data data = new Bunifu.DataViz.Data();
-            Bunifu.DataViz.DataPoint point1 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.spline);
-
-            point1.addLabely("LUNES", label11.Text);
-            point1.addLabely("MARTES", label11.Text);
-            point1.addLabely("MIERCOLES", label11.Text);
-            point1.addLabely("JUEVES", "80");
-            point1.addLabely("VIERNES", "90");
-            point1.addLabely("SABADO", label11.Text);
-            point1.addLabely("DOMINGO","100");
+            Bunifu.DataViz.DataPoint point1 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.line);
+            
+            point1.addLabely("VIDEOJUEGOS", lbVideojuego.Text);
+            point1.addLabely("PELICULAS", lbPelicula.Text);
+            point1.addLabely("VARIADO", lbdiferente.Text);
+            point1.addLabely("MUSICA", lbMusica.Text);
+            point1.addLabely("FIGURAS", lbFiguras.Text);
             data.addData(point1);
 
-            Bunifu.DataViz.DataPoint point2 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.spline);
+
+            //Bunifu.DataViz.DataPoint point2 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.spline);
 
             
 
-            point2.addLabely("LUNES", "90");
-            point2.addLabely("MARTES", "200");
-            point2.addLabely("MIERCOLES", "300");
-            point2.addLabely("JUEVES", "700");
-            point2.addLabely("VIERNES", "400");
-            point2.addLabely("SABADO", "900");
-            point2.addLabely("DOMINGO", "500");
-            data.addData(point2);
-            bunifuCharts1.Render(data);
+            //point2.addLabely("LUNES", "90");
+            //point2.addLabely("MARTES", "200");
+            //point2.addLabely("MIERCOLES", "300");
+            //point2.addLabely("JUEVES", "700");
+            //point2.addLabely("VIERNES", "400");
+            //point2.addLabely("SABADO", "900");
+            //point2.addLabely("DOMINGO", "500");
+            //data.addData(point2);
+            //bunifuCharts1.Render(data);
 
-            Bunifu.DataViz.DataPoint point3 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.spline);
+            //Bunifu.DataViz.DataPoint point3 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.spline);
 
-            point3.addLabely("LUNES", "100");
-            point3.addLabely("MARTES", "400");
-            point3.addLabely("MIERCOLES", "600");
-            point3.addLabely("JUEVES", "300");
-            point3.addLabely("VIERNES", "400");
-            point3.addLabely("SABADO", "600");
-            point3.addLabely("DOMINGO", "500");
-            data.addData(point3);
+            //point3.addLabely("LUNES", "100");
+            //point3.addLabely("MARTES", "400");
+            //point3.addLabely("MIERCOLES", "600");
+            //point3.addLabely("JUEVES", "300");
+            //point3.addLabely("VIERNES", "400");
+            //point3.addLabely("SABADO", "600");
+            //point3.addLabely("DOMINGO", "500");
+            //data.addData(point3);
             bunifuCharts1.Render(data);
         }
 
@@ -182,9 +181,7 @@ namespace Inventario
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login login = new Login();
-            login.Show();
+            
         }
 
         private void lbmensajeAdmin_Click(object sender, EventArgs e)
@@ -449,6 +446,11 @@ namespace Inventario
             
         }
 
-        
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonMusica = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -127,10 +130,10 @@
             this.ButtonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonVolver.ForeColor = System.Drawing.Color.Crimson;
-            this.ButtonVolver.Location = new System.Drawing.Point(9, 411);
+            this.ButtonVolver.Location = new System.Drawing.Point(9, 413);
             this.ButtonVolver.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonVolver.Name = "ButtonVolver";
-            this.ButtonVolver.Size = new System.Drawing.Size(138, 39);
+            this.ButtonVolver.Size = new System.Drawing.Size(115, 38);
             this.ButtonVolver.TabIndex = 13;
             this.ButtonVolver.Text = "Volver";
             this.ButtonVolver.UseVisualStyleBackColor = false;
@@ -138,16 +141,48 @@
             // 
             // clienteData
             // 
-            this.clienteData.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.clienteData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.clienteData.Location = new System.Drawing.Point(156, 47);
+            this.clienteData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
+            this.clienteData.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clienteData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            this.clienteData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.clienteData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.clienteData.ColumnHeadersHeight = 30;
+            this.clienteData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.clienteData.DefaultCellStyle = dataGridViewCellStyle2;
+            this.clienteData.GridColor = System.Drawing.Color.SteelBlue;
+            this.clienteData.Location = new System.Drawing.Point(146, 35);
             this.clienteData.Margin = new System.Windows.Forms.Padding(2);
             this.clienteData.Name = "clienteData";
-            this.clienteData.RowHeadersWidth = 51;
+            this.clienteData.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.clienteData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.clienteData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.clienteData.RowTemplate.Height = 24;
+            this.clienteData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.clienteData.Size = new System.Drawing.Size(841, 357);
             this.clienteData.TabIndex = 15;
             this.clienteData.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clienteData_CellContentDoubleClick);
+            this.clienteData.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.clienteData_CellFormatting);
             // 
             // label1
             // 
@@ -228,6 +263,7 @@
             // 
             // txtPagar
             // 
+            this.txtPagar.Enabled = false;
             this.txtPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPagar.Location = new System.Drawing.Point(771, 416);
             this.txtPagar.Margin = new System.Windows.Forms.Padding(2);
@@ -254,7 +290,7 @@
             this.lbFecha.AutoSize = true;
             this.lbFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFecha.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbFecha.Location = new System.Drawing.Point(797, 11);
+            this.lbFecha.Location = new System.Drawing.Point(692, 9);
             this.lbFecha.Name = "lbFecha";
             this.lbFecha.Size = new System.Drawing.Size(199, 22);
             this.lbFecha.TabIndex = 24;
@@ -283,6 +319,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.buttonMusica);
+            this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuCliente";
@@ -301,7 +338,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button buttonVideojuegos;
         private System.Windows.Forms.Button ButtonVolver;
-        private System.Windows.Forms.DataGridView clienteData;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label label2;
@@ -311,5 +347,6 @@
         private System.Windows.Forms.TextBox txtPagar;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuCustomLabel lbFecha;
+        private System.Windows.Forms.DataGridView clienteData;
     }
 }

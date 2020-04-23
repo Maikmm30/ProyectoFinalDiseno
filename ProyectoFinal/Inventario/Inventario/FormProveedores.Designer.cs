@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProveedores));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -56,10 +59,10 @@
             this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.White;
             this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.bunifuMaterialTextbox1.LineThickness = 1;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(1039, 166);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(779, 135);
+            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(317, 41);
+            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(238, 33);
             this.bunifuMaterialTextbox1.TabIndex = 0;
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -75,10 +78,10 @@
             this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.White;
             this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.bunifuMaterialTextbox2.LineThickness = 1;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(1039, 447);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(779, 363);
+            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(317, 41);
+            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(238, 33);
             this.bunifuMaterialTextbox2.TabIndex = 1;
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -94,10 +97,10 @@
             this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.White;
             this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.bunifuMaterialTextbox3.LineThickness = 1;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(1039, 375);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(779, 305);
+            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(317, 41);
+            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(238, 33);
             this.bunifuMaterialTextbox3.TabIndex = 2;
             this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -113,10 +116,10 @@
             this.bunifuMaterialTextbox4.LineIdleColor = System.Drawing.Color.White;
             this.bunifuMaterialTextbox4.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.bunifuMaterialTextbox4.LineThickness = 1;
-            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(1039, 302);
-            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox4.Location = new System.Drawing.Point(779, 245);
+            this.bunifuMaterialTextbox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
-            this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(317, 41);
+            this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(238, 33);
             this.bunifuMaterialTextbox4.TabIndex = 3;
             this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -132,10 +135,10 @@
             this.bunifuMaterialTextbox5.LineIdleColor = System.Drawing.Color.White;
             this.bunifuMaterialTextbox5.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.bunifuMaterialTextbox5.LineThickness = 1;
-            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(1039, 231);
-            this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuMaterialTextbox5.Location = new System.Drawing.Point(779, 188);
+            this.bunifuMaterialTextbox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuMaterialTextbox5.Name = "bunifuMaterialTextbox5";
-            this.bunifuMaterialTextbox5.Size = new System.Drawing.Size(317, 41);
+            this.bunifuMaterialTextbox5.Size = new System.Drawing.Size(238, 33);
             this.bunifuMaterialTextbox5.TabIndex = 4;
             this.bunifuMaterialTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -157,10 +160,10 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(1196, 537);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(897, 436);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(160, 41);
+            this.bunifuThinButton22.Size = new System.Drawing.Size(120, 33);
             this.bunifuThinButton22.TabIndex = 19;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
@@ -183,10 +186,10 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(1196, 590);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(897, 479);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(167, 41);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(125, 33);
             this.bunifuThinButton21.TabIndex = 18;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
@@ -209,10 +212,10 @@
             this.btnEditar.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnEditar.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnEditar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnEditar.Location = new System.Drawing.Point(1016, 590);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnEditar.Location = new System.Drawing.Point(762, 479);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(167, 41);
+            this.btnEditar.Size = new System.Drawing.Size(125, 33);
             this.btnEditar.TabIndex = 17;
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -222,10 +225,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(387, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(299, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 30);
+            this.label1.Size = new System.Drawing.Size(147, 22);
             this.label1.TabIndex = 23;
             this.label1.Text = "PROVEEDORES";
             // 
@@ -233,20 +235,47 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(279, 31);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(209, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(100, 92);
+            this.panel1.Size = new System.Drawing.Size(75, 75);
             this.panel1.TabIndex = 24;
             // 
             // dataGridViewProducto
             // 
+            this.dataGridViewProducto.AllowUserToAddRows = false;
+            this.dataGridViewProducto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProducto.Location = new System.Drawing.Point(279, 152);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProducto.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewProducto.GridColor = System.Drawing.Color.White;
+            this.dataGridViewProducto.Location = new System.Drawing.Point(183, 150);
+            this.dataGridViewProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewProducto.Name = "dataGridViewProducto";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewProducto.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewProducto.RowHeadersWidth = 51;
             this.dataGridViewProducto.RowTemplate.Height = 24;
-            this.dataGridViewProducto.Size = new System.Drawing.Size(681, 446);
+            this.dataGridViewProducto.Size = new System.Drawing.Size(554, 362);
             this.dataGridViewProducto.TabIndex = 25;
             // 
             // textBuscar
@@ -261,20 +290,20 @@
             this.textBuscar.LineIdleColor = System.Drawing.Color.White;
             this.textBuscar.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.textBuscar.LineThickness = 2;
-            this.textBuscar.Location = new System.Drawing.Point(279, 619);
-            this.textBuscar.Margin = new System.Windows.Forms.Padding(5);
+            this.textBuscar.Location = new System.Drawing.Point(209, 115);
+            this.textBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBuscar.Name = "textBuscar";
-            this.textBuscar.Size = new System.Drawing.Size(337, 36);
+            this.textBuscar.Size = new System.Drawing.Size(487, 29);
             this.textBuscar.TabIndex = 27;
             this.textBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBuscar.OnValueChanged += new System.EventHandler(this.textBuscar_OnValueChanged);
             // 
             // FormProveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(1404, 737);
+            this.ClientSize = new System.Drawing.Size(1053, 599);
             this.Controls.Add(this.textBuscar);
             this.Controls.Add(this.dataGridViewProducto);
             this.Controls.Add(this.panel1);
@@ -288,7 +317,6 @@
             this.Controls.Add(this.bunifuMaterialTextbox2);
             this.Controls.Add(this.bunifuMaterialTextbox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormProveedores";
             this.Text = "FormProveedores";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducto)).EndInit();
