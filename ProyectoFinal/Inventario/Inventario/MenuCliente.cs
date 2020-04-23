@@ -23,7 +23,7 @@ namespace Inventario
         {
             InitializeComponent();
             CenterToScreen();
-           
+
         }
 
         public DataTable llenar_grid()
@@ -43,7 +43,7 @@ namespace Inventario
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -79,8 +79,8 @@ namespace Inventario
 
         private void buttonVideojuegos_Click(object sender, EventArgs e)
         {
-            
-                clienteData.DataSource = Buscar("Videojuego");
+
+            clienteData.DataSource = Buscar("Videojuego");
 
         }
 
@@ -101,15 +101,31 @@ namespace Inventario
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                Conexion.conectar();
+                string actualizar = "UPDATE Inventario set Cantidad = Cantidad - @CANTIDAD WHERE Descripcion = @DESCRIPCION";
+                SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
+                cmd2.Parameters.AddWithValue("@CANTIDAD", Convert.ToInt32(txtCantidad.Text));
+                cmd2.Parameters.AddWithValue("@DESCRIPCION", txtBuscar.Text);
+                cmd2.ExecuteNonQuery();
+                clienteData.DataSource = llenar_grid();
+                MessageBox.Show("Se ha efectuado su compra" + " Gracias por preferirnos !!!");
+            }
+            catch (Exception ex)
+            {
+                if (ex is SqlException)
+                {
+                    MessageBox.Show("No puede comprar ese articulo, no hay");
 
-            Conexion.conectar();
-            string actualizar = "UPDATE Inventario set Cantidad = Cantidad - @CANTIDAD WHERE Descripcion = @DESCRIPCION";
-            SqlCommand cmd2 = new SqlCommand(actualizar, Conexion.conectar());
-            cmd2.Parameters.AddWithValue("@CANTIDAD", Convert.ToInt32(txtCantidad.Text));
-            cmd2.Parameters.AddWithValue("@DESCRIPCION", txtBuscar.Text);
-            cmd2.ExecuteNonQuery();
-            clienteData.DataSource = llenar_grid();
-            MessageBox.Show("Se ha efectuado su compra" + " Gracias por preferirnos !!!");
+                }
+                else
+                {
+                    MessageBox.Show("No hay de la cantidad buscada");
+                }
+
+            }
+
 
 
             try
@@ -122,11 +138,15 @@ namespace Inventario
                 cmd3.Parameters.AddWithValue("@FECHA", fecha);
                 cmd3.ExecuteNonQuery();
                 MessageBox.Show("SE HA INSERTADO EN LA TABLA DE COMPRADOS");
+
+                txtBuscar.Clear();
+                txtCantidad.Clear();
+                txtPagar.Clear();
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show(" "+ex);
+                MessageBox.Show(" ");
             }
         }
 
@@ -142,7 +162,7 @@ namespace Inventario
 
             clienteData.DataSource = BuscarTodos();
 
-           
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -175,18 +195,22 @@ namespace Inventario
         {
             lbFecha.Text = DateTime.Now.ToLongDateString();
         }
-             
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-            clienteData.DataSource = BuscarTxT(txtBuscar.Text);
+          //  clienteData.DataSource = BuscarTxT(txtBuscar.Text);
         }
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
         {
-            
+
+
             try
             {
+
+
+
                 Conexion.conectar();
                 String consultar = "SELECT DESCRIPCION, CANTIDAD, PRECIO FROM Inventario where (CANTIDAD>=@CANTIDAD) AND (DESCRIPCION=@DESCRIPCION)";
                 SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
@@ -194,26 +218,47 @@ namespace Inventario
                 cmd.Parameters.AddWithValue("@CANTIDAD", cantidad);
                 cmd.Parameters.AddWithValue("@DESCRIPCION", txtBuscar.Text);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Si hay la cantidad solicitada");
+
 
                 SqlDataReader sqlDataReader = cmd.ExecuteReader();
 
                 while (sqlDataReader.Read())
                 {
-                    txtPagar.Text = (sqlDataReader["Precio"].ToString());
+                    if (txtCantidad.Text != null)
+                    {
 
-                    
+
+                        txtPagar.Text = (sqlDataReader["Precio"].ToString());
+
+                    }
+                    else
+                    {
+                        txtPagar.Clear();
+                    }
                 }
 
                 int precio = int.Parse(txtPagar.Text);
                 precio = (precio * cantidad);
                 txtPagar.Text = precio.ToString();
+
             }
             catch (Exception)
             {
 
-                MessageBox.Show("No se ha encontrado la cantidad buscada ");
+                if (txtCantidad.Text == null )
+                {
+                    MessageBox.Show("No se ha encontrado la cantidad buscada ");
+                }
+                else
+                {
+                    
+                }
+                
             }
+        
+    
+
+
         }
         
         private void txtPagar_TextChanged(object sender, EventArgs e)
@@ -233,7 +278,12 @@ namespace Inventario
 
         private void clienteData_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-           
+            txtBuscar.Text = clienteData.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
