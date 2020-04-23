@@ -103,6 +103,31 @@ namespace Inventario
                 cmd3.ExecuteNonQuery();
                 MessageBox.Show(" Se han eliminado los datos ");
                 dataGridViewProducto.DataSource = llenar_grid();
+
+                //string consultar = "SELECT cantidad_comprada Cantidad from compra where Descripcion = @Descripcion";
+                //SqlCommand cmd4 = new SqlCommand(consultar, Conexion.conectar());
+                //cmd4.Parameters.AddWithValue("@Descripcion", txtMarca.Text);
+                //cmd4.ExecuteNonQuery();
+                //SqlDataReader sqlDataReader = cmd4.ExecuteReader();
+
+                //while (sqlDataReader.Read())
+                //{
+                //    lbCantidad.Text = (sqlDataReader["Cantidad_comprada"].ToString());
+                //}
+
+
+               
+
+
+
+                string update = "update Inventario set Cantidad = Cantidad + @Cantidad where Descripcion = @Descripcion";
+                SqlCommand cmd6 = new SqlCommand(update, Conexion.conectar());
+                cmd6.Parameters.AddWithValue("@Descripcion", txtMarca.Text);
+                cmd6.Parameters.AddWithValue("@Cantidad", txtCantidad.Text);
+                cmd6.ExecuteNonQuery();
+                MessageBox.Show("Se ha actualizado al tabla de inventario");
+                cmd6.ExecuteNonQuery();
+
             }
             catch (Exception ex)
             {
@@ -110,6 +135,20 @@ namespace Inventario
             }            
         }
 
+        public void consultarCantidad() {
+            string consultar2 = "Select Cantidad from inventario where Descripcion = @Descripcion";
+            SqlCommand cmd5 = new SqlCommand(consultar2, Conexion.conectar());
+            cmd5.Parameters.AddWithValue("@Descripcion", txtMarca.Text);
+            cmd5.ExecuteNonQuery();
+            SqlDataReader sqlDataReader1 = cmd5.ExecuteReader();
+
+            while (sqlDataReader1.Read())
+            {
+                lbCantidad.Text = (sqlDataReader1["Cantidad"].ToString());
+            }
+
+
+        }
 
         public void modificarInventario()
         {
@@ -188,5 +227,14 @@ namespace Inventario
             return dt.Tables["COMPRA"];
         }
 
+        private void txtMarca_OnValueChanged(object sender, EventArgs e)
+        {
+            consultarCantidad();
+        }
+
+        private void lbCantidad_Click(object sender, EventArgs e)
+        {
+            consultarCantidad();
+        }
     }
 }

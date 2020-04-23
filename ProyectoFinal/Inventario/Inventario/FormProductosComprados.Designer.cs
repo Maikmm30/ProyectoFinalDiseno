@@ -45,6 +45,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBuscar = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtIDCompra = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.lbCantidad = new System.Windows.Forms.Label();
+            this.lbDescripcion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,10 +55,9 @@
             this.txtFech.AutoSize = true;
             this.txtFech.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFech.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(57)))));
-            this.txtFech.Location = new System.Drawing.Point(319, 175);
-            this.txtFech.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtFech.Location = new System.Drawing.Point(239, 142);
             this.txtFech.Name = "txtFech";
-            this.txtFech.Size = new System.Drawing.Size(68, 22);
+            this.txtFech.Size = new System.Drawing.Size(55, 20);
             this.txtFech.TabIndex = 0;
             this.txtFech.Text = "Fecha";
             // 
@@ -65,10 +66,9 @@
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(57)))));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(319, 322);
-            this.bunifuCustomLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(239, 262);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(66, 22);
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(56, 20);
             this.bunifuCustomLabel3.TabIndex = 3;
             this.bunifuCustomLabel3.Text = "Precio";
             // 
@@ -77,10 +77,9 @@
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(57)))));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(318, 249);
-            this.bunifuCustomLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(238, 202);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(99, 22);
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(78, 20);
             this.bunifuCustomLabel4.TabIndex = 4;
             this.bunifuCustomLabel4.Text = "Cantidad";
             // 
@@ -96,10 +95,10 @@
             this.txtCantidad.LineIdleColor = System.Drawing.Color.White;
             this.txtCantidad.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.txtCantidad.LineThickness = 1;
-            this.txtCantidad.Location = new System.Drawing.Point(523, 237);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCantidad.Location = new System.Drawing.Point(392, 193);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(378, 34);
+            this.txtCantidad.Size = new System.Drawing.Size(284, 28);
             this.txtCantidad.TabIndex = 10;
             this.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -115,10 +114,10 @@
             this.txtCosto.LineIdleColor = System.Drawing.Color.White;
             this.txtCosto.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.txtCosto.LineThickness = 1;
-            this.txtCosto.Location = new System.Drawing.Point(523, 310);
-            this.txtCosto.Margin = new System.Windows.Forms.Padding(5);
+            this.txtCosto.Location = new System.Drawing.Point(392, 252);
+            this.txtCosto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(378, 34);
+            this.txtCosto.Size = new System.Drawing.Size(284, 28);
             this.txtCosto.TabIndex = 11;
             this.txtCosto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -140,10 +139,10 @@
             this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton22.Location = new System.Drawing.Point(966, 407);
-            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.bunifuThinButton22.Location = new System.Drawing.Point(724, 331);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuThinButton22.Name = "bunifuThinButton22";
-            this.bunifuThinButton22.Size = new System.Drawing.Size(169, 42);
+            this.bunifuThinButton22.Size = new System.Drawing.Size(127, 34);
             this.bunifuThinButton22.TabIndex = 14;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
@@ -166,10 +165,10 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(966, 299);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(724, 243);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(169, 42);
+            this.bunifuThinButton21.Size = new System.Drawing.Size(127, 34);
             this.bunifuThinButton21.TabIndex = 13;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
@@ -192,10 +191,10 @@
             this.btnEditar.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnEditar.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnEditar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnEditar.Location = new System.Drawing.Point(966, 353);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnEditar.Location = new System.Drawing.Point(724, 287);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(169, 42);
+            this.btnEditar.Size = new System.Drawing.Size(127, 34);
             this.btnEditar.TabIndex = 12;
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -212,22 +211,22 @@
             this.txtMarca.LineIdleColor = System.Drawing.Color.White;
             this.txtMarca.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.txtMarca.LineThickness = 1;
-            this.txtMarca.Location = new System.Drawing.Point(523, 393);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(5);
+            this.txtMarca.Location = new System.Drawing.Point(392, 319);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(378, 34);
+            this.txtMarca.Size = new System.Drawing.Size(284, 28);
             this.txtMarca.TabIndex = 20;
             this.txtMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMarca.OnValueChanged += new System.EventHandler(this.txtMarca_OnValueChanged);
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(143)))), ((int)(((byte)(57)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(318, 393);
-            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(238, 319);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(116, 22);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(96, 20);
             this.bunifuCustomLabel2.TabIndex = 19;
             this.bunifuCustomLabel2.Text = "Descripción";
             // 
@@ -236,10 +235,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(481, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(361, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(329, 30);
+            this.label1.Size = new System.Drawing.Size(257, 22);
             this.label1.TabIndex = 21;
             this.label1.Text = "PRODUCTOS COMPRADOS";
             // 
@@ -247,28 +245,28 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(363, -9);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(266, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(91, 80);
+            this.panel1.Size = new System.Drawing.Size(68, 65);
             this.panel1.TabIndex = 22;
             // 
             // dataGridViewProducto
             // 
             this.dataGridViewProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewProducto.Location = new System.Drawing.Point(291, 470);
-            this.dataGridViewProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewProducto.Location = new System.Drawing.Point(218, 382);
+            this.dataGridViewProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewProducto.Name = "dataGridViewProducto";
             this.dataGridViewProducto.RowHeadersWidth = 51;
             this.dataGridViewProducto.RowTemplate.Height = 24;
-            this.dataGridViewProducto.Size = new System.Drawing.Size(1064, 255);
+            this.dataGridViewProducto.Size = new System.Drawing.Size(798, 207);
             this.dataGridViewProducto.TabIndex = 24;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(523, 175);
+            this.dateTimePicker1.Location = new System.Drawing.Point(392, 142);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(287, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(216, 20);
             this.dateTimePicker1.TabIndex = 25;
             // 
             // textBuscar
@@ -283,10 +281,10 @@
             this.textBuscar.LineIdleColor = System.Drawing.Color.White;
             this.textBuscar.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.textBuscar.LineThickness = 2;
-            this.textBuscar.Location = new System.Drawing.Point(966, 161);
-            this.textBuscar.Margin = new System.Windows.Forms.Padding(5);
+            this.textBuscar.Location = new System.Drawing.Point(724, 131);
+            this.textBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBuscar.Name = "textBuscar";
-            this.textBuscar.Size = new System.Drawing.Size(337, 36);
+            this.textBuscar.Size = new System.Drawing.Size(253, 29);
             this.textBuscar.TabIndex = 26;
             this.textBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textBuscar.OnValueChanged += new System.EventHandler(this.textBuscar_OnValueChanged);
@@ -303,19 +301,42 @@
             this.txtIDCompra.LineIdleColor = System.Drawing.Color.White;
             this.txtIDCompra.LineMouseHoverColor = System.Drawing.Color.DarkRed;
             this.txtIDCompra.LineThickness = 2;
-            this.txtIDCompra.Location = new System.Drawing.Point(966, 235);
-            this.txtIDCompra.Margin = new System.Windows.Forms.Padding(5);
+            this.txtIDCompra.Location = new System.Drawing.Point(724, 191);
+            this.txtIDCompra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIDCompra.Name = "txtIDCompra";
-            this.txtIDCompra.Size = new System.Drawing.Size(169, 36);
+            this.txtIDCompra.Size = new System.Drawing.Size(127, 29);
             this.txtIDCompra.TabIndex = 27;
             this.txtIDCompra.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // lbCantidad
+            // 
+            this.lbCantidad.AutoSize = true;
+            this.lbCantidad.BackColor = System.Drawing.Color.White;
+            this.lbCantidad.Location = new System.Drawing.Point(724, 44);
+            this.lbCantidad.Name = "lbCantidad";
+            this.lbCantidad.Size = new System.Drawing.Size(35, 13);
+            this.lbCantidad.TabIndex = 28;
+            this.lbCantidad.Text = "label2";
+            this.lbCantidad.Click += new System.EventHandler(this.lbCantidad_Click);
+            // 
+            // lbDescripcion
+            // 
+            this.lbDescripcion.AutoSize = true;
+            this.lbDescripcion.BackColor = System.Drawing.Color.White;
+            this.lbDescripcion.Location = new System.Drawing.Point(787, 44);
+            this.lbDescripcion.Name = "lbDescripcion";
+            this.lbDescripcion.Size = new System.Drawing.Size(35, 13);
+            this.lbDescripcion.TabIndex = 29;
+            this.lbDescripcion.Text = "label2";
+            // 
             // FormProductosComprados
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(1404, 737);
+            this.ClientSize = new System.Drawing.Size(1034, 599);
+            this.Controls.Add(this.lbDescripcion);
+            this.Controls.Add(this.lbCantidad);
             this.Controls.Add(this.txtIDCompra);
             this.Controls.Add(this.textBuscar);
             this.Controls.Add(this.dateTimePicker1);
@@ -333,7 +354,6 @@
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.txtFech);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormProductosComprados";
             this.Text = "FormProductosComprados";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducto)).EndInit();
@@ -360,5 +380,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox textBuscar;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtIDCompra;
+        private System.Windows.Forms.Label lbCantidad;
+        private System.Windows.Forms.Label lbDescripcion;
     }
 }

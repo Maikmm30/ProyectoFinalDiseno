@@ -33,15 +33,15 @@ namespace Inventario
 
             timer1.Stop();
             timer2.Start();
-            //if (this.Opacity < 1) this.Opacity += 0.05;
-            //cont = +1;
-            ////CircleProgressbar.Value += 1;
-            ////CircleProgressbar.Text = CircleProgressbar.Value.ToString();
-            //if (cont == 100)
-            //{
-            //    timer1.Stop();
-            //    timer2.Start();
-            //}
+            if (this.Opacity < 1) this.Opacity += 0.05;
+            cont = +1;
+            //CircleProgressbar.Value += 1;
+            //CircleProgressbar.Text = CircleProgressbar.Value.ToString();
+            if (cont == 100)
+            {
+                timer1.Stop();
+                timer2.Start();
+            }
 
 
         }
