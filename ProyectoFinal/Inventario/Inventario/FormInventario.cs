@@ -71,7 +71,9 @@ namespace Inventario
                 cmd.Parameters.AddWithValue("@PROVEEDOR", txtProveedor.Text);
                 cmd.Parameters.AddWithValue("@CANTIDAD", txtCantidad.Text);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Se han insertao con exito");
+                Mensaje_Hijo MH = new Mensaje_Hijo();
+                MH.imprimeMesaje("inventario");
+                //MessageBox.Show("Se han insertao con exito");
                 dataGridViewProducto.DataSource = llenar_grid();
             }
 

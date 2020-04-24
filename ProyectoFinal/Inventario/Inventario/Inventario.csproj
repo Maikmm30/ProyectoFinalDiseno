@@ -92,6 +92,8 @@
     <Compile Include="FRM_registrarse.Designer.cs">
       <DependentUpon>FRM_registrarse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensaje_Hijo.cs" />
+    <Compile Include="Mensaje_Padre.cs" />
     <Compile Include="PruebaBd.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

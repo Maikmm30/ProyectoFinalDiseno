@@ -116,7 +116,9 @@ namespace Inventario
                 cmd3.Parameters.AddWithValue("@DESCRIPCION", txtMarca.Text);
                 cmd3.Parameters.AddWithValue("@FECHA", dateTimePicker1.Value);
                 cmd3.ExecuteNonQuery();
-                MessageBox.Show("SE HA INSERTADO EN LA TABLA DE COMPRADOS");
+                Mensaje_Hijo MH = new Mensaje_Hijo();
+                MH.imprimeMesaje("compra");
+                // MessageBox.Show("SE HA INSERTADO EN LA TABLA DE COMPRADOS");
                 dataGridViewProducto.DataSource = llenar_grid();
                 modificarInventario();
             }

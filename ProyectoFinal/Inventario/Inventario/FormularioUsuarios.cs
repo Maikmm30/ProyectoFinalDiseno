@@ -130,7 +130,10 @@ namespace Inventario
                 cmd.Parameters.AddWithValue("@NOMBRE", txtNyA.Text);
                 cmd.Parameters.AddWithValue("@TIPO_USUARIO", txtCargo.Text);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Se han insertado con exito");
+                Mensaje_Hijo MH = new Mensaje_Hijo();
+                MH.imprimeMesaje("usuario");
+
+                // MessageBox.Show("Se han insertado con exito");
                 dataGridViewProducto.DataSource = llenar_grid();
             }
             catch (Exception ex)
