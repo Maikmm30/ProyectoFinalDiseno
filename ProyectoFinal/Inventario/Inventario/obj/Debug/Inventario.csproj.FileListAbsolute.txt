@@ -145,10 +145,8 @@ D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\
 D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormularioUsuarios.resources
 D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Login.resources
 D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.MenuCliente.resources
-D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Musica.resources
 D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
 D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Prueba_ConexionBd.resources
-D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Videojuegos.resources
 D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.cache
 D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.CopyComplete
 D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.exe
@@ -173,8 +171,8 @@ C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFina
 C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.txt_Nombre.resources
 C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.Prueba_ConexionBd.resources
 C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.csproj.CoreCompileInputs.cache
-D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormularioBienvenida.resources
 D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.txt_Nombre.resources
 D:\Disco Duro 1 Tb\Descargas\Tercer Cuatrimestre\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormBienvenidacs.resources
 C:\Users\adria.LAPTOP-1CV1KD6D\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormBienvenidacs.resources
 C:\Users\EFS\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormBienvenidacs.resources
+D:\Users\Michael\Documents\Visual Studio 2019\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\obj\Debug\Inventario.FormBienvenidacs.resources
