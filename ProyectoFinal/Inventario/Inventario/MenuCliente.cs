@@ -199,7 +199,7 @@ namespace Inventario
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-          //  clienteData.DataSource = BuscarTxT(txtBuscar.Text);
+           clienteData.DataSource = BuscarTxT(txtBuscar.Text);
         }
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
@@ -278,7 +278,7 @@ namespace Inventario
 
         private void clienteData_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            txtBuscar.Text = clienteData.CurrentRow.Cells[1].Value.ToString();
+            
         }
 
         private void label2_Click(object sender, EventArgs e)

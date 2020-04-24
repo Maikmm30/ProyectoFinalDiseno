@@ -33,9 +33,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -52,18 +54,18 @@
             this.Inventaria = new ns1.BunifuFlatButton();
             this.proveedor = new ns1.BunifuFlatButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.lbdiferente = new System.Windows.Forms.Label();
-            this.lbFiguras = new System.Windows.Forms.Label();
-            this.lbPelicula = new System.Windows.Forms.Label();
-            this.lbVideojuego = new System.Windows.Forms.Label();
             this.lbMusica = new System.Windows.Forms.Label();
+            this.lbdiferente = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lbFiguras = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.lbPelicula = new System.Windows.Forms.Label();
             this.bunifuCharts1 = new Bunifu.DataViz.BunifuCharts();
+            this.lbVideojuego = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnSalir = new ns1.BunifuFlatButton();
             this.menuPrincipal = new ns1.BunifuCustomLabel();
@@ -75,10 +77,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuFlatButton1 = new ns1.BunifuFlatButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -133,6 +135,42 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.DimGray;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "Volver";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.bunifuFlatButton1.Iconimage = null;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(6, 563);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(85)))), ((int)(((byte)(151)))), ((int)(((byte)(148)))));
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(175, 32);
+            this.bunifuFlatButton1.TabIndex = 21;
+            this.bunifuFlatButton1.Text = "Volver";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.DimGray;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(146)))), ((int)(((byte)(108)))));
@@ -158,10 +196,22 @@
             this.panel11.BackColor = System.Drawing.Color.Teal;
             this.panel11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel11.BackgroundImage")));
             this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel11.Controls.Add(this.label12);
             this.panel11.Location = new System.Drawing.Point(103, 5);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(94, 79);
             this.panel11.TabIndex = 16;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(74, 11);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(78, 20);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "EN STOCK";
             // 
             // label7
             // 
@@ -457,9 +507,14 @@
             // 
             this.panelContenedor.AutoSize = true;
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
+            this.panelContenedor.Controls.Add(this.lbMusica);
+            this.panelContenedor.Controls.Add(this.lbdiferente);
             this.panelContenedor.Controls.Add(this.panel15);
+            this.panelContenedor.Controls.Add(this.lbFiguras);
             this.panelContenedor.Controls.Add(this.panel14);
+            this.panelContenedor.Controls.Add(this.lbPelicula);
             this.panelContenedor.Controls.Add(this.bunifuCharts1);
+            this.panelContenedor.Controls.Add(this.lbVideojuego);
             this.panelContenedor.Controls.Add(this.panel10);
             this.panelContenedor.Controls.Add(this.btnSalir);
             this.panelContenedor.Controls.Add(this.menuPrincipal);
@@ -473,82 +528,54 @@
             this.panelContenedor.TabStop = true;
             this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // panel15
+            // lbMusica
             // 
-            this.panel15.BackColor = System.Drawing.Color.Teal;
-            this.panel15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel15.BackgroundImage")));
-            this.panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel15.Controls.Add(this.lbdiferente);
-            this.panel15.Controls.Add(this.lbFiguras);
-            this.panel15.Controls.Add(this.lbPelicula);
-            this.panel15.Controls.Add(this.lbVideojuego);
-            this.panel15.Controls.Add(this.lbMusica);
-            this.panel15.Controls.Add(this.label11);
-            this.panel15.Controls.Add(this.label12);
-            this.panel15.Location = new System.Drawing.Point(420, 48);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(205, 119);
-            this.panel15.TabIndex = 17;
+            this.lbMusica.AutoSize = true;
+            this.lbMusica.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMusica.ForeColor = System.Drawing.Color.Teal;
+            this.lbMusica.Location = new System.Drawing.Point(819, 174);
+            this.lbMusica.Name = "lbMusica";
+            this.lbMusica.Size = new System.Drawing.Size(26, 30);
+            this.lbMusica.TabIndex = 6;
+            this.lbMusica.Text = "0";
+            this.lbMusica.Click += new System.EventHandler(this.lbMusica_Click);
             // 
             // lbdiferente
             // 
             this.lbdiferente.AutoSize = true;
             this.lbdiferente.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbdiferente.ForeColor = System.Drawing.Color.Teal;
-            this.lbdiferente.Location = new System.Drawing.Point(155, 81);
+            this.lbdiferente.Location = new System.Drawing.Point(960, 175);
             this.lbdiferente.Name = "lbdiferente";
             this.lbdiferente.Size = new System.Drawing.Size(26, 30);
             this.lbdiferente.TabIndex = 11;
             this.lbdiferente.Text = "0";
             this.lbdiferente.Click += new System.EventHandler(this.lbdiferente_Click);
             // 
-            // lbFiguras
+            // panel15
             // 
-            this.lbFiguras.AutoSize = true;
-            this.lbFiguras.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFiguras.ForeColor = System.Drawing.Color.Teal;
-            this.lbFiguras.Location = new System.Drawing.Point(133, 7);
-            this.lbFiguras.Name = "lbFiguras";
-            this.lbFiguras.Size = new System.Drawing.Size(26, 30);
-            this.lbFiguras.TabIndex = 10;
-            this.lbFiguras.Text = "0";
-            this.lbFiguras.Click += new System.EventHandler(this.lbFiguras_Click);
+            this.panel15.BackColor = System.Drawing.Color.Teal;
+            this.panel15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel15.BackgroundImage")));
+            this.panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel15.Controls.Add(this.label13);
+            this.panel15.Controls.Add(this.label11);
+            this.panel15.Location = new System.Drawing.Point(420, 48);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(205, 119);
+            this.panel15.TabIndex = 17;
             // 
-            // lbPelicula
+            // label13
             // 
-            this.lbPelicula.AutoSize = true;
-            this.lbPelicula.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPelicula.ForeColor = System.Drawing.Color.Teal;
-            this.lbPelicula.Location = new System.Drawing.Point(133, 85);
-            this.lbPelicula.Name = "lbPelicula";
-            this.lbPelicula.Size = new System.Drawing.Size(26, 30);
-            this.lbPelicula.TabIndex = 9;
-            this.lbPelicula.Text = "0";
-            this.lbPelicula.Click += new System.EventHandler(this.lbPelicula_Click);
-            // 
-            // lbVideojuego
-            // 
-            this.lbVideojuego.AutoSize = true;
-            this.lbVideojuego.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVideojuego.ForeColor = System.Drawing.Color.Teal;
-            this.lbVideojuego.Location = new System.Drawing.Point(165, 30);
-            this.lbVideojuego.Name = "lbVideojuego";
-            this.lbVideojuego.Size = new System.Drawing.Size(26, 30);
-            this.lbVideojuego.TabIndex = 7;
-            this.lbVideojuego.Text = "0";
-            this.lbVideojuego.Click += new System.EventHandler(this.lbVideojuego_Click);
-            // 
-            // lbMusica
-            // 
-            this.lbMusica.AutoSize = true;
-            this.lbMusica.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMusica.ForeColor = System.Drawing.Color.Teal;
-            this.lbMusica.Location = new System.Drawing.Point(4, 52);
-            this.lbMusica.Name = "lbMusica";
-            this.lbMusica.Size = new System.Drawing.Size(26, 30);
-            this.lbMusica.TabIndex = 6;
-            this.lbMusica.Text = "0";
-            this.lbMusica.Click += new System.EventHandler(this.lbMusica_Click);
+            this.label13.AccessibleRole = System.Windows.Forms.AccessibleRole.Cursor;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Teal;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(38, 92);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(78, 20);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "EN STOCK";
             // 
             // label11
             // 
@@ -562,16 +589,17 @@
             this.label11.Text = "0";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // label12
+            // lbFiguras
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(14, 93);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 20);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "EN STOCK";
+            this.lbFiguras.AutoSize = true;
+            this.lbFiguras.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFiguras.ForeColor = System.Drawing.Color.Teal;
+            this.lbFiguras.Location = new System.Drawing.Point(865, 178);
+            this.lbFiguras.Name = "lbFiguras";
+            this.lbFiguras.Size = new System.Drawing.Size(26, 30);
+            this.lbFiguras.TabIndex = 10;
+            this.lbFiguras.Text = "0";
+            this.lbFiguras.Click += new System.EventHandler(this.lbFiguras_Click);
             // 
             // panel14
             // 
@@ -609,6 +637,18 @@
             this.label10.TabIndex = 4;
             this.label10.Text = "CANTIDAD DE COMPRAS";
             // 
+            // lbPelicula
+            // 
+            this.lbPelicula.AutoSize = true;
+            this.lbPelicula.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPelicula.ForeColor = System.Drawing.Color.Teal;
+            this.lbPelicula.Location = new System.Drawing.Point(762, 174);
+            this.lbPelicula.Name = "lbPelicula";
+            this.lbPelicula.Size = new System.Drawing.Size(26, 30);
+            this.lbPelicula.TabIndex = 9;
+            this.lbPelicula.Text = "0";
+            this.lbPelicula.Click += new System.EventHandler(this.lbPelicula_Click);
+            // 
             // bunifuCharts1
             // 
             this.bunifuCharts1.animationEnabled = false;
@@ -628,7 +668,7 @@
             0});
             this.bunifuCharts1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuCharts1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCharts1.Location = new System.Drawing.Point(228, 211);
+            this.bunifuCharts1.Location = new System.Drawing.Point(216, 211);
             this.bunifuCharts1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCharts1.Name = "bunifuCharts1";
             this.bunifuCharts1.Size = new System.Drawing.Size(756, 375);
@@ -636,6 +676,18 @@
             this.bunifuCharts1.Theme = Bunifu.DataViz.BunifuCharts._theme.theme1;
             this.bunifuCharts1.Title = "";
             this.bunifuCharts1.Load += new System.EventHandler(this.bunifuCharts1_Load_2);
+            // 
+            // lbVideojuego
+            // 
+            this.lbVideojuego.AutoSize = true;
+            this.lbVideojuego.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVideojuego.ForeColor = System.Drawing.Color.Teal;
+            this.lbVideojuego.Location = new System.Drawing.Point(912, 175);
+            this.lbVideojuego.Name = "lbVideojuego";
+            this.lbVideojuego.Size = new System.Drawing.Size(26, 30);
+            this.lbVideojuego.TabIndex = 7;
+            this.lbVideojuego.Text = "0";
+            this.lbVideojuego.Click += new System.EventHandler(this.lbVideojuego_Click);
             // 
             // panel10
             // 
@@ -777,42 +829,6 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.DimGray;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Volver";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(6, 563);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(28)))), ((int)(((byte)(37)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(85)))), ((int)(((byte)(151)))), ((int)(((byte)(148)))));
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(175, 32);
-            this.bunifuFlatButton1.TabIndex = 21;
-            this.bunifuFlatButton1.Text = "Volver";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.DimGray;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
-            // 
             // proyectoFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -829,6 +845,8 @@
             this.panel1.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelContenedor.ResumeLayout(false);
@@ -896,6 +914,7 @@
         private System.Windows.Forms.Label lbFiguras;
         private System.Windows.Forms.Label lbdiferente;
         private ns1.BunifuFlatButton bunifuFlatButton1;
+        private System.Windows.Forms.Label label13;
     }
 }
 

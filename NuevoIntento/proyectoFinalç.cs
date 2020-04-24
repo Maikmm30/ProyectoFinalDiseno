@@ -12,7 +12,6 @@ namespace Inventario
         {
             InitializeComponent();
             CenterToScreen();
-            
             labelVariado();
             labelPelicula();
             labelMusica();
@@ -223,7 +222,7 @@ namespace Inventario
             try
             {
                 Conexion.conectar();
-                String consultar = "SELECT CANTIDAD FROM INVENTARIO WHERE CATEGORIA=@CATEGORIA ";
+                String consultar = "SELECT SUM(Cantidad) as TOTAL from Inventario where Categoria=@Categoria";
                 SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
 
 
@@ -233,7 +232,7 @@ namespace Inventario
 
                 while (sqlDataReader.Read())
                 {
-                    lbMusica.Text = (sqlDataReader["Cantidad"].ToString());
+                    lbMusica.Text = (sqlDataReader["TOTAL"].ToString());
 
 
                 }
@@ -252,7 +251,7 @@ namespace Inventario
                 try
                 {
                     Conexion.conectar();
-                    String consultar = "SELECT CANTIDAD FROM INVENTARIO WHERE CATEGORIA=@CATEGORIA ";
+                    String consultar = "SELECT SUM(Cantidad) as TOTAL1 from Inventario where Categoria=@Categoria";
                     SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
 
 
@@ -262,7 +261,7 @@ namespace Inventario
 
                     while (sqlDataReader.Read())
                     {
-                        lbFiguras.Text = (sqlDataReader["Cantidad"].ToString());
+                        lbFiguras.Text = (sqlDataReader["TOTAL1"].ToString());
                     }
 
                 }
@@ -278,7 +277,7 @@ namespace Inventario
             try
             {
                 Conexion.conectar();
-                String consultar = "SELECT CANTIDAD FROM INVENTARIO WHERE CATEGORIA=@CATEGORIA ";
+                String consultar = "SELECT SUM(Cantidad) as TOTAL1 from Inventario where Categoria=@Categoria";
                 SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
 
 
@@ -288,7 +287,7 @@ namespace Inventario
 
                 while (sqlDataReader.Read())
                 {
-                    lbPelicula.Text = (sqlDataReader["Cantidad"].ToString());
+                    lbPelicula.Text = (sqlDataReader["TOTAL1"].ToString());
 
 
                 }
@@ -306,7 +305,7 @@ namespace Inventario
             try
             {
                 Conexion.conectar();
-                String consultar = "SELECT CANTIDAD FROM INVENTARIO WHERE CATEGORIA=@CATEGORIA ";
+                String consultar = "SELECT SUM(Cantidad) as TOTAL1 from Inventario where Categoria=@Categoria";
                 SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
 
 
@@ -316,7 +315,7 @@ namespace Inventario
 
                 while (sqlDataReader.Read())
                 {
-                    lbVideojuego.Text = (sqlDataReader["Cantidad"].ToString());
+                    lbVideojuego.Text = (sqlDataReader["TOTAL1"].ToString());
 
 
                 }
@@ -334,7 +333,7 @@ namespace Inventario
             try
             {
                 Conexion.conectar();
-                String consultar = "SELECT CANTIDAD FROM INVENTARIO WHERE CATEGORIA=@CATEGORIA";
+                String consultar = "SELECT SUM(Cantidad) as TOTAL1 from Inventario where Categoria=@Categoria";
                 SqlCommand cmd = new SqlCommand(consultar, Conexion.conectar());
 
 
@@ -344,7 +343,7 @@ namespace Inventario
 
                 while (sqlDataReader.Read())
                 {
-                    lbdiferente.Text = (sqlDataReader["Cantidad"].ToString());
+                    lbdiferente.Text = (sqlDataReader["TOTAL1"].ToString());
 
 
                 }
