@@ -15,6 +15,7 @@ namespace Inventario
         public FormBienvenidacs()
         {
             InitializeComponent();
+            CenterToScreen();
         }
 
         private void bunifuCustomLabel2_Click(object sender, EventArgs e)
