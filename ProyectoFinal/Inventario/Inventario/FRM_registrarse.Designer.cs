@@ -53,9 +53,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 244);
+            this.pictureBox2.Location = new System.Drawing.Point(16, 300);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 37);
+            this.pictureBox2.Size = new System.Drawing.Size(40, 46);
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
             // 
@@ -77,10 +78,10 @@
             this.btn_registrarse.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(23)))), ((int)(((byte)(17)))));
             this.btn_registrarse.IdleForecolor = System.Drawing.Color.White;
             this.btn_registrarse.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(23)))), ((int)(((byte)(17)))));
-            this.btn_registrarse.Location = new System.Drawing.Point(200, 438);
-            this.btn_registrarse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_registrarse.Location = new System.Drawing.Point(267, 539);
+            this.btn_registrarse.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btn_registrarse.Name = "btn_registrarse";
-            this.btn_registrarse.Size = new System.Drawing.Size(160, 42);
+            this.btn_registrarse.Size = new System.Drawing.Size(213, 52);
             this.btn_registrarse.TabIndex = 21;
             this.btn_registrarse.TabStop = false;
             this.btn_registrarse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -104,10 +105,10 @@
             this.BTN_CANCELAR.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(23)))), ((int)(((byte)(17)))));
             this.BTN_CANCELAR.IdleForecolor = System.Drawing.Color.White;
             this.BTN_CANCELAR.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(23)))), ((int)(((byte)(17)))));
-            this.BTN_CANCELAR.Location = new System.Drawing.Point(13, 438);
-            this.BTN_CANCELAR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BTN_CANCELAR.Location = new System.Drawing.Point(17, 539);
+            this.BTN_CANCELAR.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BTN_CANCELAR.Name = "BTN_CANCELAR";
-            this.BTN_CANCELAR.Size = new System.Drawing.Size(157, 42);
+            this.BTN_CANCELAR.Size = new System.Drawing.Size(209, 52);
             this.BTN_CANCELAR.TabIndex = 22;
             this.BTN_CANCELAR.TabStop = false;
             this.BTN_CANCELAR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -117,9 +118,10 @@
             // 
             this.TXTipoUsuario.BackColor = System.Drawing.Color.Black;
             this.TXTipoUsuario.Enabled = false;
-            this.TXTipoUsuario.Location = new System.Drawing.Point(174, 56);
+            this.TXTipoUsuario.Location = new System.Drawing.Point(232, 69);
+            this.TXTipoUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXTipoUsuario.Name = "TXTipoUsuario";
-            this.TXTipoUsuario.Size = new System.Drawing.Size(43, 20);
+            this.TXTipoUsuario.Size = new System.Drawing.Size(56, 22);
             this.TXTipoUsuario.TabIndex = 25;
             this.TXTipoUsuario.Text = "Usuario";
             // 
@@ -127,9 +129,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 189);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 233);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox1.Size = new System.Drawing.Size(40, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -138,9 +141,10 @@
             // 
             this.lbUsuario.AutoSize = true;
             this.lbUsuario.BackColor = System.Drawing.Color.Black;
-            this.lbUsuario.Location = new System.Drawing.Point(12, 9);
+            this.lbUsuario.Location = new System.Drawing.Point(16, 11);
+            this.lbUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUsuario.Name = "lbUsuario";
-            this.lbUsuario.Size = new System.Drawing.Size(43, 13);
+            this.lbUsuario.Size = new System.Drawing.Size(57, 17);
             this.lbUsuario.TabIndex = 30;
             this.lbUsuario.Text = "Usuario";
             // 
@@ -148,10 +152,10 @@
             // 
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.Location = new System.Drawing.Point(86, -2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Location = new System.Drawing.Point(115, -2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(217, 108);
+            this.pictureBox4.Size = new System.Drawing.Size(289, 133);
             this.pictureBox4.TabIndex = 31;
             this.pictureBox4.TabStop = false;
             // 
@@ -165,10 +169,10 @@
             this.txtNombre1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtNombre1.ForeColor = System.Drawing.Color.White;
             this.txtNombre1.isPassword = false;
-            this.txtNombre1.Location = new System.Drawing.Point(51, 129);
-            this.txtNombre1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre1.Location = new System.Drawing.Point(68, 159);
+            this.txtNombre1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNombre1.Name = "txtNombre1";
-            this.txtNombre1.Size = new System.Drawing.Size(322, 41);
+            this.txtNombre1.Size = new System.Drawing.Size(429, 50);
             this.txtNombre1.TabIndex = 32;
             this.txtNombre1.Text = "Nombre Completo";
             this.txtNombre1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -183,10 +187,10 @@
             this.txtUserName1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtUserName1.ForeColor = System.Drawing.Color.White;
             this.txtUserName1.isPassword = false;
-            this.txtUserName1.Location = new System.Drawing.Point(49, 189);
-            this.txtUserName1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUserName1.Location = new System.Drawing.Point(65, 233);
+            this.txtUserName1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtUserName1.Name = "txtUserName1";
-            this.txtUserName1.Size = new System.Drawing.Size(324, 41);
+            this.txtUserName1.Size = new System.Drawing.Size(432, 50);
             this.txtUserName1.TabIndex = 33;
             this.txtUserName1.Text = "Nombre Usuario";
             this.txtUserName1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -201,10 +205,10 @@
             this.txtPassword4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtPassword4.ForeColor = System.Drawing.Color.White;
             this.txtPassword4.isPassword = true;
-            this.txtPassword4.Location = new System.Drawing.Point(51, 301);
-            this.txtPassword4.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword4.Location = new System.Drawing.Point(68, 370);
+            this.txtPassword4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPassword4.Name = "txtPassword4";
-            this.txtPassword4.Size = new System.Drawing.Size(322, 41);
+            this.txtPassword4.Size = new System.Drawing.Size(429, 50);
             this.txtPassword4.TabIndex = 35;
             this.txtPassword4.Text = "Nombre Usuario";
             this.txtPassword4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -219,22 +223,23 @@
             this.txtPassword3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtPassword3.ForeColor = System.Drawing.Color.White;
             this.txtPassword3.isPassword = true;
-            this.txtPassword3.Location = new System.Drawing.Point(51, 244);
-            this.txtPassword3.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword3.Location = new System.Drawing.Point(68, 300);
+            this.txtPassword3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtPassword3.Name = "txtPassword3";
-            this.txtPassword3.Size = new System.Drawing.Size(322, 41);
+            this.txtPassword3.Size = new System.Drawing.Size(429, 50);
             this.txtPassword3.TabIndex = 34;
             this.txtPassword3.Text = "Nombre Completo";
             this.txtPassword3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCheckbox1
             // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(23)))), ((int)(((byte)(17)))));
+            this.bunifuCheckbox1.BackColor = System.Drawing.Color.DarkOrange;
             this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.DarkOrange;
-            this.bunifuCheckbox1.Checked = true;
+            this.bunifuCheckbox1.Checked = false;
             this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(23)))), ((int)(((byte)(17)))));
             this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox1.Location = new System.Drawing.Point(51, 378);
+            this.bunifuCheckbox1.Location = new System.Drawing.Point(68, 465);
+            this.bunifuCheckbox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuCheckbox1.Name = "bunifuCheckbox1";
             this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox1.TabIndex = 36;
@@ -244,9 +249,10 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(82, 378);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(109, 465);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(243, 20);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(304, 22);
             this.bunifuCustomLabel1.TabIndex = 37;
             this.bunifuCustomLabel1.Text = "Aceptar Terminos y Condiciones";
             // 
@@ -254,18 +260,19 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Black;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(12, 305);
+            this.pictureBox5.Location = new System.Drawing.Point(16, 375);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 37);
+            this.pictureBox5.Size = new System.Drawing.Size(40, 46);
             this.pictureBox5.TabIndex = 38;
             this.pictureBox5.TabStop = false;
             // 
             // txt_Nombre
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(403, 519);
+            this.ClientSize = new System.Drawing.Size(537, 639);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.bunifuCheckbox1);
@@ -281,6 +288,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "txt_Nombre";
             this.Text = "FRM_registrarse";
             this.Load += new System.EventHandler(this.txt_Nombre_Load);

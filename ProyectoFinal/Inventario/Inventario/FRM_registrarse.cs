@@ -21,7 +21,7 @@ namespace Inventario
 
         private void btn_registrarse_Click(object sender, EventArgs e)
         {
-            if (txtPassword3.Text == txtPassword4.Text)
+            if ((txtPassword3.Text == txtPassword4.Text) && (bunifuCheckbox1.Checked))
             {
                 Conexion.conectar();
                 string insertar = "INSERT INTO USUARIOS (NOMBRE,USUARIO,PASSWORD,Tipo_Usuario)VALUES(@Nombre,@Usuario,@Password,@Tipo_Uusuario)";
