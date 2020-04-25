@@ -22,7 +22,7 @@ namespace Inventario
         }
 
      
-        public DataTable llenar_grid()
+        public DataTable llenar_grid() // Metodo que muestras los datos de la tabla correspondiente 
         {
             Conexion.conectar();
             DataTable dt = new DataTable();
@@ -33,7 +33,7 @@ namespace Inventario
             return dt;
         }
 
-        private void Edit(bool value)
+        private void Edit(bool value) // Permite  que lo cambios se puedan habilitar para llenar la información
         {
             txtId.Enabled = value;
             txtDescripcion.Enabled = value;
@@ -56,7 +56,7 @@ namespace Inventario
 
         }
 
-        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        private void bunifuThinButton22_Click(object sender, EventArgs e)  // Metodo que toma las variables y los introduce como un nuevo objeto 
         {
             try
             {
@@ -73,7 +73,6 @@ namespace Inventario
                 cmd.ExecuteNonQuery();
                 Mensaje_Hijo MH = new Mensaje_Hijo();
                 MH.imprimeMesaje("inventario");
-                //MessageBox.Show("Se han insertao con exito");
                 dataGridViewProducto.DataSource = llenar_grid();
             }
 
@@ -89,7 +88,7 @@ namespace Inventario
 
         }
 
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        private void bunifuThinButton21_Click(object sender, EventArgs e) // Metodo que conecta con la base de datos, toma la variable que identifica el objeto a eliminar y lo elimina.
         {
             try
             {
@@ -109,7 +108,7 @@ namespace Inventario
             }         
         }
 
-        private void bunifuThinButton24_Click(object sender, EventArgs e)
+        private void bunifuThinButton24_Click(object sender, EventArgs e) // Metodo que modifica los datos de un objeto, toma las variables de los labes y aplica el cambio 
         {
             try
             {
@@ -156,7 +155,7 @@ namespace Inventario
             }
         }
 
-        public void BuscarElemento()
+        public void BuscarElemento() // Parte del proceso para mostrar unicamente la categoría que seleccionó
         {
             try
             {
@@ -177,7 +176,7 @@ namespace Inventario
             }
         }
 
-        public DataTable mostrarDatos()
+        public DataTable mostrarDatos() // Muestra la tabla de inventario 
         {
             Conexion.conectar();
             SqlCommand cmd4 = new SqlCommand("select * from INVENTARIO", Conexion.conectar());
@@ -187,7 +186,7 @@ namespace Inventario
             return dt.Tables["tabla"];
         }
 
-        public DataTable Buscar(string ID_INVENTARIO)
+        public DataTable Buscar(string ID_INVENTARIO) // Parte del proceso para mostrar unicamente la categoría que seleccionó
         {
             Conexion.conectar();
             SqlCommand cmd5 = new SqlCommand(string.Format("select * from INVENTARIO where ID_INVENTARIO like '%{0}%'", ID_INVENTARIO), Conexion.conectar());

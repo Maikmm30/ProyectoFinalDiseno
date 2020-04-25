@@ -81,7 +81,7 @@ namespace Inventario
             this.Close();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e) // Metodo que modifica los datos de un objeto, toma las variables de los labes y aplica el cambio 
         {
             try
             {
@@ -104,7 +104,7 @@ namespace Inventario
             }           
         }
 
-        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        private void bunifuThinButton22_Click(object sender, EventArgs e) // Metodo que toma las variables y los introduce como un nuevo objeto 
         {
             try
             {
@@ -118,7 +118,6 @@ namespace Inventario
                 cmd3.ExecuteNonQuery();
                 Mensaje_Hijo MH = new Mensaje_Hijo();
                 MH.imprimeMesaje("compra");
-                // MessageBox.Show("SE HA INSERTADO EN LA TABLA DE COMPRADOS");
                 dataGridViewProducto.DataSource = llenar_grid();
                 modificarInventario();
             }
@@ -128,7 +127,7 @@ namespace Inventario
             }      
         }
 
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        private void bunifuThinButton21_Click(object sender, EventArgs e) // Metodo que conecta con la base de datos, toma la variable que identifica el objeto a eliminar y lo elimina. 
         {
             try
             {
@@ -207,7 +206,7 @@ namespace Inventario
             }
         }
 
-        public void BuscarElemento()
+        public void BuscarElemento()  // Parte del proceso para mostrar unicamente la categoría que seleccionó
         {
             try
             {
@@ -228,7 +227,7 @@ namespace Inventario
             }
         }
 
-        public DataTable mostrarDatos()
+        public DataTable mostrarDatos() // Muestra la tabla de productos  
         {
             Conexion.conectar();
             SqlCommand cmd4 = new SqlCommand("select * from COMPRA", Conexion.conectar());
@@ -238,7 +237,7 @@ namespace Inventario
             return dt.Tables["tabla"];
         }
 
-        public DataTable Buscar(string ID_COMPRA)
+        public DataTable Buscar(string ID_COMPRA)  // Parte del proceso para mostrar unicamente la categoría que seleccionó
         {
             Conexion.conectar();
             SqlCommand cmd5 = new SqlCommand(string.Format("select * from COMPRA where ID_COMPRA like '%{0}%'", ID_COMPRA), Conexion.conectar());

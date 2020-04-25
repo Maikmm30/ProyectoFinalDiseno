@@ -26,7 +26,7 @@ namespace Inventario
 
         }
 
-        public DataTable llenar_grid()
+        public DataTable llenar_grid() // Muesta los datos de las tablas 
         {
             Conexion.conectar();
             DataTable dt = new DataTable();
@@ -54,7 +54,7 @@ namespace Inventario
         }
 
 
-        public DataTable Buscar(string Categoria)
+        public DataTable Buscar(string Categoria) // Metodo que muestra los valores unicos de la categoria seleccionada
         {
             Conexion.conectar();
             SqlCommand cmd5 = new SqlCommand(string.Format("select Categoria CATEGORIA, Descripcion DESCRIPCION, Precio PRECIO from Inventario where Categoria like '%{0}%'", Categoria), Conexion.conectar());
@@ -64,7 +64,7 @@ namespace Inventario
             return dt.Tables["Inventario"];
         }
 
-        public DataTable BuscarTodos()
+        public DataTable BuscarTodos() // Muestra todos los objetos del inventario 
         {
             Conexion.conectar();
             SqlCommand cmd5 = new SqlCommand(string.Format("select Categoria CATEGORIA, Descripcion DESCRIPCION, Precio PRECIO from Inventario where id_Inventario > 0; "), Conexion.conectar());
@@ -80,13 +80,13 @@ namespace Inventario
         private void buttonVideojuegos_Click(object sender, EventArgs e)
         {
 
-            clienteData.DataSource = Buscar("Videojuego");
+            clienteData.DataSource = Buscar("Videojuego"); // Llama al metodo de buscar unicamente videjuegos
 
         }
 
 
 
-        private void ButtonVolver_Click(object sender, EventArgs e)
+        private void ButtonVolver_Click(object sender, EventArgs e) 
         {
             Login Volver = new Login();
             Volver.Show();
@@ -96,10 +96,10 @@ namespace Inventario
 
         private void buttonMusica_Click(object sender, EventArgs e)
         {
-            clienteData.DataSource = Buscar("Musica");
+            clienteData.DataSource = Buscar("Musica"); // Llama al metodo de buscar unicamente  musica
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e) // Metodo de comprar, registra la compra al igual que disminuye la cantidad de producto en el inventario. 
         {
             try
             {

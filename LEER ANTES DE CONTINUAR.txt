@@ -1,0 +1,11 @@
+Para poder correr adecuadamente el programa se deben de tener encuenta 3 cosas: 
+
+1. La ruta del programa es \ProyectoFinalDiseno\ProyectoFinal\Inventario y una vez ahi se corre la aplicacion "Inventario".
+2. En el codigo, en la clase "Conexion" se debe de cambiar la ruta hacia la base de datos. 
+     Ejemplo de como debe de quedar esa linea de codigo: 
+     Linea de codigo: SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\EFS\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\Database1.mdf;Integrated Security=True");
+     Parte a modificar por la direccion en la que se usa el programa: "C:\Users\EFS\Documents\GitHub\ProyectoFinalDiseno\ProyectoFinal\Inventario\Inventario\Database1"
+3. En el codigo, en la Clase "Login" se debe dar doble click en el boton ayuda y se de cambiar la ruta para poder ingresar a la pagina de la empresa (HTML)
+     Ejemplo de como debe de quedar esa linea de codigo: 
+     System.Diagnostics.Process.Start("C:/Users/EFS/Documents/GitHub/ProyectoFinalDiseno/ProyectoFinal/Inventario/Inventario/PaginaWeb/indice.html");
+     Parte a modificar por la direccion en la que se usa el programa: "C:/Users/EFS/Documents/GitHub/ProyectoFinalDiseno/ProyectoFinal/Inventario/Inventario/PaginaWeb/indice.html"

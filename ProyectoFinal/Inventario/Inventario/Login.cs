@@ -25,6 +25,7 @@ namespace Inventario
         }
 
         public void logear(string usuario, string contrasena)
+            // Este metodo tomas los datos de los labels y los compara con los valores dentro de la base de datos para saber si puede ingresar o no; y a donde ingresar. 
         {
             try
             {
@@ -38,12 +39,9 @@ namespace Inventario
 
                 if (dt.Rows.Count == 1){
                     this.Hide();
-                    //new proyectoFinal(dt.Rows[0][0].ToString()).Show();
 
                     if (dt.Rows[0][1].ToString() == "Admin"){
-                        //new proyectoFinal(dt.Rows[0][0].ToString()).Show();
-                        //proyectoFinal principal = new proyectoFinal();
-                        //principal.Show();
+                       
                         new FormBienvenidacs().Show();
 
 
@@ -51,7 +49,6 @@ namespace Inventario
                     }
                     else if (dt.Rows[0][1].ToString() == "Usuario")
                     {
-                        //new MenuCliente(dt.Rows[0][0].ToString()).Show();
                         MenuCliente cliente = new MenuCliente();
                         cliente.Show(); 
                         this.Hide();
@@ -105,15 +102,15 @@ namespace Inventario
 
         }
 
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e) // Llama al formulario para ingresar nueva cuenta de CLIENTE. 
         {
             new txt_Nombre().Show();
             this.Hide();
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+        private void button1_Click_2(object sender, EventArgs e) // Metodo para ir a la pagina de la empresa y ver los manuales 
         {
-            System.Diagnostics.Process.Start("D:/Users/Michael/Documents/Visual Studio 2019/ProyectoFinalDiseno/ProyectoFinal/Inventario/Inventario/PaginaWeb/indice.html");
+            System.Diagnostics.Process.Start("C:/Users/EFS/Documents/GitHub/ProyectoFinalDiseno/ProyectoFinal/Inventario/Inventario/PaginaWeb/indice.html");
         }
     }
 }

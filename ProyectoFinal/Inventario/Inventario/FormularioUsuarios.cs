@@ -23,7 +23,7 @@ namespace Inventario
             dataGridViewProducto.DataSource = llenar_grid();
         }
 
-        public DataTable llenar_grid()
+        public DataTable llenar_grid()  // Metodo que muestras los datos de la tabla correspondiente 
         {        
                 Conexion.conectar();
                 DataTable dt = new DataTable();
@@ -34,7 +34,7 @@ namespace Inventario
                 return dt;       
         }
 
-        private void Edit(bool value)
+        private void Edit(bool value)  // Permite  que lo cambios se puedan habilitar para llenar la información
         {
             txtUsuario.Enabled = value;
             txtContraseña.Enabled = value;
@@ -73,14 +73,14 @@ namespace Inventario
 
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e) // Metodo que conecta con la base de datos, toma la variable que identifica el objeto a eliminar y lo elimina. 
         {                   
             try
             {
                 Conexion.conectar();
                 string eliminar = "DELETE FROM USUARIOS WHERE Usuario=@Usuario";
                 SqlCommand cmd3 = new SqlCommand(eliminar, Conexion.conectar());
-                cmd3.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
+                cmd3.Parameters.AddWithValue("@Usuario", txtUsuario.Text);  
                 cmd3.ExecuteNonQuery();
                 MessageBox.Show(" Se han eliminado los datos ");
                 dataGridViewProducto.DataSource = llenar_grid();
@@ -94,7 +94,7 @@ namespace Inventario
 
         }
 
-    private void btnBuscar_Click(object sender, EventArgs e)
+    private void btnBuscar_Click(object sender, EventArgs e) // Metodo que modifica los datos de un objeto, toma las variables de los labes y aplica el cambio 
         {
             try
             {
@@ -118,7 +118,7 @@ namespace Inventario
      
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e) // Metodo que toma las variables y los introduce como un nuevo objeto 
         {
             try
             {
@@ -132,8 +132,6 @@ namespace Inventario
                 cmd.ExecuteNonQuery();
                 Mensaje_Hijo MH = new Mensaje_Hijo();
                 MH.imprimeMesaje("usuario");
-
-                // MessageBox.Show("Se han insertado con exito");
                 dataGridViewProducto.DataSource = llenar_grid();
             }
             catch (Exception ex)
@@ -167,7 +165,7 @@ namespace Inventario
             }
         }
 
-        public void BuscarElemento()
+        public void BuscarElemento() // Parte del proceso para mostrar unicamente la categoría que seleccionó
         {
             try
             {
@@ -188,7 +186,7 @@ namespace Inventario
             }
         }
 
-        public DataTable mostrarDatos()
+        public DataTable mostrarDatos() // Muestra la tabla de usuarios 
         {
             Conexion.conectar();
             SqlCommand cmd4 = new SqlCommand("select * from USUARIOS", Conexion.conectar());
@@ -198,7 +196,7 @@ namespace Inventario
             return dt.Tables["tabla"];
         }
 
-        public DataTable Buscar(string Nombre)
+        public DataTable Buscar(string Nombre) // Parte del proceso para mostrar unicamente la categoría que seleccionó
         {
             Conexion.conectar();
             SqlCommand cmd5 = new SqlCommand(string.Format("select * from USUARIOS where Nombre like '%{0}%'", Nombre), Conexion.conectar());

@@ -90,25 +90,25 @@ namespace Inventario
 
         private void item_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new FormularioItems());
+           
         }
 
-        private void Usuario_Click(object sender, EventArgs e)
+        private void Usuario_Click(object sender, EventArgs e) // Llama al panel de usuario 
         {
             AbrirFormInPanel(new FormularioUsuarios());
         }
 
-        private void Inventaria_Click(object sender, EventArgs e)
+        private void Inventaria_Click(object sender, EventArgs e) // Llama al panel de inventario 
         {
             AbrirFormInPanel(new FormInventario());
         }
 
-        private void productosComprados_Click(object sender, EventArgs e)
+        private void productosComprados_Click(object sender, EventArgs e) // Llama al panel de productos comprados
         {
             AbrirFormInPanel(new FormProductosComprados());
         }
 
-        private void proveedor_Click(object sender, EventArgs e)
+        private void proveedor_Click(object sender, EventArgs e) // Llama al panel de proveedores 
         {
             AbrirFormInPanel(new FormProveedores());
         }
@@ -139,30 +139,6 @@ namespace Inventario
             data.addData(point1);
 
 
-            //Bunifu.DataViz.DataPoint point2 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.spline);
-
-            
-
-            //point2.addLabely("LUNES", "90");
-            //point2.addLabely("MARTES", "200");
-            //point2.addLabely("MIERCOLES", "300");
-            //point2.addLabely("JUEVES", "700");
-            //point2.addLabely("VIERNES", "400");
-            //point2.addLabely("SABADO", "900");
-            //point2.addLabely("DOMINGO", "500");
-            //data.addData(point2);
-            //bunifuCharts1.Render(data);
-
-            //Bunifu.DataViz.DataPoint point3 = new Bunifu.DataViz.DataPoint(Bunifu.DataViz.BunifuCharts._type.spline);
-
-            //point3.addLabely("LUNES", "100");
-            //point3.addLabely("MARTES", "400");
-            //point3.addLabely("MIERCOLES", "600");
-            //point3.addLabely("JUEVES", "300");
-            //point3.addLabely("VIERNES", "400");
-            //point3.addLabely("SABADO", "600");
-            //point3.addLabely("DOMINGO", "500");
-            //data.addData(point3);
             bunifuCharts1.Render(data);
         }
 
